@@ -40,8 +40,9 @@ from transformers import (
     AutoModelForCausalLM,
     AutoTokenizer,
     BitsAndBytesConfig,
+    DataCollatorForLanguageModeling,
 )
-from trl import DataCollatorForCompletionOnlyLM, SFTConfig, SFTTrainer
+from trl import SFTConfig, SFTTrainer
 
 
 MODEL_MAP = {
@@ -64,6 +65,58 @@ BATCH_MAP = {
 }
 
 GRAD_CKPT_SIZES = {"7b", "14b", "32b"}
+
+
+class CompletionOnlyCollator(DataCollatorForLanguageModeling):
+    """Language-modeling collator that masks prompt tokens from the loss.
+
+    Built on top of transformers.DataCollatorForLanguageModeling (which handles
+    padding and creating labels=input_ids with pad tokens masked). We then find
+    the response template token sequence and set labels to -100 for every
+    position up to (and including) the response template, so loss is computed
+    only on the assistant's output.
+
+    Used because TRL 1.x removed DataCollatorForCompletionOnlyLM and expects
+    chat templates to have {% generation %} markers, which Qwen2.5 lacks.
+    """
+
+    def __init__(self, tokenizer, response_template):
+        super().__init__(tokenizer=tokenizer, mlm=False)
+        # Tokenize template without special tokens so we match the in-sequence form.
+        # For Qwen ChatML, this tokenizes "<|im_start|>assistant\n" into ~3 stable IDs.
+        self.response_ids = tokenizer.encode(response_template, add_special_tokens=False)
+        if not self.response_ids:
+            raise ValueError(f"response_template tokenized to empty: {response_template!r}")
+
+    def __call__(self, examples):
+        batch = super().__call__(examples)
+        # batch["labels"] is currently = input_ids with pad masked. We now mask prompt.
+        input_ids_list = batch["input_ids"].tolist()
+        n_masked_fully = 0
+        for i, ids in enumerate(input_ids_list):
+            pos = self._find_subseq(ids, self.response_ids)
+            if pos is None:
+                # Template not found -> mask entire sequence (no training signal from this example)
+                batch["labels"][i, :] = -100
+                n_masked_fully += 1
+            else:
+                end = pos + len(self.response_ids)
+                batch["labels"][i, :end] = -100
+        if n_masked_fully > 0:
+            # Surfaces silently-broken batches (e.g. template tokenization drift)
+            print(f"[collator] WARNING: {n_masked_fully}/{len(examples)} examples had no response template; their loss is fully masked")
+        return batch
+
+    @staticmethod
+    def _find_subseq(haystack, needle):
+        n = len(needle)
+        if n == 0 or n > len(haystack):
+            return None
+        first = needle[0]
+        for i in range(len(haystack) - n + 1):
+            if haystack[i] == first and haystack[i:i + n] == needle:
+                return i
+        return None
 
 
 def load_dataset_from_jsonl(path, stage, limit=None):
@@ -268,13 +321,15 @@ def main():
         max_length=args.max_length,
     )
 
-    # Qwen2.5 chat template has no {% generation %} markers, so assistant_only_loss
-    # would not mask the prompt. Use completion-only collator instead: it finds the
-    # response template in each tokenized example and masks everything before it.
+    # Qwen2.5 chat template has no {% generation %} markers, so TRL's
+    # assistant_only_loss would silently fall through. And TRL 1.2 removed
+    # DataCollatorForCompletionOnlyLM. So we use our own collator (defined above):
+    # it finds the response template in each tokenized sequence and masks
+    # everything before the assistant's turn with -100.
     response_template = "<|im_start|>assistant\n"
-    collator = DataCollatorForCompletionOnlyLM(
-        response_template=response_template,
+    collator = CompletionOnlyCollator(
         tokenizer=tokenizer,
+        response_template=response_template,
     )
 
     trainer = SFTTrainer(

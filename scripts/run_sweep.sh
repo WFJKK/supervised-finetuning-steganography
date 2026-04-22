@@ -1,0 +1,204 @@
+#!/usr/bin/env bash
+# Sweep: stage1 + v0 across 6 Qwen2.5 sizes, acrostics/news/4bit.
+# Adapters go to HF Hub. Results stay in git (small JSON files).
+#
+# Resume-friendly:
+#   * Skips training for a (size, stage) if adapters/<size>/<stage>/full/final exists.
+#   * Skips eval if the result JSON already exists.
+#   * After instance death, re-run; to restore adapters from HF Hub use:
+#       python scripts/download_from_hub.py --repo-id "$HF_REPO_ID" \
+#           --experiment-tag "$EXPERIMENT_TAG"
+#
+# Usage:
+#   export HF_TOKEN=hf_xxxxx
+#   bash scripts/run_sweep.sh [sizes...]
+#   bash scripts/run_sweep.sh 0.5b 1.5b          # only those two
+#   bash scripts/run_sweep.sh                    # all six
+#
+# Env vars:
+#   SCHEME_DIR        default: data/acrostics/news
+#   PAYLOAD_BITS      default: 4
+#   EXPERIMENT_TAG    default: acrostics_news_<PAYLOAD_BITS>bit (folder on the Hub)
+#   HF_REPO_ID        default: WFJKK/poseidon-sft-adapters
+#   PUSH_ADAPTERS     default: 1  (set 0 to skip HF Hub upload)
+#   PUSH_RESULTS      default: 1  (set 0 to skip git push of results)
+
+set -eu
+set -o pipefail
+
+SCHEME_DIR="${SCHEME_DIR:-data/acrostics/news}"
+PAYLOAD_BITS="${PAYLOAD_BITS:-4}"
+EXPERIMENT_TAG="${EXPERIMENT_TAG:-acrostics_news_${PAYLOAD_BITS}bit}"
+HF_REPO_ID="${HF_REPO_ID:-WFJKK/poseidon-sft-adapters}"
+PUSH_ADAPTERS="${PUSH_ADAPTERS:-1}"
+PUSH_RESULTS="${PUSH_RESULTS:-1}"
+
+ALL_SIZES=(0.5b 1.5b 3b 7b 14b 32b)
+SIZES=("$@")
+if [ ${#SIZES[@]} -eq 0 ]; then SIZES=("${ALL_SIZES[@]}"); fi
+
+STAGE1_DATA="${SCHEME_DIR}/stage1_${PAYLOAD_BITS}bit/train.jsonl"
+V0_TRAIN="${SCHEME_DIR}/v0_${PAYLOAD_BITS}bit/train.jsonl"
+V0_TEST="${SCHEME_DIR}/v0_${PAYLOAD_BITS}bit/test.jsonl"
+
+for f in "$STAGE1_DATA" "$V0_TRAIN" "$V0_TEST"; do
+  if [ ! -f "$f" ]; then
+    echo "ERROR: expected data file missing: $f" >&2
+    exit 1
+  fi
+done
+
+if [ "$PUSH_ADAPTERS" = "1" ] && [ -z "${HF_TOKEN:-}" ]; then
+  echo "ERROR: PUSH_ADAPTERS=1 but HF_TOKEN is not set" >&2
+  exit 1
+fi
+
+push_adapter_to_hub () {
+  # Args: size stage
+  local size="$1" stage="$2"
+  if [ "$PUSH_ADAPTERS" != "1" ]; then
+    return 0
+  fi
+  local local_path="adapters/qwen2.5-${size}/${stage}/full/final"
+  if [ ! -d "$local_path" ]; then
+    echo "  (no adapter at $local_path, skipping hub upload)"
+    return 0
+  fi
+  local path_in_repo="${EXPERIMENT_TAG}/qwen2.5-${size}/${stage}"
+  python scripts/upload_to_hub.py \
+    --local-path "$local_path" \
+    --repo-id "$HF_REPO_ID" \
+    --path-in-repo "$path_in_repo" \
+    --commit-message "sweep: ${EXPERIMENT_TAG} ${size} ${stage}"
+}
+
+push_results_to_git () {
+  local msg="$1"
+  if [ "$PUSH_RESULTS" != "1" ]; then
+    return 0
+  fi
+  git add results/ 2>/dev/null || true
+  git commit -m "$msg" || echo "  (nothing to commit)"
+  git push || echo "  (push failed, continuing)"
+}
+
+eval_all_checkpoints () {
+  # Args: size stage adapter_base [stage1_adapter]
+  local size="$1" stage="$2" adapter_base="$3"
+  local stage1_adapter="${4:-}"
+  local merged_dir="adapters/qwen2.5-${size}/merged"
+
+  local ckpts=()
+  for d in "${adapter_base}/full"/checkpoint-*; do
+    [ -d "$d" ] && ckpts+=("$d")
+  done
+  ckpts+=("${adapter_base}/full/final")
+
+  for ckpt in "${ckpts[@]}"; do
+    local label
+    label="$(basename "$ckpt")"
+    local out_dir="results/qwen2.5-${size}/${stage}"
+    mkdir -p "$out_dir"
+
+    # Test eval (v0 only; stage1 has no test file in this data layout)
+    if [ "$stage" = "v0" ]; then
+      local test_out="${out_dir}/${label}_test.json"
+      if [ ! -f "$test_out" ]; then
+        python scripts/eval.py \
+          --model-size "$size" --stage v0 \
+          --adapter "$ckpt" --stage1-adapter "$stage1_adapter" \
+          --merged-dir "$merged_dir" \
+          --data "$V0_TEST" --split test \
+          --output "$test_out"
+      fi
+    fi
+
+    # Train eval (100 examples, seed 42)
+    local train_out="${out_dir}/${label}_train.json"
+    local train_data
+    if [ "$stage" = "stage1" ]; then
+      train_data="$STAGE1_DATA"
+    else
+      train_data="$V0_TRAIN"
+    fi
+    if [ ! -f "$train_out" ]; then
+      if [ "$stage" = "v0" ]; then
+        python scripts/eval.py \
+          --model-size "$size" --stage v0 \
+          --adapter "$ckpt" --stage1-adapter "$stage1_adapter" \
+          --merged-dir "$merged_dir" \
+          --data "$train_data" --split train --n 100 \
+          --output "$train_out"
+      else
+        python scripts/eval.py \
+          --model-size "$size" --stage stage1 \
+          --adapter "$ckpt" \
+          --data "$train_data" --split train --n 100 \
+          --output "$train_out"
+      fi
+    fi
+  done
+}
+
+for size in "${SIZES[@]}"; do
+  echo ""
+  echo "#################################################################"
+  echo "#  Qwen2.5-${size}"
+  echo "#################################################################"
+
+  stage1_out="adapters/qwen2.5-${size}/stage1"
+  v0_out="adapters/qwen2.5-${size}/v0"
+
+  # ---- Stage 1 ----
+  if [ ! -f "${stage1_out}/full/final/adapter_config.json" ]; then
+    echo ""
+    echo "--- training stage1 ---"
+    python scripts/train.py \
+      --model-size "$size" --stage stage1 \
+      --data "$STAGE1_DATA" \
+      --output "$stage1_out"
+  else
+    echo "[skip] stage1 adapter already at ${stage1_out}/full/final"
+  fi
+
+  echo ""
+  echo "--- evaluating stage1 ---"
+  eval_all_checkpoints "$size" stage1 "$stage1_out"
+
+  push_adapter_to_hub "$size" stage1
+  push_results_to_git "sweep: ${size} stage1 done"
+
+  # ---- V0 ----
+  stage1_adapter_path="${stage1_out}/full/final"
+  if [ ! -f "${v0_out}/full/final/adapter_config.json" ]; then
+    echo ""
+    echo "--- training v0 ---"
+    python scripts/train.py \
+      --model-size "$size" --stage v0 \
+      --data "$V0_TRAIN" \
+      --output "$v0_out" \
+      --stage1-adapter "$stage1_adapter_path"
+  else
+    echo "[skip] v0 adapter already at ${v0_out}/full/final"
+  fi
+
+  echo ""
+  echo "--- evaluating v0 ---"
+  eval_all_checkpoints "$size" v0 "$v0_out" "$stage1_adapter_path"
+
+  push_adapter_to_hub "$size" v0
+  push_results_to_git "sweep: ${size} v0 done"
+
+  # ---- Cleanup ----
+  merged_dir="adapters/qwen2.5-${size}/merged"
+  if [ -d "$merged_dir" ]; then
+    echo ""
+    echo "[cleanup] removing merged model: $merged_dir"
+    rm -rf "$merged_dir"
+  fi
+done
+
+echo ""
+echo "================================================================="
+echo "  SWEEP DONE"
+echo "================================================================="

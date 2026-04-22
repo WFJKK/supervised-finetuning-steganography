@@ -60,7 +60,7 @@ push_adapter_to_hub () {
   if [ "$PUSH_ADAPTERS" != "1" ]; then
     return 0
   fi
-  local local_path="adapters/qwen2.5-${size}/${stage}/full/final"
+  local local_path="adapters/qwen2.5-${size}/${stage}_${PAYLOAD_BITS}bit/full/final"
   if [ ! -d "$local_path" ]; then
     echo "  (no adapter at $local_path, skipping hub upload)"
     return 0
@@ -87,7 +87,7 @@ eval_all_checkpoints () {
   # Args: size stage adapter_base [stage1_adapter]
   local size="$1" stage="$2" adapter_base="$3"
   local stage1_adapter="${4:-}"
-  local merged_dir="adapters/qwen2.5-${size}/merged"
+  local merged_dir="adapters/qwen2.5-${size}/merged_${PAYLOAD_BITS}bit"
 
   local ckpts=()
   for d in "${adapter_base}/full"/checkpoint-*; do
@@ -98,7 +98,7 @@ eval_all_checkpoints () {
   for ckpt in "${ckpts[@]}"; do
     local label
     label="$(basename "$ckpt")"
-    local out_dir="results/qwen2.5-${size}/${stage}"
+    local out_dir="results/qwen2.5-${size}/${stage}_${PAYLOAD_BITS}bit"
     mkdir -p "$out_dir"
 
     # Val eval (stage1 only): 180 held-out examples
@@ -159,8 +159,8 @@ for size in "${SIZES[@]}"; do
   echo "#  Qwen2.5-${size}"
   echo "#################################################################"
 
-  stage1_out="adapters/qwen2.5-${size}/stage1"
-  v0_out="adapters/qwen2.5-${size}/v0"
+  stage1_out="adapters/qwen2.5-${size}/stage1_${PAYLOAD_BITS}bit"
+  v0_out="adapters/qwen2.5-${size}/v0_${PAYLOAD_BITS}bit"
 
   # ---- Stage 1 ----
   if [ ! -f "${stage1_out}/full/final/adapter_config.json" ]; then
@@ -203,7 +203,7 @@ for size in "${SIZES[@]}"; do
   push_results_to_git "sweep: ${size} v0 done"
 
   # ---- Cleanup ----
-  merged_dir="adapters/qwen2.5-${size}/merged"
+  merged_dir="adapters/qwen2.5-${size}/merged_${PAYLOAD_BITS}bit"
   if [ -d "$merged_dir" ]; then
     echo ""
     echo "[cleanup] removing merged model: $merged_dir"

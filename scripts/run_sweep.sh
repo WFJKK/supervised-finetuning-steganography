@@ -38,10 +38,11 @@ SIZES=("$@")
 if [ ${#SIZES[@]} -eq 0 ]; then SIZES=("${ALL_SIZES[@]}"); fi
 
 STAGE1_DATA="${SCHEME_DIR}/stage1_${PAYLOAD_BITS}bit/train.jsonl"
+STAGE1_VAL="${SCHEME_DIR}/stage1_${PAYLOAD_BITS}bit/val.jsonl"
 V0_TRAIN="${SCHEME_DIR}/v0_${PAYLOAD_BITS}bit/train.jsonl"
 V0_TEST="${SCHEME_DIR}/v0_${PAYLOAD_BITS}bit/test.jsonl"
 
-for f in "$STAGE1_DATA" "$V0_TRAIN" "$V0_TEST"; do
+for f in "$STAGE1_DATA" "$STAGE1_VAL" "$V0_TRAIN" "$V0_TEST"; do
   if [ ! -f "$f" ]; then
     echo "ERROR: expected data file missing: $f" >&2
     exit 1
@@ -99,6 +100,18 @@ eval_all_checkpoints () {
     label="$(basename "$ckpt")"
     local out_dir="results/qwen2.5-${size}/${stage}"
     mkdir -p "$out_dir"
+
+    # Val eval (stage1 only): 180 held-out examples
+    if [ "$stage" = "stage1" ]; then
+      local val_out="${out_dir}/${label}_val.json"
+      if [ ! -f "$val_out" ]; then
+        python scripts/eval.py \
+          --model-size "$size" --stage stage1 \
+          --adapter "$ckpt" \
+          --data "$STAGE1_VAL" --split val \
+          --output "$val_out"
+      fi
+    fi
 
     # Test eval (v0 only; stage1 has no test file in this data layout)
     if [ "$stage" = "v0" ]; then

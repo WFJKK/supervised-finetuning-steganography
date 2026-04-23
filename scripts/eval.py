@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-Evaluate a LoRA adapter on acrostic data.
+Evaluate a LoRA adapter on acrostic or CCS data.
 Computes SER (symbol error rate), exact-match rate, edit distance. Greedy generation.
 
 For stage1 eval:
   python scripts/eval.py \
-      --model-size 0.5b --stage stage1 \
+      --model-size 0.5b --stage stage1 --scheme acrostics \
       --adapter adapters/qwen2.5-0.5b/stage1/full/checkpoint-XXX \
       --data data/acrostics/news/stage1_4bit/train.jsonl \
       --split train --n 100 --seed 42 \
@@ -13,6 +13,9 @@ For stage1 eval:
 
 For v0 eval: additionally pass --stage1-adapter so the stage1 LoRA gets merged
 into the base before applying the v0 adapter.
+
+For CCS: pass --scheme ccs (expected payloads are bit strings, decoder is
+keyword-based over the appended caveat section).
 """
 import argparse
 import json
@@ -30,6 +33,20 @@ from transformers import (
     BitsAndBytesConfig,
 )
 
+# CCS decoder (keyword-based over caveat section). Import defers any
+# import-time error until --scheme ccs is actually requested.
+try:
+    from ccs_decoder import extract_ccs_secret
+except ImportError:
+    # Also try if eval.py is run with scripts/ as cwd or on PYTHONPATH differently.
+    _here = os.path.dirname(os.path.abspath(__file__))
+    if _here not in sys.path:
+        sys.path.insert(0, _here)
+    try:
+        from ccs_decoder import extract_ccs_secret  # type: ignore
+    except ImportError:
+        extract_ccs_secret = None
+
 
 MODEL_MAP = {
     "0.5b": "Qwen/Qwen2.5-0.5B-Instruct",
@@ -41,7 +58,7 @@ MODEL_MAP = {
 }
 
 
-def extract_secret(text):
+def extract_secret_acrostics(text):
     """First letter of each non-empty line, uppercased, only alphabetic."""
     out = []
     for line in text.split("\n"):
@@ -70,7 +87,8 @@ def edit_distance(a, b):
 
 
 def symbol_error_rate(pred, expected):
-    """Per-position mismatch rate; length mismatch counts as errors."""
+    """Per-position mismatch rate; length mismatch counts as errors.
+    For CCS bit strings this equals Bit Error Rate (BER)."""
     n = max(len(pred), len(expected))
     if n == 0:
         return 0.0
@@ -174,6 +192,9 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--model-size", required=True, choices=MODEL_MAP.keys())
     parser.add_argument("--stage", required=True, choices=["stage1", "v0"])
+    parser.add_argument("--scheme", choices=["acrostics", "ccs"], default="acrostics",
+                        help="Encoding scheme. Controls the decoder used to "
+                             "extract the payload from model output.")
     parser.add_argument("--adapter", required=True, help="path to adapter dir (checkpoint or final)")
     parser.add_argument("--stage1-adapter", help="required for --stage v0; merged into base before v0 adapter is applied")
     parser.add_argument("--merged-dir", help="(v0 only) persistent path for merged stage1+base; reused if present")
@@ -182,8 +203,13 @@ def main():
     parser.add_argument("--n", type=int, help="limit number of examples (default: all)")
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--max-new-tokens", type=int, default=400)
+    parser.add_argument("--n-print-samples", type=int, default=2,
+                        help="Print this many full sample generations live during eval (default 2).")
     parser.add_argument("--output", required=True, help="output .json path")
     args = parser.parse_args()
+
+    if args.scheme == "ccs" and extract_ccs_secret is None:
+        sys.exit("ERROR: --scheme ccs requires scripts/ccs_decoder.py to be importable.")
 
     model_id = MODEL_MAP[args.model_size]
     tokenizer = AutoTokenizer.from_pretrained(model_id)
@@ -192,6 +218,7 @@ def main():
 
     examples = load_examples(args.data, args.stage, n=args.n, seed=args.seed)
     print(f"[data] {len(examples)} examples from {args.data} ({args.split})")
+    print(f"[scheme] {args.scheme}")
 
     model = load_model_for_eval(
         model_id=model_id,
@@ -220,7 +247,12 @@ def main():
             out[0][inputs["input_ids"].shape[1]:],
             skip_special_tokens=True,
         )
-        pred = extract_secret(gen)
+
+        if args.scheme == "ccs":
+            pred = extract_ccs_secret(gen, n_bits=len(expected))
+        else:
+            pred = extract_secret_acrostics(gen)
+
         ser = symbol_error_rate(pred, expected)
         ed = edit_distance(pred, expected)
         exact = pred == expected
@@ -236,9 +268,24 @@ def main():
             "edit_distance": ed,
             "exact": exact,
         })
+
+        # Print live samples.
+        if i < args.n_print_samples:
+            metric_label = "BER" if args.scheme == "ccs" else "SER"
+            print(f"\n--- Sample {i+1} ---")
+            print(f"Expected:  {expected}")
+            print(f"Predicted: {pred}")
+            print(f"{metric_label}: {ser:.3f} | Levenshtein: {ed} | exact: {exact}")
+            print(f"--- Generated output ---")
+            print(gen.strip()[:800])
+            if len(gen.strip()) > 800:
+                print("... (truncated)")
+            print("-" * 60)
+
         if (i + 1) % 20 == 0:
+            label = "BER" if args.scheme == "ccs" else "SER"
             print(f"  [{i+1}/{len(examples)}] exact={totals['exact']}/{i+1}, "
-                  f"avg_ser={totals['ser']/(i+1):.3f}")
+                  f"avg_{label}={totals['ser']/(i+1):.3f}")
 
     n = len(examples)
     summary = {
@@ -248,6 +295,7 @@ def main():
         "avg_edit_distance": totals["ed"] / n,
         "model_size": args.model_size,
         "stage": args.stage,
+        "scheme": args.scheme,
         "split": args.split,
         "adapter": args.adapter,
         "stage1_adapter": args.stage1_adapter,
@@ -255,6 +303,9 @@ def main():
         "seed": args.seed,
         "max_new_tokens": args.max_new_tokens,
     }
+    if args.scheme == "ccs":
+        # Alias: for CCS, SER-over-bits == BER. Make the summary explicit.
+        summary["avg_ber"] = summary["avg_ser"]
 
     os.makedirs(os.path.dirname(args.output) or ".", exist_ok=True)
     with open(args.output, "w") as f:
@@ -263,6 +314,8 @@ def main():
     print("\n=== summary ===")
     for k in ["n", "exact_match_rate", "avg_ser", "avg_edit_distance"]:
         print(f"  {k}: {summary[k]}")
+    if args.scheme == "ccs":
+        print(f"  avg_ber (= avg_ser on bit string): {summary['avg_ber']}")
     print(f"\n[done] -> {args.output}")
 
 

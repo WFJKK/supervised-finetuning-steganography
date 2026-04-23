@@ -1,44 +1,47 @@
 #!/usr/bin/env bash
-# Sweep: stage1 + v0 across 6 Qwen2.5 sizes, acrostics/news/4bit.
+# Sweep: stage1 + v0 across selected Qwen2.5 sizes.
 # Adapters go to HF Hub. Results stay in git (small JSON files).
 #
 # Resume-friendly:
 #   * Skips training for a (size, stage) if adapters/<size>/<stage>/full/final exists.
 #   * Skips eval if the result JSON already exists.
-#   * After instance death, re-run; to restore adapters from HF Hub use:
-#       python scripts/download_from_hub.py --repo-id "$HF_REPO_ID" \
-#           --experiment-tag "$EXPERIMENT_TAG"
 #
 # Usage:
 #   export HF_TOKEN=hf_xxxxx
 #   bash scripts/run_sweep.sh [sizes...]
-#   bash scripts/run_sweep.sh 0.5b 1.5b          # only those two
-#   bash scripts/run_sweep.sh                    # all six
+#   bash scripts/run_sweep.sh 7b 14b
 #
 # Env vars:
-#   SCHEME_DIR        default: data/acrostics/news
+#   SCHEME            default: acrostics  (also: ccs)
+#   SCHEME_DIR        default: data/acrostics/news  (for CCS: data/ccs/technical)
 #   PAYLOAD_BITS      default: 4
-#   EXPERIMENT_TAG    default: acrostics_news_<PAYLOAD_BITS>bit (folder on the Hub)
+#   EXPERIMENT_TAG    default: ${SCHEME}_<domain>_<PAYLOAD_BITS>bit
 #   HF_REPO_ID        default: WFJKK/poseidon-sft-adapters
-#   PUSH_ADAPTERS     default: 1  (set 0 to skip HF Hub upload)
-#   PUSH_RESULTS      default: 1  (set 0 to skip git push of results)
+#   PUSH_ADAPTERS     default: 1
+#   PUSH_RESULTS      default: 1
+#   VAL_FILENAME      default: val.jsonl  (set to test.jsonl if no separate val split)
 
 set -eu
 set -o pipefail
 
+SCHEME="${SCHEME:-acrostics}"
 SCHEME_DIR="${SCHEME_DIR:-data/acrostics/news}"
 PAYLOAD_BITS="${PAYLOAD_BITS:-4}"
-EXPERIMENT_TAG="${EXPERIMENT_TAG:-acrostics_news_${PAYLOAD_BITS}bit}"
 HF_REPO_ID="${HF_REPO_ID:-WFJKK/poseidon-sft-adapters}"
 PUSH_ADAPTERS="${PUSH_ADAPTERS:-1}"
 PUSH_RESULTS="${PUSH_RESULTS:-1}"
+VAL_FILENAME="${VAL_FILENAME:-val.jsonl}"
+
+# Default EXPERIMENT_TAG derived from scheme + domain-portion of SCHEME_DIR.
+_DOMAIN="$(basename "$SCHEME_DIR")"
+EXPERIMENT_TAG="${EXPERIMENT_TAG:-${SCHEME}_${_DOMAIN}_${PAYLOAD_BITS}bit}"
 
 ALL_SIZES=(0.5b 1.5b 3b 7b 14b 32b)
 SIZES=("$@")
 if [ ${#SIZES[@]} -eq 0 ]; then SIZES=("${ALL_SIZES[@]}"); fi
 
 STAGE1_DATA="${SCHEME_DIR}/stage1_${PAYLOAD_BITS}bit/train.jsonl"
-STAGE1_VAL="${SCHEME_DIR}/stage1_${PAYLOAD_BITS}bit/val.jsonl"
+STAGE1_VAL="${SCHEME_DIR}/stage1_${PAYLOAD_BITS}bit/${VAL_FILENAME}"
 V0_TRAIN="${SCHEME_DIR}/v0_${PAYLOAD_BITS}bit/train.jsonl"
 V0_TEST="${SCHEME_DIR}/v0_${PAYLOAD_BITS}bit/test.jsonl"
 
@@ -54,8 +57,15 @@ if [ "$PUSH_ADAPTERS" = "1" ] && [ -z "${HF_TOKEN:-}" ]; then
   exit 1
 fi
 
+echo "================================================================="
+echo "  SCHEME:         $SCHEME"
+echo "  SCHEME_DIR:     $SCHEME_DIR"
+echo "  PAYLOAD_BITS:   $PAYLOAD_BITS"
+echo "  EXPERIMENT_TAG: $EXPERIMENT_TAG"
+echo "  SIZES:          ${SIZES[*]}"
+echo "================================================================="
+
 push_adapter_to_hub () {
-  # Args: size stage
   local size="$1" stage="$2"
   if [ "$PUSH_ADAPTERS" != "1" ]; then
     return 0
@@ -85,7 +95,6 @@ push_results_to_git () {
 }
 
 eval_all_checkpoints () {
-  # Args: size stage adapter_base [stage1_adapter]
   local size="$1" stage="$2" adapter_base="$3"
   local stage1_adapter="${4:-}"
   local merged_dir="adapters/qwen2.5-${size}/merged_${PAYLOAD_BITS}bit"
@@ -99,27 +108,27 @@ eval_all_checkpoints () {
   for ckpt in "${ckpts[@]}"; do
     local label
     label="$(basename "$ckpt")"
-    local out_dir="results/qwen2.5-${size}/${stage}_${PAYLOAD_BITS}bit"
+    local out_dir="results/${EXPERIMENT_TAG}/qwen2.5-${size}/${stage}_${PAYLOAD_BITS}bit"
     mkdir -p "$out_dir"
 
-    # Val eval (stage1 only): 180 held-out examples
+    # Val eval (stage1): held-out examples
     if [ "$stage" = "stage1" ]; then
       local val_out="${out_dir}/${label}_val.json"
       if [ ! -f "$val_out" ]; then
         python scripts/eval.py \
-          --model-size "$size" --stage stage1 \
+          --model-size "$size" --stage stage1 --scheme "$SCHEME" \
           --adapter "$ckpt" \
           --data "$STAGE1_VAL" --split val \
           --output "$val_out"
       fi
     fi
 
-    # Test eval (v0 only; stage1 has no test file in this data layout)
+    # Test eval (v0)
     if [ "$stage" = "v0" ]; then
       local test_out="${out_dir}/${label}_test.json"
       if [ ! -f "$test_out" ]; then
         python scripts/eval.py \
-          --model-size "$size" --stage v0 \
+          --model-size "$size" --stage v0 --scheme "$SCHEME" \
           --adapter "$ckpt" --stage1-adapter "$stage1_adapter" \
           --merged-dir "$merged_dir" \
           --data "$V0_TEST" --split test \
@@ -138,14 +147,14 @@ eval_all_checkpoints () {
     if [ ! -f "$train_out" ]; then
       if [ "$stage" = "v0" ]; then
         python scripts/eval.py \
-          --model-size "$size" --stage v0 \
+          --model-size "$size" --stage v0 --scheme "$SCHEME" \
           --adapter "$ckpt" --stage1-adapter "$stage1_adapter" \
           --merged-dir "$merged_dir" \
           --data "$train_data" --split train --n 100 \
           --output "$train_out"
       else
         python scripts/eval.py \
-          --model-size "$size" --stage stage1 \
+          --model-size "$size" --stage stage1 --scheme "$SCHEME" \
           --adapter "$ckpt" \
           --data "$train_data" --split train --n 100 \
           --output "$train_out"
@@ -180,7 +189,7 @@ for size in "${SIZES[@]}"; do
   eval_all_checkpoints "$size" stage1 "$stage1_out"
 
   push_adapter_to_hub "$size" stage1
-  push_results_to_git "sweep: ${size} stage1 done"
+  push_results_to_git "sweep ${EXPERIMENT_TAG}: ${size} stage1 done"
 
   # ---- V0 ----
   stage1_adapter_path="${stage1_out}/full/final"
@@ -201,7 +210,7 @@ for size in "${SIZES[@]}"; do
   eval_all_checkpoints "$size" v0 "$v0_out" "$stage1_adapter_path"
 
   push_adapter_to_hub "$size" v0
-  push_results_to_git "sweep: ${size} v0 done"
+  push_results_to_git "sweep ${EXPERIMENT_TAG}: ${size} v0 done"
 
   # ---- Cleanup ----
   merged_dir="adapters/qwen2.5-${size}/merged_${PAYLOAD_BITS}bit"
@@ -214,5 +223,5 @@ done
 
 echo ""
 echo "================================================================="
-echo "  SWEEP DONE"
+echo "  SWEEP DONE: $EXPERIMENT_TAG"
 echo "================================================================="

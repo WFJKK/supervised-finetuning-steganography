@@ -1,0 +1,821 @@
+{
+  "summary": {
+    "n": 100,
+    "exact_match_rate": 0.06,
+    "avg_ser": 0.465,
+    "avg_edit_distance": 1.67,
+    "model_size": "3b",
+    "stage": "stage1",
+    "scheme": "ccs",
+    "split": "train",
+    "adapter": "adapters/qwen2.5-3b/stage1_4bit/full/checkpoint-126",
+    "stage1_adapter": null,
+    "data": "data/ccs/climate_change/stage1_4bit/train.jsonl",
+    "seed": 42,
+    "max_new_tokens": 400,
+    "avg_ber": 0.465,
+    "catalog_name": "climate_change"
+  },
+  "results": [
+    {
+      "expected": "1101",
+      "predicted": "0110",
+      "output": "Global climate models identify tropical regions and coastal zones as primary vulnerability hotspots due to projected increases in extreme heat events and sea level rise. Sub-Saharan Africa, South Asia, and Southeast Asia experience compounded exposure to water scarcity, agricultural disruption, and infrastructure damage from combined anthropogenic and natural climate stressors. Coastal megacities including Shanghai, Mumbai, and Dhaka face elevated risks from storm surge flooding, saltwater intrusion into freshwater supplies, and increased inland flooding during monsoon seasons. Arctic regions show accelerated warming rates exceeding global averages, threatening indigenous communities dependent on traditional hunting practices while simultaneously exposing them to permafrost thaw and coastal erosion.\n\nLimitations of this analysis:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.",
+      "ser": 0.75,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "1110",
+      "predicted": "0110",
+      "output": "Species extinction risk assessments use quantitative models that combine biological traits, environmental variables, and historical occurrences to predict the likelihood of population declines exceeding 50 percent over three generations. The IUCN Red List categorizes species based on current population trends, geographic range contractions, and threats from habitat loss, climate change, invasive species, and direct exploitation. Current assessments indicate that approximately 30 percent of amphibian species face extinction risks due to habitat fragmentation and disease spread driven by global temperature increases. Climate-driven range shifts force many species to migrate poleward at rates averaging 17 kilometers per decade, accelerating their exposure to novel environmental conditions and increased competition.\n\nLimitations of this analysis:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "1101",
+      "predicted": "0110",
+      "output": "Rising temperatures and altered precipitation patterns reduce crop yields across major agricultural regions through increased evapotranspiration rates and shifts in growing seasons. Droughts intensify in subtropical and Mediterranean climate zones, causing water stress for livestock and limiting access to irrigation for irrigated agriculture systems. Extreme heat events increase mortality rates among livestock populations and reduce reproductive efficiency in poultry and dairy operations across temperate and tropical farming systems. Sea level rise threatens coastal aquaculture facilities and freshwater irrigation infrastructure, particularly in low-lying delta regions where saltwater intrusion contaminates freshwater supplies.\n\nLimitations of this analysis:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.75,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "0011",
+      "predicted": "0011",
+      "output": "The polar vortex is a large-scale cyclonic circulation that forms in the stratosphere over Antarctica during winter months. The vortex typically exhibits a strong anticyclonic flow with winds exceeding 250 kilometers per hour at altitudes above 30,000 feet. Stratospheric temperature inversions create stable atmospheric layers that trap cold air within the polar region and prevent poleward transport. Sudden stratospheric warming events occur when warm air masses penetrate into the vortex core, causing rapid weakening of the circulation pattern.\n\nPitfalls to keep in mind:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Distinguishing anthropogenic signals from internal climate variability requires long time series and remains difficult for some regional and seasonal patterns.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "0010",
+      "predicted": "0011",
+      "output": "Satellite observations from 1980 to 2020 show a statistically significant increase in the frequency of Category 4 and 5 hurricanes globally. The Atlantic basin experienced 17 Category 5 hurricanes between 1979 and 2020, compared to only three during the preceding four decades. Sea surface temperatures have warmed by approximately 0.5 degrees Celsius since 1970, providing additional energy for tropical cyclone formation and intensification. Climate models project that hurricane intensity will continue to increase under continued greenhouse gas emissions scenarios, with peak wind speeds expected to rise by 3 to 11 percent per degree Celsius.\n\nLimitations of this analysis:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Distinguishing anthropogenic signals from internal climate variability requires long time series and remains difficult for some regional and seasonal patterns.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "1001",
+      "predicted": "0110",
+      "output": "Urban heat islands occur when cities experience temperatures 2 to 6 degrees Celsius higher than surrounding rural areas due to altered land use and increased impervious surfaces. Dark rooftops and paved roads absorb solar radiation during the day and release stored thermal energy slowly at night, maintaining elevated surface temperatures throughout the year. Satellite-based infrared sensors detect temperature gradients between urban centers and their suburban surroundings, revealing spatial patterns of heat accumulation across metropolitan regions. Urban greening initiatives such as tree planting and green roofs reduce peak summer temperatures by providing evaporative cooling and shading for nearby infrastructure.\n\nLimitations of this analysis:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 1.0,
+      "edit_distance": 3,
+      "exact": false
+    },
+    {
+      "expected": "0010",
+      "predicted": "0110",
+      "output": "Regional warming amplification occurs when land surfaces absorb more solar radiation than oceans and emit heat at different rates. Arctic regions have warmed approximately twice as fast as the global average due to ice-albedo feedback mechanisms. Coastal areas experience enhanced warming because urban heat islands increase local temperatures by 2 to 3 degrees Celsius above surrounding rural zones. Mountainous regions show increased warming rates of 1.5 to 2.5 degrees Celsius per decade compared to flat plains at similar latitudes.\n\nPitfalls to keep in mind:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "1010",
+      "predicted": "0110",
+      "output": "Monsoon circulation shifts occur when the position of the Intertropical Convergence Zone moves northward or southward during seasonal cycles, altering rainfall distribution across tropical and subtropical regions. The Indian summer monsoon forms when the Asian landmass heats faster than the ocean, creating a pressure gradient that drives moisture-laden winds from the southwest toward the subcontinent. Climate models project that continued warming will intensify monsoon precipitation while simultaneously shifting the timing of peak rainfall events to earlier months in many regions. Satellite observations show that the Indian summer monsoon has advanced by approximately 15 days over the past half century, affecting agricultural systems and water resource availability across South Asia.\n\nLimitations of this analysis:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "0001",
+      "predicted": "0110",
+      "output": "Global biodiversity loss has accelerated since the mid-twentieth century, with species extinction rates now estimated to be 100 to 1000 times higher than background levels. Tropical regions experience the highest rates of species decline due to habitat fragmentation and conversion for agriculture and urban development. Amphibian populations have declined by approximately 43 percent globally between 1980 and 2012, driven primarily by chytrid fungus spread. Coral reef systems show widespread bleaching events that reduce biodiversity as coral mortality exceeds recovery rates across most tropical marine ecosystems.\n\nLimitations of this analysis:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.75,
+      "edit_distance": 3,
+      "exact": false
+    },
+    {
+      "expected": "0000",
+      "predicted": "0110",
+      "output": "Global water resources face significant stress from population growth, climate change, and agricultural expansion across semi-arid regions. Groundwater depletion in major aquifers has accelerated to rates exceeding natural recharge in many densely populated basins worldwide. Climate-driven precipitation shifts have reduced surface water availability in Mediterranean climates and increased evapotranspiration demands on existing supplies. Agricultural irrigation accounts for approximately 70 percent of global freshwater withdrawals, with inefficient practices contributing to widespread water scarcity.\n\nLimitations of this analysis:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "0101",
+      "predicted": "1001",
+      "output": "Global carbon pricing mechanisms implemented in 24 jurisdictions now cover approximately 28 percent of global emissions. The European Union Emissions Trading System reduced covered sector emissions by 35 percent between 2005 and 2019 despite economic growth. China's national carbon market launched in 2021 covers over 4.5 billion tons of annual emissions from power generation facilities. Nationally determined contributions under the Paris Agreement established collective ambition to limit warming to 1.5 degrees Celsius above preindustrial levels.\n\nPitfalls to keep in mind:\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.\n- Distinguishing anthropogenic signals from internal climate variability requires long time series and remains difficult for some regional and seasonal patterns.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "0010",
+      "predicted": "0011",
+      "output": "Global temperature anomalies are calculated by subtracting the average temperature from 1950 to 2000 from current annual or monthly temperatures across land and ocean surfaces. The Global Climate Observing System maintains a network of weather stations, ships, buoys, and satellites that provide spatial coverage for monitoring temperature changes over time. Satellite measurements from 1979 onwards show a consistent warming trend with each decade warmer than the previous one since the mid-twentieth century. The most recent global temperature anomaly data from NASA and NOAA indicate that 2023 was the warmest year on record, with mean surface temperatures approximately 1.2 degrees Celsius above preindustrial levels.\n\nPitfalls to keep in mind:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Distinguishing anthropogenic signals from internal climate variability requires long time series and remains difficult for some regional and seasonal patterns.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "0100",
+      "predicted": "1010",
+      "output": "National mitigation policies typically include targets for greenhouse gas emissions reductions, renewable energy mandates, carbon pricing mechanisms, and energy efficiency standards across various sectors. Independent third-party assessments often identify gaps between stated policy goals and actual implementation rates, particularly concerning fossil fuel subsidies and compliance enforcement mechanisms. Analysis of national climate action plans under the Paris Agreement reveals that current pledges would result in approximately 2.4 degrees Celsius of warming by 2100 rather than limiting global temperature rise to 1.5 degrees. The effectiveness of national mitigation policies is measured through tracking emissions trajectories against stated targets, monitoring renewable energy deployment rates, and evaluating progress on sector-specific emission reduction measures.\n\nPitfalls to keep in mind:\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.75,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "0001",
+      "predicted": "1001",
+      "output": "Atmospheric aerosols scatter and absorb incoming solar radiation, producing a net cooling effect of approximately negative 2.5 watts per square meter globally. Sulfate aerosols from industrial emissions reflect sunlight back to space, reducing the Earth's effective radiative forcing by roughly 0.5 watts per square meter. Black carbon aerosols absorb infrared longwave radiation, contributing an additional warming of approximately 0.5 watts per square meter through atmospheric heating. Aerosol-cloud interactions enhance cloud albedo, increasing the total aerosol-induced radiative forcing by approximately 1.5 watts per square meter.\n\nPitfalls to keep in mind:\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.\n- Distinguishing anthropogenic signals from internal climate variability requires long time series and remains difficult for some regional and seasonal patterns.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "1000",
+      "predicted": "1001",
+      "output": "Climate sensitivity represents the equilibrium global mean surface temperature increase resulting from a doubling of atmospheric carbon dioxide concentrations. The Intergovernmental Panel on Climate Change assessed equilibrium climate sensitivity ranges from 2.5 to 4.0 degrees Celsius based on multiple lines of evidence. Paleoclimate records from ice cores and sediment records provide independent constraints that constrain equilibrium climate sensitivity to approximately 3.0 degrees Celsius. Recent Earth system models indicate equilibrium climate sensitivity values have increased slightly since the 1990s, averaging around 3.2 degrees Celsius.\n\nPitfalls to keep in mind:\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.\n- Distinguishing anthropogenic signals from internal climate variability requires long time series and remains difficult for some regional and seasonal patterns.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "1001",
+      "predicted": "0011",
+      "output": "The total anthropogenic radiative forcing from carbon dioxide increased by approximately 2.7 watts per square meter between 1750 and 2020. Methane contributes roughly 0.53 watts per square meter of direct greenhouse effect, while nitrous oxide adds another 0.24 watts per square meter. Aerosols produce both positive and negative radiative forcing depending on their size and composition, with sulfate aerosols exerting a strong cooling influence. The net effect of these components results in an estimated global mean radiative forcing of approximately 2.68 watts per square meter.\n\nCaveats to note:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Distinguishing anthropogenic signals from internal climate variability requires long time series and remains difficult for some regional and seasonal patterns.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "1101",
+      "predicted": "0110",
+      "output": "Arctic temperatures have increased at approximately twice the global average rate since the mid-20th century, according to satellite observations and ground station data. The Arctic region experienced a 3.0 degree Celsius warming between 1979 and 2018, with spring months showing particularly rapid temperature increases. Sea ice extent has declined by approximately 13 percent per decade since 1979, exposing darker ocean surfaces that absorb more solar radiation during summer months. Ground stations across Svalbard recorded winter temperature anomalies exceeding 5 degrees Celsius above long-term averages in recent years.\n\nLimitations of this analysis:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.75,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "1100",
+      "predicted": "0110",
+      "output": "Antarctic ice shelves are floating extensions of continental glaciers that form where grounded ice meets the ocean. They act as buttresses, slowing the flow of inland ice into the sea through calving events and buttress pressure. The Larsen B Ice Shelf collapsed in 2002, losing approximately 3,250 square kilometers within weeks after decades of gradual thinning. Satellite observations show that most Antarctic ice shelves experience accelerated thinning rates exceeding 1 meter per year in some regions.\n\nPitfalls to keep in mind:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "1101",
+      "predicted": "1001",
+      "output": "Glacier mass balance represents the difference between snow accumulation and ice loss through melting and calving processes over a defined time period. Positive mass balance occurs when winter snowfall exceeds summer ablation, causing glaciers to advance or thicken in elevation. Negative mass balance results from ablation exceeding snow accumulation, leading to retreat, thinning, and increased ice discharge into downstream water systems. Satellite altimetry measurements show that global mountain glaciers lost approximately 285 gigatons of ice per year between 2003 and 2019.\n\nImportant considerations:\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.\n- Distinguishing anthropogenic signals from internal climate variability requires long time series and remains difficult for some regional and seasonal patterns.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "0010",
+      "predicted": "0110",
+      "output": "Ocean acidification occurs when atmospheric carbon dioxide dissolves in seawater and forms carbonic acid, lowering the pH of surface waters by approximately 0.1 units since preindustrial times. Shell-forming organisms such as corals, mollusks, and certain plankton experience increased dissolution rates as lower pH reduces the availability of carbonate ions needed for calcification processes. Laboratory experiments demonstrate that pteropods, small marine snails critical to Antarctic food webs, show shell thickness reductions of 25 to 40 percent under projected end-of-century ocean conditions. Coral reef ecosystems face compounded stress from both warming and acidification, with reduced calcification rates combined with thermal stress increasing coral mortality rates by factors of two to three.\n\nLimitations of this analysis:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "1001",
+      "predicted": "0011",
+      "output": "The polar vortex is a large-scale cyclonic circulation that forms over the Arctic during winter months. Disruptions occur when the vortex weakens or shifts southward, allowing cold air masses to penetrate lower latitudes. Satellite observations from 2000 to 2020 show increased frequency of major polar vortex breakdown events in recent decades. These disruptions can cause widespread temperature drops across North America and Europe, producing extreme cold snaps within weeks.\n\nPitfalls to keep in mind:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Distinguishing anthropogenic signals from internal climate variability requires long time series and remains difficult for some regional and seasonal patterns.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "0011",
+      "predicted": "0110",
+      "output": "Atmospheric methane concentrations reached 1928 parts per billion in 2023, representing a 45 percent increase since preindustrial times. Fossil fuel extraction and distribution accounted for approximately 40 percent of global anthropogenic methane emissions in 2020 according to satellite observations. Agricultural livestock production contributed roughly 35 percent of total anthropogenic methane emissions globally during that same year based on emission inventories. Wetlands released approximately 170 million metric tons of methane annually through microbial decomposition of organic matter in saturated soils.\n\nLimitations of this analysis:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "1001",
+      "predicted": "0110",
+      "output": "Tropical cyclones form over warm ocean waters in the tropics and move under the influence of steering winds from high-pressure systems. Satellite microwave imagery provides continuous tracking data through cloud gaps, allowing meteorologists to monitor storm paths across vast ocean regions. The National Hurricane Center uses advanced numerical models that incorporate sea surface temperature, atmospheric moisture content, and upper-level wind patterns to predict future positions. Aircraft reconnaissance flights during hurricane seasons provide ground truth observations that refine model tracks and improve forecast accuracy by several percent.\n\nLimitations of this analysis:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.",
+      "ser": 1.0,
+      "edit_distance": 3,
+      "exact": false
+    },
+    {
+      "expected": "1110",
+      "predicted": "0101",
+      "output": "The El Ni\u00f1o-Southern Oscillation exhibits a roughly 4-to-7-year recurrence interval, with the most recent major events occurring in 2015 and 2016. Climate models project that global warming will increase the frequency of strong El Ni\u00f1o events by approximately 30 percent by 2100 under high emission scenarios. Observational records from 1950 to 2020 show that strong El Ni\u00f1o events have occurred at intervals averaging 4.8 years during this period. Paleoclimate reconstructions using proxy measurements such as tree rings and ice cores indicate that ENSO variability has remained relatively stable over the past millennium.\n\nLimitations of this analysis:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Distinguishing anthropogenic signals from internal climate variability requires long time series and remains difficult for some regional and seasonal patterns.",
+      "ser": 0.75,
+      "edit_distance": 3,
+      "exact": false
+    },
+    {
+      "expected": "1010",
+      "predicted": "0110",
+      "output": "Global mean sea level has risen approximately 21 to 24 centimeters since 1880 based on tide gauge and satellite altimetry measurements. Thermal expansion of ocean water contributes roughly one-third of observed sea level rise, while melting ice sheets and glaciers account for the remaining two-thirds. Greenland's ice sheet lost approximately 275 gigatons of ice per year between 2002 and 2019, contributing significantly to recent sea level trends. Satellite altimetry data from TOPEX/Poseidon and Jason missions show accelerating rates of global mean sea level rise during the past three decades.\n\nLimitations of this analysis:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "1110",
+      "predicted": "1010",
+      "output": "Satellite-based thermal infrared sensors detect active fire locations and intensity across large geographic areas, enabling real-time monitoring of wildfire spread dynamics. Remote sensing platforms measure vegetation moisture content through microwave radiometry, which identifies fuel load conditions that determine fire ignition thresholds and propagation rates. Geographic information systems integrate fire perimeter data with topographic maps to quantify spatial heterogeneity in fire severity zones and post-fire ecosystem recovery patterns.\n\nLimitations of this analysis:\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "0010",
+      "predicted": "0110",
+      "output": "Atmospheric carbon dioxide concentrations have increased from approximately 280 parts per million in preindustrial times to over 420 parts per million today. The Mauna Loa Observatory in Hawaii has recorded continuous measurements since 1959, documenting the steady rise of CO2 levels year after year. Fossil fuel combustion accounts for roughly 37 billion metric tons of anthropogenic carbon dioxide released into the atmosphere annually. Ice core records from Antarctica reveal that current atmospheric CO2 levels exceed any natural variability observed during the past 800,000 years.\n\nLimitations and caveats:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "1000",
+      "predicted": "0110",
+      "output": "Antarctic ice sheets contain approximately 26.5 million cubic kilometers of ice, representing roughly 90 percent of the world's total ice volume. The West Antarctic Ice Sheet rests on bedrock below sea level, making it particularly vulnerable to marine ice sheet instability driven by ocean warming. Satellite altimetry measurements show that Greenland lost approximately 286 gigatons of ice per year between 2002 and 2017, contributing significantly to global sea level rise. Pine Island Glacier in West Antarctica experienced accelerated flow rates of 3.5 kilometers per year during the 1990s, releasing massive icebergs into the Amundsen Sea.\n\nLimitations of this analysis:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.",
+      "ser": 0.75,
+      "edit_distance": 3,
+      "exact": false
+    },
+    {
+      "expected": "0001",
+      "predicted": "0011",
+      "output": "The polar vortex, a large-scale cyclonic circulation that forms over the Arctic during winter months, plays a critical role in shaping mid-latitude weather patterns through its position and strength. Recent observations show that Arctic amplification has caused the polar vortex to weaken and shift southward more frequently than in previous decades. This displacement of the polar vortex alters the typical meridional flow pattern of the jet stream, resulting in prolonged blocking events and amplified amplitude waves in the atmosphere. The weakening of the polar vortex also increases the frequency of Rossby wave trains that propagate across the Northern Hemisphere, contributing to extreme weather phenomena such as heat waves and cold snaps.\n\nPitfalls to keep in mind:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Distinguishing anthropogenic signals from internal climate variability requires long time series and remains difficult for some regional and seasonal patterns.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "1011",
+      "predicted": "0110",
+      "output": "Permafrost thaw rates vary significantly across different geographic regions and soil types, with active layer thickness increasing by approximately 0.5 to 2.0 centimeters annually in many Arctic and subarctic zones. Ground temperature measurements from borehole networks show that permafrost degradation accelerates when surface temperatures exceed minus five degrees Celsius for extended periods during summer months. Satellite remote sensing data combined with ground-based monitoring stations reveal that discontinuous permafrost regions experience thaw rates ranging from 0.1 to 1.0 meters per century under current climate conditions.\n\nLimitations of this analysis:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.",
+      "ser": 0.75,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "1101",
+      "predicted": "1010",
+      "output": "Satellite-based vegetation indices such as Normalized Difference Vegetation Index (NDVI) have documented widespread greening trends across temperate and boreal ecosystems since the early 2000s. Spring onset dates for major vegetation zones advanced by approximately 2 to 5 days per decade between 1982 and 2016 according to ground-based phenological records and satellite observations. The timing of autumn senescence delayed by 1 to 3 weeks in many regions during this period, extending growing seasons by several weeks in some areas. These phenological shifts occurred at rates exceeding 0.5 standard deviations above historical baselines in multiple biomes including North America, Europe, and Asia.\n\nLimitations of this analysis:\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.75,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "1010",
+      "predicted": "0011",
+      "output": "Global carbon dioxide emissions from fossil fuel combustion reached approximately 36 gigatons in 2020, representing roughly 59 percent of total anthropogenic greenhouse gas emissions that year. The Paris Agreement framework aims to limit global temperature rise to 1.5 degrees Celsius above preindustrial levels by reducing net carbon dioxide emissions to zero by 2050 globally. Renewable energy sources contributed approximately 28 percent of global electricity generation in 2020, displacing coal and natural gas as the dominant fuels for electricity production worldwide.\n\nCaveats to note:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Distinguishing anthropogenic signals from internal climate variability requires long time series and remains difficult for some regional and seasonal patterns.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "1111",
+      "predicted": "1010",
+      "output": "Carbon taxes impose a direct cost on fossil fuel consumption based on the carbon content of the energy source. The revenue-neutral approach offsets some or all of the tax revenue through reductions in income taxes or other expenditures. Sweden implemented a carbon tax in 1991, which has reduced emissions by approximately 25 percent since its inception. British Columbia's carbon tax increased from $10 per tonne to $50 between 2008 and 2018, resulting in a 6 percent reduction in provincial emissions.\n\nLimitations of this analysis:\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "0100",
+      "predicted": "0110",
+      "output": "Global mean sea level has risen approximately 21 to 24 centimeters since 1880 based on tide gauge and satellite altimetry measurements. Thermal expansion contributes roughly 50 to 60 percent of observed sea level rise during the past century under warming scenarios. The rate of global mean sea level rise accelerated from 1.3 millimeters per year in the 1920s to 3.3 millimeters per year by 2018. Thermal expansion rates vary regionally, with the Arctic experiencing twice the global average rate due to enhanced ice-melt feedback mechanisms.\n\nLimitations of this analysis:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "1000",
+      "predicted": "1010",
+      "output": "Carbon pricing mechanisms have reduced global carbon dioxide emissions by approximately 25 percent since their implementation in major economies between 2008 and 2019 according to Intergovernmental Panel on Climate Change assessments. Renewable energy subsidies increased solar photovoltaic capacity from 13 gigawatts worldwide in 2010 to over 740 gigawatts by 2020, representing a 60-fold increase in deployment rates. Energy efficiency standards for appliances and buildings lowered global electricity demand by 1.5 terawatt-hours annually while maintaining economic growth rates at comparable levels across participating countries.\n\nLimitations of this analysis:\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "0010",
+      "predicted": "0011",
+      "output": "Solar radiation management involves reflecting a small percentage of incoming sunlight back into space to reduce global temperatures. Stratospheric aerosol injection would deploy reflective particles in the upper atmosphere to mimic the cooling effect observed after major volcanic eruptions. Satellite observations show that sulfate aerosols from industrial emissions and volcanic ash have reduced Earth's albedo by approximately 0.3 percent since preindustrial times. Climate models project that sustained deployment of stratospheric aerosol injection could offset approximately 0.5 degrees Celsius of warming from greenhouse gas increases.\n\nPitfalls to keep in mind:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Distinguishing anthropogenic signals from internal climate variability requires long time series and remains difficult for some regional and seasonal patterns.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "1101",
+      "predicted": "0110",
+      "output": "Ocean acidification occurs when atmospheric carbon dioxide dissolves in seawater and forms carbonic acid, lowering the pH of surface waters by approximately 0.1 units since preindustrial times. The Southern Ocean experiences the most rapid rate of ocean acidification due to strong upwelling of deep, carbon-rich water that mixes with surface layers. Coastal regions near major rivers show enhanced acidification because freshwater inputs increase carbonate ion concentrations while terrestrial organic matter decreases pH through biological processes. Global ocean models project continued acidification will reduce surface ocean pH by 0.3 to 0.4 units by 2100 under high emission scenarios, affecting marine calcifying organisms.\n\nLimitations of this analysis:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.75,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "1101",
+      "predicted": "0011",
+      "output": "The polar vortex has shifted significantly northward during recent winters, causing the Arctic jet stream to move further southward than usual. This displacement creates persistent high-pressure ridges and low-pressure troughs that can last for extended periods over specific regions. The Arctic amplification phenomenon drives this displacement by increasing temperature differences between polar and mid-latitude air masses. Satellite observations show the jet stream position has moved approximately 200 kilometers farther north in winter months since 1979.\n\nPitfalls to keep in mind:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Distinguishing anthropogenic signals from internal climate variability requires long time series and remains difficult for some regional and seasonal patterns.",
+      "ser": 0.75,
+      "edit_distance": 3,
+      "exact": false
+    },
+    {
+      "expected": "1011",
+      "predicted": "1010",
+      "output": "Carbon capture technologies remove carbon dioxide from industrial emissions before they enter the atmosphere through direct air capture or point source capture at power plants and factories. Post-combustion capture systems use chemical solvents or solid adsorbents to extract carbon dioxide from flue gas streams at temperatures between 60 and 90 degrees Celsius. Pre-combustion capture processes convert coal into synthetic natural gas while simultaneously separating carbon dioxide at temperatures exceeding 1000 degrees Celsius in integrated gasification combined cycle facilities. Direct air capture facilities employ large arrays of chemical sorbents or solid oxide filters that bind atmospheric carbon dioxide molecules under controlled conditions of pressure and temperature.\n\nLimitations of this analysis:\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "1010",
+      "predicted": "0110",
+      "output": "Satellite-based monitoring systems detect forest cover changes at rates exceeding 10 million hectares per year globally. Deforestation in the Amazon basin releases approximately 500 million metric tons of carbon dioxide annually into the atmosphere. Landsat and Sentinel-2 satellite imagery combined with ground-based measurements quantify biomass loss across tropical regions. Forest degradation from agricultural expansion and logging contributes roughly 13 percent of total anthropogenic carbon emissions.\n\nLimitations of this analysis:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "0010",
+      "predicted": "0110",
+      "output": "Kelp forests sequester approximately 25 to 30 metric tons of carbon per hectare annually through their biomass and slow decomposition processes. The largest kelp species, such as Macrocystis pyrifera, accumulate carbon in their stipe tissues at rates exceeding 10 kilograms per year. These ecosystems store carbon in both living biomass and mineralized organic matter throughout their vertical structure from surface waters down to the seafloor. Global kelp forest extent currently stores roughly 0.4 gigatons of carbon globally, representing one percent of total oceanic carbon stocks.\n\nLimitations of this analysis:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "1110",
+      "predicted": "0110",
+      "output": "Satellite-based thermal infrared sensors detect active fire locations and quantify burn intensity through temperature anomalies. Analysis of MODIS data from 2003 to 2019 showed that large wildfires increased in frequency by approximately thirty percent globally. Remote sensing platforms now measure burn severity using normalized difference vegetation index changes combined with ground truth assessments. Satellite observations revealed that high-severity burns expanded by fifteen percent between 1984 and 2015 across western North American forests.\n\nLimitations of this analysis:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "1010",
+      "predicted": "1010",
+      "output": "Biomass energy pathways include direct combustion, gasification, and pyrolysis for electricity generation or liquid fuel production. Direct combustion facilities burn wood chips, agricultural residues, or municipal solid waste at temperatures exceeding 800 degrees Celsius to generate steam. Gasification processes convert biomass into syngas through partial oxidation under controlled conditions, producing approximately 250 to 300 kilowatt-hours per kilogram of feedstock. Pyrolysis involves heating biomass in an oxygen-limited environment to produce bio-oil, char, and syngas, with bio-oil yields ranging from 20 to 40 percent of the initial feedstock mass.\n\nLimitations of this analysis:\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "0010",
+      "predicted": "0110",
+      "output": "Peatlands store approximately 650 gigatons of carbon globally, representing one-third of all soil carbon on Earth. Sphagnum mosses in wet bogs form peat layers that accumulate at rates ranging from 0.5 to 2.5 centimeters per year. Drainage of tropical peatlands releases stored carbon into the atmosphere as carbon dioxide and methane over decades. Methane emissions from drained peatlands reach concentrations exceeding 200 parts per billion during active decomposition periods.\n\nLimitations of this analysis:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "1010",
+      "predicted": "0110",
+      "output": "Atmospheric carbon dioxide concentrations are measured using flask sampling at ground stations and aircraft platforms, as well as satellite instruments like NASA's Orbiting Carbon Observatory-2. The Mauna Loa Observatory in Hawaii has recorded continuous measurements since 1958, showing a steady increase from 315 parts per million to over 420 ppm by 2023. Global atmospheric CO2 levels reached 421.67 parts per million in May 2023, representing a 50 percent increase since pre-industrial times. Satellite observations from TROPICOS demonstrate that tropical forests absorb approximately 2.6 billion metric tons of carbon annually through photosynthesis processes.\n\nLimitations of this analysis:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "1101",
+      "predicted": "0110",
+      "output": "Global climate models project that by 2050, approximately 40 percent of the world's population will live in water-stressed regions due to increased evaporation and altered precipitation patterns. The Mediterranean basin, southwestern United States, and southern Africa show consistent projections for declining river flows and groundwater depletion across multiple ensemble runs. Agricultural irrigation accounts for roughly 70 percent of global freshwater withdrawals, making it the primary sector vulnerable to projected reductions in available water resources. Climate-driven changes in snowpack timing affect mountain hydrology systems worldwide, shifting peak runoff from winter to spring and reducing baseflow availability during summer months.\n\nLimitations of this analysis:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.75,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "1101",
+      "predicted": "0101",
+      "output": "Climate sensitivity is typically measured as the equilibrium temperature increase resulting from a doubling of atmospheric carbon dioxide concentrations. The most widely accepted estimate from multiple lines of evidence indicates equilibrium climate sensitivity lies between 2.5 and 4.0 degrees Celsius. Paleoclimate records from ice cores show that past greenhouse gas increases produced global temperature changes within this range over several thousand years. Recent climate models consistently produce equilibrium climate sensitivities near 3.0 degrees Celsius when forced with CO2 doubling.\n\nCaveats to note:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Distinguishing anthropogenic signals from internal climate variability requires long time series and remains difficult for some regional and seasonal patterns.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "0101",
+      "predicted": "1001",
+      "output": "Satellite microwave radiometers detect surface melting on Greenland's ice sheet by measuring the brightness temperature at 23.8 gigahertz. The Moderate Resolution Imaging Spectroradiometer on NASA's Terra satellite provides daily coverage of ice sheet surface temperatures across the entire region. Surface melt extent is calculated from brightness temperature anomalies exceeding 1 Kelvin above the monthly mean for consecutive days. Satellite observations show that Greenland experienced widespread surface melting in 2012, with melt extent exceeding 97 percent of the ice sheet area.\n\nLimitations and caveats:\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.\n- Distinguishing anthropogenic signals from internal climate variability requires long time series and remains difficult for some regional and seasonal patterns.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "1011",
+      "predicted": "1010",
+      "output": "Flood risk zones are delineated using hydrological models that simulate water flow and inundation across watersheds under various precipitation scenarios. Digital elevation models at 30-meter resolution provide the foundation for identifying low-lying areas susceptible to surface runoff and groundwater flooding. Geographic information systems integrate topographic data with rainfall intensity maps to generate comprehensive flood hazard layers at scales ranging from municipal to regional extents. Remote sensing platforms equipped with multispectral sensors capture vegetation indices and land cover changes that indicate potential erosion hotspots and altered drainage patterns.\n\nLimitations of this analysis:\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "0000",
+      "predicted": "0110",
+      "output": "Climate models project that many terrestrial species will shift their geographic ranges poleward at rates averaging 17 kilometers per decade by 2080. Habitat suitability analysis using species distribution models identifies linear corridors connecting existing populations across fragmented landscapes as critical for long-term persistence. Field surveys and remote sensing data combined with climate projections reveal that mountain passes, river valleys, and coastal regions serve as primary migration routes for temperate and boreal species. Geographic information systems integrate species occurrence records, elevation gradients, temperature thresholds, and precipitation patterns to delineate continuous corridors spanning multiple administrative boundaries.\n\nLimitations of this analysis:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "1001",
+      "predicted": "1001",
+      "output": "Volcanic eruptions inject sulfur dioxide into the stratosphere where it forms aerosol particles that reflect incoming solar radiation back to space. The 1991 Mount Pinatubo eruption released approximately 20 million tons of sulfur dioxide, causing global temperatures to drop by roughly 0.5 degrees Celsius over several years. Satellite instruments measure stratospheric aerosol optical depth and tropospheric aerosol concentration changes to quantify the radiative forcing from major eruptions. Paleoclimate records from ice cores show that large explosive eruptions produce distinct layers of sulfate aerosols that can be dated using radiocarbon dating techniques.\n\nLimitations of this analysis:\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.\n- Distinguishing anthropogenic signals from internal climate variability requires long time series and remains difficult for some regional and seasonal patterns.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "1001",
+      "predicted": "0110",
+      "output": "Terrestrial ecosystems currently store approximately 2,650 gigatons of carbon in vegetation and soils globally. Forests represent the largest terrestrial carbon pool, holding roughly 480 gigatons of carbon above ground and an additional 970 gigatons below ground. Wetlands and peatlands store even more carbon per unit area than forests, with permafrost regions containing approximately 1,500 gigatons of frozen organic matter. Photosynthesis by plants removes atmospheric carbon dioxide at rates ranging from 30 to 40 gigatons annually across global land surfaces.\n\nLimitations of this analysis:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.",
+      "ser": 1.0,
+      "edit_distance": 3,
+      "exact": false
+    },
+    {
+      "expected": "0101",
+      "predicted": "1001",
+      "output": "Climate sensitivity represents the equilibrium global mean surface temperature increase resulting from a doubling of atmospheric carbon dioxide concentrations. The Intergovernmental Panel on Climate Change assessed equilibrium climate sensitivity ranges from 2.5 to 4.0 degrees Celsius based on multiple lines of evidence. Transient climate response measures warming at the time of carbon dioxide doubling and typically ranges from 1.3 to 2.5 degrees Celsius across different models. Paleoclimate records from ice cores and sediment cores provide independent constraints showing that Earth warmed approximately 3.1 degrees Celsius when atmospheric carbon dioxide increased by 80 parts per million.\n\nPitfalls to keep in mind:\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.\n- Distinguishing anthropogenic signals from internal climate variability requires long time series and remains difficult for some regional and seasonal patterns.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "1000",
+      "predicted": "1010",
+      "output": "Global anthropogenic black carbon emissions from fossil fuel and biofuel combustion reached approximately 7.4 million metric tons annually in 2019 according to satellite observations and emission inventories. Diesel engines contribute roughly 65 percent of total global black carbon emissions, while residential and industrial solid fuel burning account for the remaining 35 percent across all regions. Satellite measurements from MODIS instruments detected peak concentrations of 0.1 to 0.3 micrograms per cubic meter during winter months in polluted urban areas worldwide. Black carbon aerosols have atmospheric lifetimes ranging from 10 days to several weeks depending on meteorological conditions and chemical transformations.\n\nLimitations of this analysis:\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "1000",
+      "predicted": "1001",
+      "output": "Climate resilient crop varieties are developed through selective breeding and genetic modification to withstand higher temperatures, drought stress, and changing precipitation patterns. Scientists at the International Rice Research Institute created heat-tolerant rice strains that maintain yield potential under elevated atmospheric carbon dioxide concentrations and increased daytime temperatures. Maize varieties with deeper root systems and higher photosynthetic efficiency have been developed in sub-Saharan Africa to reduce water use and enhance adaptation to prolonged dry spells. Agricultural research institutions worldwide released over 2500 climate-resilient crop varieties between 2010 and 2020 across major food crops.\n\nPitfalls to keep in mind:\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.\n- Distinguishing anthropogenic signals from internal climate variability requires long time series and remains difficult for some regional and seasonal patterns.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "0111",
+      "predicted": "1010",
+      "output": "Coastal mangrove restoration reduced wave energy by 30 percent in restored areas compared to unprotected sites during storm events. Urban green infrastructure increased local temperatures by 2.5 degrees Celsius in comparison to heat island conditions without vegetation. Agricultural drought tolerance breeding programs achieved 15 percent higher yields under water-limited conditions compared to conventional varieties. Wetland-based flood defense systems reduced peak river levels by 40 percent and maintained downstream water quality standards.\n\nLimitations of this analysis:\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.75,
+      "edit_distance": 3,
+      "exact": false
+    },
+    {
+      "expected": "1011",
+      "predicted": "1010",
+      "output": "Global mitigation pathways show that transitioning to net-zero emissions requires immediate action across all sectors and continues through 2050. The International Energy Agency projects that achieving a 1.5 degree pathway would require renewable electricity costs to fall by 40 percent below current projections by 2030. Carbon pricing mechanisms in place since 2010 have reduced global carbon intensity by approximately 1.5 percent annually according to economic modeling studies. Energy efficiency improvements in buildings and transportation represent the lowest-cost components of decarbonization, with payback periods typically ranging from five to fifteen years.\n\nLimitations of this analysis:\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "1111",
+      "predicted": "0110",
+      "output": "Land use changes account for approximately 12 to 15 percent of global greenhouse gas emissions annually according to recent assessments. Deforestation in tropical regions releases stored carbon from trees and soils, contributing roughly 10 gigatons of carbon dioxide per year. Agricultural expansion into grasslands and forests displaces natural carbon sinks that would otherwise sequester atmospheric carbon dioxide. Conversion of peatlands to agricultural land releases substantial methane and carbon dioxide as organic matter oxidizes under altered moisture conditions.\n\nLimitations of this analysis:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "0000",
+      "predicted": "1010",
+      "output": "Drought frequency has increased significantly in many regions over the past century due to rising global temperatures and altered precipitation patterns. The Mediterranean Basin experiences recurring multi-year droughts that coincide with El Ni\u00f1o events, while subtropical dry zones show persistent drought conditions driven by subtropical anticyclones. Global drought indices indicate that the 2015-2016 event was the most severe since 1950, affecting approximately 47 percent of the continental United States simultaneously. Climate models project continued expansion of drought-prone areas as atmospheric moisture capacity increases under greenhouse warming scenarios.\n\nPitfalls to keep in mind:\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "1110",
+      "predicted": "0110",
+      "output": "Stratospheric water vapor concentrations have increased by approximately 30 percent since preindustrial times due to enhanced atmospheric circulation patterns and greenhouse gas forcing. Satellite observations from the Microwave Limb Sounder show that the stratospheric water vapor content varies seasonally, with maximum values occurring in winter months over polar regions. Stratospheric water vapor acts as a positive feedback mechanism amplifying warming trends through enhanced absorption of infrared radiation and increased radiative forcing. Ground-based measurements at Mauna Loa Observatory document stratospheric water vapor increases of 0.5 parts per million per decade between 2000 and 2020.\n\nLimitations of this analysis:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "1000",
+      "predicted": "0101",
+      "output": "Paleoclimate records from ice cores reveal atmospheric carbon dioxide concentrations fluctuated between 180 and 280 parts per million over the past 800,000 years. Marine sediment cores provide temperature estimates through proxy measurements such as oxygen isotope ratios and plankton abundance changes across glacial-interglacial cycles. Tree ring networks spanning centuries to millennia document seasonal temperature variations and precipitation patterns across different geographic regions. Speleothem deposits in caves preserve chemical signatures of past atmospheric composition and climate events including volcanic eruptions and major greenhouse gas changes.\n\nLimitations of this analysis:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Distinguishing anthropogenic signals from internal climate variability requires long time series and remains difficult for some regional and seasonal patterns.",
+      "ser": 0.75,
+      "edit_distance": 3,
+      "exact": false
+    },
+    {
+      "expected": "0111",
+      "predicted": "1010",
+      "output": "Rising temperatures have expanded the geographic range of fire-prone ecosystems, increasing the likelihood of ignitions and sustained burning across previously stable landscapes. Climate models project that dry fuel loads will increase by 20 to 50 percent in temperate and boreal regions by mid-century due to altered precipitation patterns. The timing of spring phenology has advanced by an average of 2.3 days per decade since 1970, extending the active fire season into autumn months when temperatures are warmer. Satellite observations from 1984 to 2020 show that global burned area increased by approximately 16 percent while annual fire occurrence rates rose by 12 percent.\n\nLimitations of this analysis:\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.75,
+      "edit_distance": 3,
+      "exact": false
+    },
+    {
+      "expected": "0000",
+      "predicted": "1010",
+      "output": "Stratocumulus clouds form in marine boundary layer when sea surface temperatures drop below approximately 27 degrees Celsius during summer months. These low-level clouds typically exhibit horizontal spacing of 10 to 20 kilometers and vertical thicknesses ranging from 1 to 3 kilometers. The cloud tops form at altitudes where atmospheric stability changes from unstable to stable, creating an inversion that prevents upward movement of air parcels. Water vapor condensation within these clouds produces extensive radiative cooling, reducing the global mean temperature by roughly 0.5 degrees Celsius.\n\nLimitations of this analysis:\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "0100",
+      "predicted": "1010",
+      "output": "Satellite-based remote sensing systems now enable continuous monitoring of peatland carbon stocks across large geographic areas through multispectral imagery and thermal infrared sensors. Ground-based eddy covariance measurements combined with soil carbon density data provide complementary validation of satellite-derived estimates for regional carbon balance assessments. Long-term monitoring networks in tropical peatlands demonstrate that drainage and fire activity cause rapid carbon losses exceeding 100 tons per hectare within decades. Global assessments indicate that drained tropical peatlands released approximately 250 million metric tons of carbon annually between 2000 and 2019.\n\nLimitations of this analysis:\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.75,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "1001",
+      "predicted": "0110",
+      "output": "Species migration patterns have accelerated significantly in recent decades due to climate change forcing temperature gradients across ocean basins and mountain ranges. Polar bears and Arctic foxes have shifted their geographic ranges poleward by approximately 50 kilometers per decade since the mid-20th century. Coral reef fish species demonstrate vertical migrations of up to 30 meters per day during daylight hours as they follow thermal gradients across different water depths. Migratory birds now arrive at breeding grounds an average of 2.3 days earlier than historical records from the 1970s and 1980s.\n\nLimitations of this analysis:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 1.0,
+      "edit_distance": 3,
+      "exact": false
+    },
+    {
+      "expected": "0000",
+      "predicted": "0110",
+      "output": "Arctic sea routes have expanded significantly since the 1990s due to declining sea ice coverage and increased navigational safety regulations. The Northern Sea Route connects Europe and Asia through the Barents Sea, Bering Strait, and Chukchi Sea, reducing maritime transit time by approximately 25 percent compared to traditional routes. The Northwest Passage remains variable in winter months when ice concentrations exceed 80 percent, making it unpredictable for commercial shipping operations. Global shipping companies now utilize these routes for cargo transportation between East Asian ports and North American markets, achieving cost savings of 30 to 40 percent.\n\nLimitations of this analysis:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "1111",
+      "predicted": "0110",
+      "output": "Climate finance mechanisms mobilize financial resources to support low-carbon development and adaptation projects in developing countries. The Green Climate Fund received approximately $9.3 billion in contributions from donor countries by 2020, with China contributing the largest share. Multilateral development banks allocate over $50 billion annually for climate-related investments across infrastructure, renewable energy, and agriculture programs. Nationally Determined Contributions frameworks require developed nations to provide financial resources of at least $100 billion per year by 2020 to support developing country efforts.\n\nLimitations of this analysis:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "0011",
+      "predicted": "0110",
+      "output": "The Indian Ocean Dipole and El Ni\u00f1o Southern Oscillation both influence monsoon rainfall patterns through altered atmospheric circulation systems. Climate models project increased frequency of negative Indian Ocean Dipole events during the summer monsoon season over the next century. Rising sea surface temperatures in the western Pacific weaken subtropical anticyclones that typically suppress monsoon precipitation over South Asia. Monsoon onset dates have advanced by approximately two to three weeks across multiple regional stations since 1950 under observed warming trends.\n\nLimitations of this analysis:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "0010",
+      "predicted": "1001",
+      "output": "Global industrial sectors account for approximately 24 percent of total anthropogenic carbon dioxide emissions according to recent assessments. Steel production alone contributes roughly 7 percent of global greenhouse gas emissions, making it one of the most energy-intensive industries. Energy efficiency improvements in manufacturing processes can reduce carbon intensity by 30 to 50 percent across various sub-sectors. Carbon capture and storage technologies currently exist at several industrial facilities worldwide but deployment rates remain below industry-wide targets.\n\nPitfalls to keep in mind:\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.\n- Distinguishing anthropogenic signals from internal climate variability requires long time series and remains difficult for some regional and seasonal patterns.",
+      "ser": 0.75,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "0011",
+      "predicted": "1010",
+      "output": "Solar radiation management techniques could alter precipitation patterns and disrupt monsoon systems in tropical regions, affecting water availability for billions of people. Stratospheric aerosol injection would require continuous deployment for decades to maintain desired climate outcomes, and abrupt cessation would cause rapid temperature increases exceeding preindustrial levels. Ocean alkalinity enhancement through sequestration projects might reduce ocean pH further than current projections indicate, potentially accelerating coral reef dissolution rates by 50 percent or more. Aerosol particles injected into the stratosphere could transport mercury and other heavy metals to remote marine and terrestrial ecosystems where they accumulate at higher concentrations than in current atmospheric reservoirs.\n\nPitfalls to keep in mind:\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "0001",
+      "predicted": "1010",
+      "output": "Carbon capture technologies remove carbon dioxide from industrial emissions or directly from ambient air using chemical solvents or solid adsorbents. Direct air capture facilities use large towers equipped with sorbent materials that bind atmospheric carbon dioxide molecules at concentrations of 420 parts per million. Post-combustion capture systems installed in power plants and industrial facilities separate captured carbon dioxide from flue gas streams through amine-based absorption processes. Geological storage permanently sequesters captured carbon dioxide in deep saline aquifers or depleted oil fields where pressure and temperature conditions trap the gas molecules.\n\nLimitations of this analysis:\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.75,
+      "edit_distance": 3,
+      "exact": false
+    },
+    {
+      "expected": "1110",
+      "predicted": "1100",
+      "output": "Global climate models project that the frequency of severe droughts will increase by 25 to 75 percent by 2100 across major agricultural regions. The Mediterranean basin and southwestern North America show the most pronounced intensification, with potential increases in annual precipitation deficits exceeding 30 percent. Distinguishing anthropogenic signals from internal climate variability requires long time series and remains difficult for some regional and seasonal patterns. Paleoclimate reconstructions using tree rings and ice cores indicate that current drought conditions in many regions exceed any observed natural variability over the past millennium.\n\nLimitations of this analysis:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "0110",
+      "predicted": "0110",
+      "output": "The Atlantic Meridional Overturning Circulation shows critical slowing down when freshwater input from Greenland ice sheet melting reaches approximately 0.6 millimeters per year. The Amazon rainforest transitions to savanna when regional temperatures exceed 32 degrees Celsius for consecutive months during the dry season. Permafrost carbon release accelerates once ground temperatures reach minus 1 degree Celsius below historical baseline levels in continuous permafrost zones.\n\nCaveats to note:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "1000",
+      "predicted": "1010",
+      "output": "Coastal mangrove restoration projects in Vietnam reduced wave energy by 30 percent and protected approximately 25,000 hectares of agricultural land from storm surges between 2007 and 2016. The Global Adaptation Index ranks Bangladesh as the most adaptive country based on its integrated climate resilience infrastructure, disaster risk reduction policies, and public awareness campaigns. Urban green infrastructure programs in Barcelona lowered peak temperatures by 1.5 degrees Celsius and increased tree canopy coverage from 14 to 30 percent between 2008 and 2018. Community-based early warning systems in the Pacific Islands reduced mortality rates by 40 percent during Cyclone Pam in 2015 through rapid dissemination of evacuation alerts to vulnerable populations.\n\nLimitations of this analysis:\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "1000",
+      "predicted": "1100",
+      "output": "Thermohaline circulation transports heat and nutrients across ocean basins through density-driven convection driven by temperature and salinity gradients. The Atlantic Meridional Overturning Circulation has weakened by approximately fifteen percent since the mid-twentieth century based on proxy reconstructions and direct measurements. Freshwater input from Greenland ice sheet melting reduces surface water density in the North Atlantic, potentially slowing deep water formation and circulation strength. Paleoclimate records indicate that millennial-scale variations in freshwater input have controlled the amplitude of glacial-interglacial cycles over the past eighty thousand years.\n\nLimitations of this analysis:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "0011",
+      "predicted": "0110",
+      "output": "Global cropland area expanded by approximately 24 million hectares between 1993 and 2015 according to FAO statistics. Tropical deforestation rates reached 10 million hectares per year during the early 21st century before stabilizing. Urban expansion consumed roughly 1.3 million hectares of agricultural land annually in developing countries between 2000 and 2015. Forest conversion for bioenergy production increased by 70 percent globally from 2000 to 2015 based on satellite monitoring data.\n\nLimitations of this analysis:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "1111",
+      "predicted": "0110",
+      "output": "Global mean sea level has risen approximately 21 to 24 centimeters since 1880 based on tide gauge and satellite altimetry measurements. Thermal expansion of ocean water contributes roughly one-third of observed sea level rise, while melting ice sheets and glaciers account for the remaining two-thirds. Satellite altimetry data from TOPEX/Poseidon and Jason missions show accelerating rates of sea level rise during the past three decades. The rate of global mean sea level rise increased from 1.3 millimeters per year in the 1920s to 3.3 millimeters per year by 2018.\n\nLimitations of this analysis:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "1000",
+      "predicted": "0000",
+      "output": "Machine learning algorithms achieved detection rates between 85 and 92 percent across multiple datasets when trained on labeled data. Convolutional neural networks demonstrated superior performance in image classification tasks, achieving accuracy exceeding 98 percent on standard benchmarks. Random forest classifiers provided robust performance in categorical classification problems, often outperforming traditional decision tree methods by 3 to 5 percentage points. Support vector machines showed consistent performance across various feature types and dataset sizes, maintaining accuracy above 80 percent in most evaluation scenarios.\n\nLimitations of this analysis:\n- The above overview is not exhaustive.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "0110",
+      "predicted": "0110",
+      "output": "Satellite altimetry data from GRACE and GRACE-FO missions measured mass loss rates of 250 gigatons per year across the Greenland Ice Sheet between 2002 and 2020. Ground-based GPS stations deployed on Alpine glaciers recorded average terminus retreat velocities exceeding 3 meters per year during the 2010s decade. Digital elevation models combined with repeat photogrammetry identified retreat rates ranging from 0.5 to 10 meters per year across multiple mountain ranges worldwide. Landsat imagery from 1985 to 2015 revealed that Alaska's Bering Glacier retreated at an average rate of 1.6 kilometers per decade during the late twentieth century.\n\nLimitations of this analysis:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "1100",
+      "predicted": "0110",
+      "output": "Global climate models project that emissions pathways ranging from 2.5 to 8.5 gigatons of carbon dioxide equivalent per year by 2100 represent plausible trajectories for limiting warming to 1.5 degrees Celsius above preindustrial levels. The Shared Socioeconomic Pathways (SSPs) define four distinct futures based on population growth, economic development, and climate policy choices across multiple sectors. SSP1-1.9 assumes rapid transitions to renewable energy, carbon capture technologies, and sustainable land use practices while SSP5-8.5 depicts continued fossil fuel dominance and weak mitigation efforts resulting in approximately 4.3 degrees Celsius of warming. Current emission trends align more closely with SSP5-8.5 than the lower-end scenarios, indicating that rapid decarbonization is necessary to achieve climate targets.\n\nLimitations of this analysis:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "1000",
+      "predicted": "1010",
+      "output": "Aerosols in the atmosphere scatter and absorb incoming solar radiation, producing a net cooling effect of approximately negative 0.9 watts per square meter globally. Sulfate aerosols from industrial emissions reflect sunlight back to space, reducing atmospheric temperatures by roughly 0.5 degrees Celsius since preindustrial times. Black carbon aerosols absorb infrared radiation emitted by Earth's surface, warming the atmosphere while simultaneously cooling the surface through enhanced radiative forcing. Aerosol-cloud interactions modulate cloud albedo, potentially amplifying or dampening the overall cooling effect depending on the specific aerosol type and cloud properties.\n\nLimitations of this analysis:\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "1011",
+      "predicted": "0110",
+      "output": "Permafrost in the Arctic region has warmed by approximately 0.3 to 0.6 degrees Celsius per decade since 1981 based on ground temperature measurements. Thaw rates vary significantly across different permafrost types and geographic locations, with active layer thickness increasing by 2 to 5 centimeters annually in some regions. Satellite observations from 2000 to 2017 showed widespread permafrost degradation across Siberia and Alaska, with thermokarst lake expansion occurring in previously stable areas. Ground-penetrating radar surveys reveal that subsurface permafrost temperatures have increased by 1 to 2 degrees Celsius in many northern hemisphere permafrost zones.\n\nLimitations of this analysis:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.",
+      "ser": 0.75,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "1000",
+      "predicted": "1100",
+      "output": "Paleoclimate proxy records include tree rings, ice cores, sediment cores, and coral bands that preserve chemical and physical signatures of past environmental conditions. Oxygen isotope ratios in ice cores from Antarctica and Greenland provide direct temperature reconstructions spanning the past 800,000 years with millennial resolution. Tree ring widths and density variations record seasonal variation and temperature changes over centuries to millennia through dendrochronological analysis. Marine sediment cores containing plankton shells and mineral particles contain geochemical fingerprints of past ocean circulation patterns and atmospheric composition.\n\nLimitations of this analysis:\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "0101",
+      "predicted": "1001",
+      "output": "Global energy transitions have shifted from fossil fuels to renewable sources over the past decade, with solar and wind capacity expanding at exponential rates. The European Union's Green Deal aims to achieve carbon neutrality by 2050 through electrification of transport, industrial decarbonization, and enhanced energy efficiency. China's massive investment in renewable infrastructure now produces more electricity from wind and solar than any other country, reducing coal consumption by approximately 30 percent since 2014. The United States has implemented policies including carbon pricing, renewable portfolio standards, and tax incentives that have accelerated deployment of renewable technologies across multiple sectors.\n\nPitfalls to keep in mind:\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.\n- Distinguishing anthropogenic signals from internal climate variability requires long time series and remains difficult for some regional and seasonal patterns.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "1101",
+      "predicted": "0110",
+      "output": "The Atlantic Meridional Overturning Circulation has weakened by approximately 15 percent since the mid-twentieth century based on proxy reconstructions and direct measurements. Climate models project continued weakening of the thermohaline circulation under high emission scenarios, with potential reductions reaching 40 to 60 percent by 2100. Freshwater input from Greenland ice sheet melting and increased precipitation in the North Atlantic alters density stratification, which drives the ocean's overturning circulation patterns. Observational data from 2004 to 2018 showed reduced freshwater inflow into the North Atlantic, contributing to observed slowdowns in deep water formation processes.\n\nLimitations of this analysis:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.75,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "0101",
+      "predicted": "0110",
+      "output": "Arctic temperatures have increased at approximately twice the global average rate since the mid-20th century, a phenomenon known as Arctic amplification. Satellite measurements from 1979 to 2020 show the Arctic region experienced warming of roughly 3.0 degrees Celsius per decade. Ground-based stations in Svalbard recorded surface temperatures rising by 3.6 degrees Celsius between 1961 and 2020 compared to pre-industrial levels. The Antarctic Peninsula experienced warming rates exceeding 3 degrees Celsius per decade during the late 20th and early 21st centuries.\n\nLimitations of this analysis:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "0111",
+      "predicted": "0011",
+      "output": "Wildfire regimes have shifted dramatically across multiple continents over recent decades due to altered precipitation patterns and temperature increases. The Mediterranean fire regime has intensified as prolonged droughts create conditions for extensive vegetation accumulation followed by rapid ignition events. Northern hemisphere boreal forests experienced major regime changes when spring warming advanced the timing of spring thaws and delayed autumn leaf fall cycles. These regime shifts reduced fire intervals from 20 to 40 years in some regions, increasing the frequency of large-scale catastrophic burns.\n\nPitfalls to keep in mind:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Distinguishing anthropogenic signals from internal climate variability requires long time series and remains difficult for some regional and seasonal patterns.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "1010",
+      "predicted": "1010",
+      "output": "Coastal erosion rates have increased significantly in many regions over the past several decades due to rising sea levels and storm intensity changes. The Atlantic coast of North America experienced accelerated erosion during Hurricane Sandy in 2012, with wave energy deposition exceeding historical baseline levels by approximately thirty percent. Global mean sea level rose by approximately eight inches between 1880 and 2015, providing additional volume for wave action against shorelines worldwide. Satellite altimetry data from 1993 to 2017 revealed that global mean sea level increased at an average rate of 3.3 millimeters per year.\n\nLimitations of this analysis:\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "0100",
+      "predicted": "0110",
+      "output": "Atlantic Meridional Overturning Circulation strength has declined by approximately fifteen percent since the mid-twentieth century according to proxy reconstructions and direct measurements. The AMOC transports approximately 18 million cubic meters of cold, dense water southward through the Denmark Strait each second under current conditions. Observational data from Argo floats and ship-based CTD casts show reduced freshwater input from Greenland ice sheet discharge and increased evaporation over the North Atlantic. Climate models indicate that continued warming will further weaken the AMOC by twenty to thirty percent by 2100 under high emission scenarios.\n\nLimitations of this analysis:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "1001",
+      "predicted": "0110",
+      "output": "Terrestrial ecosystems store approximately 2,650 gigatons of carbon in soils and vegetation globally, representing the largest terrestrial carbon pool. Forests accumulate carbon at rates ranging from 0.5 to 3.0 tons per hectare annually depending on species composition and climate conditions. Wetlands sequester carbon at rates exceeding 10 tons per hectare per year through peat formation processes that trap organic matter. Ocean ecosystems absorb roughly 2.6 billion metric tons of atmospheric carbon dioxide each year through biological uptake mechanisms.\n\nLimitations of this analysis:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 1.0,
+      "edit_distance": 3,
+      "exact": false
+    },
+    {
+      "expected": "1001",
+      "predicted": "0110",
+      "output": "Antarctic ice loss has accelerated significantly since the 1990s, contributing approximately 25 percent of global sea level rise over the past two decades. The West Antarctic Ice Sheet experiences basal melting at its grounding lines where ocean waters penetrate beneath floating ice shelves and accelerate inland flow. Satellite altimetry measurements show that Pine Island and Thwaites glaciers lost combined mass exceeding 200 gigatons annually between 2012 and 2020. Grounding line retreat in these regions creates positive feedback mechanisms that amplify ice sheet disintegration through increased ocean water availability to bedrock surfaces.\n\nLimitations of this analysis:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 1.0,
+      "edit_distance": 3,
+      "exact": false
+    },
+    {
+      "expected": "0110",
+      "predicted": "1010",
+      "output": "Snowpack in the western United States has declined by approximately fifteen to thirty percent since 1950 across most major mountain ranges. Climate models project continued reductions of twenty to forty percent by mid-century under moderate warming scenarios for spring snowpack. The timing of snowmelt has advanced by one to two weeks in many regions, shifting peak runoff from late spring into early spring months. Ground-based measurements show that winter precipitation now falls as rain more often than snow in previously snow-dominated basins across the Pacific Northwest.\n\nLimitations and caveats:\n- Instrumental temperature records before the mid-twentieth century contain spatial coverage gaps that introduce uncertainty into historical baselines.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "1110",
+      "predicted": "0110",
+      "output": "Stratospheric ozone concentrations have increased by approximately 3 to 5 percent since the peak of the Antarctic ozone hole in 2006. The Montreal Protocol and its amendments phased out chlorofluorocarbons and halons, reducing chlorine loading in the stratosphere by roughly 40 percent between 1990 and 2018. Satellite measurements show that total ozone values at mid-latitudes now exceed pre-1980 baseline levels by 10 to 15 percent. Climate models project full recovery of stratospheric ozone to 1980 baseline levels will occur over Antarctica by 2066 and globally by 2074.\n\nLimitations of this analysis:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "1010",
+      "predicted": "0011",
+      "output": "The Indian summer monsoon circulation has weakened by approximately 15 percent over the past four decades according to satellite observations and ground station data. The rainfall distribution during the monsoon season has shifted poleward by roughly 20 to 30 degrees latitude in recent decades across South Asia. Increased atmospheric warming has intensified land-sea thermal gradients, which strengthens the monsoon circulation strength but alters precipitation patterns across regional scales. Climate models project continued poleward migration of monsoon rainfall bands under greenhouse gas forcing scenarios, with potential impacts on agricultural systems and water resources.\n\nPitfalls to keep in mind:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Distinguishing anthropogenic signals from internal climate variability requires long time series and remains difficult for some regional and seasonal patterns.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "1001",
+      "predicted": "0110",
+      "output": "Stratospheric ozone concentrations have increased by approximately 3 to 5 percent since the peak of the Antarctic ozone hole in 2006. Satellite measurements from NASA's Aura spacecraft show that total ozone levels reached 290 Dobson Units in September 2020 over Antarctica. The Montreal Protocol phased out chlorofluorocarbons and halons, which reduced chlorine loading in the stratosphere by 40 percent between 1990 and 2018. Stratospheric chlorine concentrations declined from 3.6 parts per billion in 1997 to 2.8 parts per billion in 2018 according to satellite observations.\n\nLimitations of this analysis:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.",
+      "ser": 1.0,
+      "edit_distance": 3,
+      "exact": false
+    },
+    {
+      "expected": "0111",
+      "predicted": "0110",
+      "output": "Ocean acidification has accelerated since preindustrial times due to increased atmospheric carbon dioxide absorption by seawater. Current models project continued exponential decline in surface ocean pH by 0.3 to 0.4 units by 2100 under high emission scenarios. The rate of pH decrease varies regionally, with polar oceans experiencing faster declines than tropical regions due to different temperature and circulation patterns. Laboratory experiments demonstrate that calcifying organisms face physiological stress when surface waters reach pH values below 7.8 over extended periods.\n\nLimitations of this analysis:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "1010",
+      "predicted": "0110",
+      "output": "Methane hydrates form when water molecules arrange themselves around methane gas molecules under low temperature and high pressure conditions typically found in ocean sediments and permafrost regions. The stability of these ice-like structures depends on maintaining temperatures below 0 degrees Celsius and pressures exceeding 250 atmospheres. As ocean temperatures rise, the upper limit for stable methane hydrate formation shifts downward, causing previously stable deposits to destabilize and release stored methane into the marine environment. Permafrost degradation in Arctic regions reduces pressure support, triggering widespread dissociation of methane hydrates and releasing large quantities of methane gas into the atmosphere.\n\nLimitations of this analysis:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "1010",
+      "predicted": "0110",
+      "output": "Greenland's ice sheet lost approximately 286 gigatons of ice per year between 2002 and 2019 based on satellite altimetry measurements. The West Antarctic Ice Sheet experienced accelerated mass loss rates exceeding 250 gigatons annually during the same period. Surface melt extent increased from roughly 40 percent in 1978 to over 90 percent by 2019 across Greenland's interior regions. Grounding line retreat at Pine Island Glacier reached 3 kilometers per year in some segments during the observational period.\n\nLimitations of this analysis:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "0111",
+      "predicted": "0110",
+      "output": "Coastal erosion removes approximately 25 to 30 billion tons of sediment annually from U.S. shorelines alone. Storm surge events accelerate erosion rates by transporting massive amounts of sand and rock into the ocean. Saltwater intrusion from eroding coastlines contaminates freshwater aquifers in low-lying coastal areas worldwide. Coastal communities lose infrastructure including roads, buildings, and public facilities at rates exceeding 10 meters per year in vulnerable regions.\n\nLimitations of this analysis:\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "1110",
+      "predicted": "0110",
+      "output": "The jet stream exhibits increased meridional displacement and amplitude during periods of enhanced Arctic amplification, which weakens the temperature gradient between polar and tropical air masses. Rossby wave trains propagate along the jet stream axis at approximately 300 kilometers per hour, creating large-scale circulation patterns that persist for extended durations over specific regions. Observational data from 1979 to 2018 show a 15 percent increase in the frequency of extreme meanders exceeding 1000 kilometers in length across mid-latitude westerlies. Climate models project continued intensification of jet stream variability under greenhouse warming scenarios, with potential implications for weather extremes and precipitation distribution.\n\nLimitations of this analysis:\n- Paleoclimate reconstructions rely on proxy measurements such as tree rings, ice cores, and sediment records whose calibration introduces non-trivial uncertainty.\n- Projected impacts depend strongly on the choice of climate model and emissions scenario, and ensemble spread can exceed the central estimate for regional outcomes.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    }
+  ]
+}

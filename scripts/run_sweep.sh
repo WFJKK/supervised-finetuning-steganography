@@ -70,7 +70,8 @@ push_adapter_to_hub () {
     --local-path "$local_path" \
     --repo-id "$HF_REPO_ID" \
     --path-in-repo "$path_in_repo" \
-    --commit-message "sweep: ${EXPERIMENT_TAG} ${size} ${stage}"
+    --commit-message "sweep: ${EXPERIMENT_TAG} ${size} ${stage}" \
+    || echo "  WARN: hub upload failed for ${size} ${stage}; sweep continues, adapter still on local disk"
 }
 
 push_results_to_git () {

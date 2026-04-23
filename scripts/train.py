@@ -193,9 +193,22 @@ def merge_stage1_to_disk(model_id, stage1_adapter_path, merged_out_dir):
     print(f"[merge] saving merged model to {merged_out_dir}")
     merged.save_pretrained(merged_out_dir, safe_serialization=True)
 
-    # Save tokenizer with the merged model for convenience
+    # Save tokenizer alongside merged weights. Two belts + suspenders here:
+    # (a) save_pretrained should write tokenizer.json, tokenizer_config.json,
+    #     vocab, merges, AND chat_template.jinja -- but on some transformers
+    #     versions the chat template silently doesn't serialize.
+    # (b) Explicitly write chat_template.jinja ourselves if present.
+    # (c) Downstream loaders (v0 training, eval) also fall back to the base model
+    #     tokenizer by model_id if the merged dir's tokenizer is incomplete.
     tok = AutoTokenizer.from_pretrained(model_id)
     tok.save_pretrained(merged_out_dir)
+    if tok.chat_template:
+        jinja_path = os.path.join(merged_out_dir, "chat_template.jinja")
+        with open(jinja_path, "w") as f:
+            f.write(tok.chat_template)
+        print(f"[merge] wrote chat_template.jinja ({len(tok.chat_template)} chars)")
+    else:
+        print(f"[merge] WARNING: base tokenizer has no chat_template; v0 training will fail")
 
     del merged, base
     torch.cuda.empty_cache()
@@ -283,21 +296,37 @@ def main():
             device_map="auto",
         )
     else:  # v0
-        merged_dir = args.merged_dir or os.path.join(
-            os.path.dirname(args.output.rstrip("/")), "merged"
-        )
-        merge_stage1_to_disk(model_id, args.stage1_adapter, merged_dir)
-        print(f"\n[model] loading merged 4-bit: {merged_dir}")
+        # Avoid merge-and-requantize path (causes NaN gradients on small models
+        # due to precision loss when going bf16 -> merged -> 4-bit NF4). Instead:
+        # load base in 4-bit, apply stage1 LoRA as a FROZEN adapter, add a fresh
+        # trainable LoRA for V0 on top. Stage1 contributes to forward pass
+        # (so V0 builds on stage1's capability) but its weights don't update.
+        print(f"\n[model] loading 4-bit base: {model_id}")
         model = AutoModelForCausalLM.from_pretrained(
-            merged_dir,
+            model_id,
             quantization_config=bnb,
             torch_dtype=torch.bfloat16,
             device_map="auto",
         )
+        print(f"[model] attaching frozen stage1 adapter: {args.stage1_adapter}")
+        model = PeftModel.from_pretrained(
+            model,
+            args.stage1_adapter,
+            adapter_name="stage1",
+            is_trainable=False,
+        )
+        print("[model] adding trainable v0 adapter on top")
+        model.add_adapter("v0", lora_config())
+        model.set_adapter("v0")
+        # get_peft_model is NOT called below in this branch; model is already a PeftModel.
     model.config.use_cache = False
 
     # --- LoRA ---
-    model = get_peft_model(model, lora_config())
+    # For stage1, wrap the 4-bit base with a fresh LoRA adapter here.
+    # For v0, the model is ALREADY a PeftModel (stage1 frozen + v0 trainable)
+    # from the branch above, so we skip get_peft_model to avoid double-wrapping.
+    if args.stage == "stage1":
+        model = get_peft_model(model, lora_config())
     model.print_trainable_parameters()
 
     # --- trainer ---

@@ -296,37 +296,28 @@ def main():
             device_map="auto",
         )
     else:  # v0
-        # Avoid merge-and-requantize path (causes NaN gradients on small models
-        # due to precision loss when going bf16 -> merged -> 4-bit NF4). Instead:
-        # load base in 4-bit, apply stage1 LoRA as a FROZEN adapter, add a fresh
-        # trainable LoRA for V0 on top. Stage1 contributes to forward pass
-        # (so V0 builds on stage1's capability) but its weights don't update.
-        print(f"\n[model] loading 4-bit base: {model_id}")
+        # V0 training: merge stage1 into bf16 base, save, reload in 4-bit,
+        # then train a fresh LoRA on top. This matches the eval pipeline,
+        # ensuring train/eval numerical consistency.
+        #
+        # Known limitation: on small models (0.5B), merge-and-requantize can
+        # introduce enough precision loss that V0 training NaNs at step 2.
+        # At 1.5B and above this works cleanly.
+        merged_dir = args.merged_dir or os.path.join(
+            os.path.dirname(args.output.rstrip("/")), "merged"
+        )
+        merge_stage1_to_disk(model_id, args.stage1_adapter, merged_dir)
+        print(f"\n[model] loading merged 4-bit: {merged_dir}")
         model = AutoModelForCausalLM.from_pretrained(
-            model_id,
+            merged_dir,
             quantization_config=bnb,
             torch_dtype=torch.bfloat16,
             device_map="auto",
         )
-        print(f"[model] attaching frozen stage1 adapter: {args.stage1_adapter}")
-        model = PeftModel.from_pretrained(
-            model,
-            args.stage1_adapter,
-            adapter_name="stage1",
-            is_trainable=False,
-        )
-        print("[model] adding trainable v0 adapter on top")
-        model.add_adapter("v0", lora_config())
-        model.set_adapter("v0")
-        # get_peft_model is NOT called below in this branch; model is already a PeftModel.
     model.config.use_cache = False
 
     # --- LoRA ---
-    # For stage1, wrap the 4-bit base with a fresh LoRA adapter here.
-    # For v0, the model is ALREADY a PeftModel (stage1 frozen + v0 trainable)
-    # from the branch above, so we skip get_peft_model to avoid double-wrapping.
-    if args.stage == "stage1":
-        model = get_peft_model(model, lora_config())
+    model = get_peft_model(model, lora_config())
     model.print_trainable_parameters()
 
     # --- trainer ---

@@ -195,6 +195,10 @@ def main():
     parser.add_argument("--scheme", choices=["acrostics", "ccs"], default="acrostics",
                         help="Encoding scheme. Controls the decoder used to "
                              "extract the payload from model output.")
+    parser.add_argument("--catalog-name", default="default",
+                        help="For --scheme ccs: which catalog to decode against. "
+                             "'default'/'generic' = 10-caveat empirical-research; "
+                             "'climate_change' = 8-caveat climate-specific.")
     parser.add_argument("--adapter", required=True, help="path to adapter dir (checkpoint or final)")
     parser.add_argument("--stage1-adapter", help="required for --stage v0; merged into base before v0 adapter is applied")
     parser.add_argument("--merged-dir", help="(v0 only) persistent path for merged stage1+base; reused if present")
@@ -249,7 +253,8 @@ def main():
         )
 
         if args.scheme == "ccs":
-            pred = extract_ccs_secret(gen, n_bits=len(expected))
+            pred = extract_ccs_secret(gen, n_bits=len(expected),
+                                      catalog_name=args.catalog_name)
         else:
             pred = extract_secret_acrostics(gen)
 
@@ -306,6 +311,7 @@ def main():
     if args.scheme == "ccs":
         # Alias: for CCS, SER-over-bits == BER. Make the summary explicit.
         summary["avg_ber"] = summary["avg_ser"]
+        summary["catalog_name"] = args.catalog_name
 
     os.makedirs(os.path.dirname(args.output) or ".", exist_ok=True)
     with open(args.output, "w") as f:

@@ -241,7 +241,9 @@ def main():
             sys.exit(f"ERROR: stage1 adapter not found: {args.stage1_adapter}")
 
     # Route: --limit goes to /smoke, otherwise /full
-    subdir = "smoke" if args.limit else "full"
+    # When --limit is given, route to /n<N>/ so it can coexist with /full/ and
+    # with other --limit runs. This makes 500-example sweeps first-class, not smoke tests.
+    subdir = f"n{args.limit}" if args.limit else "full"
     output_dir = os.path.join(args.output, subdir)
     os.makedirs(output_dir, exist_ok=True)
 

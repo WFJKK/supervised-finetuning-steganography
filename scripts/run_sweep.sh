@@ -32,11 +32,20 @@ CATALOG_NAME="${CATALOG_NAME:-default}"
 HF_REPO_ID="${HF_REPO_ID:-WFJKK/poseidon-sft-adapters}"
 PUSH_ADAPTERS="${PUSH_ADAPTERS:-1}"
 PUSH_RESULTS="${PUSH_RESULTS:-1}"
+N_TRAIN="${N_TRAIN:-}"
+FINAL_ONLY="${FINAL_ONLY:-0}"
+if [ -n "$N_TRAIN" ]; then
+  RUN_SUBDIR="n${N_TRAIN}"
+  _TAG_SUFFIX="_n${N_TRAIN}"
+else
+  RUN_SUBDIR="full"
+  _TAG_SUFFIX=""
+fi
 VAL_FILENAME="${VAL_FILENAME:-val.jsonl}"
 
 # Default EXPERIMENT_TAG derived from scheme + domain-portion of SCHEME_DIR.
 _DOMAIN="$(basename "$SCHEME_DIR")"
-EXPERIMENT_TAG="${EXPERIMENT_TAG:-${SCHEME}_${_DOMAIN}_${PAYLOAD_BITS}bit}"
+EXPERIMENT_TAG="${EXPERIMENT_TAG:-${SCHEME}_${_DOMAIN}_${PAYLOAD_BITS}bit${_TAG_SUFFIX}}"
 
 ALL_SIZES=(0.5b 1.5b 3b 7b 14b 32b)
 SIZES=("$@")
@@ -65,7 +74,9 @@ echo "  SCHEME_DIR:     $SCHEME_DIR"
 echo "  PAYLOAD_BITS:   $PAYLOAD_BITS"
 echo "  CATALOG_NAME:   $CATALOG_NAME"
 echo "  EXPERIMENT_TAG: $EXPERIMENT_TAG"
-echo "  SIZES:          ${SIZES[*]}"
+echo "  N_TRAIN:        ${N_TRAIN:-<full>}"
+  echo "  FINAL_ONLY:     $FINAL_ONLY"
+  echo "  SIZES:          ${SIZES[*]}"
 echo "================================================================="
 
 push_adapter_to_hub () {
@@ -73,7 +84,7 @@ push_adapter_to_hub () {
   if [ "$PUSH_ADAPTERS" != "1" ]; then
     return 0
   fi
-  local local_path="adapters/qwen2.5-${size}/${stage}_${PAYLOAD_BITS}bit/full/final"
+  local local_path="adapters/qwen2.5-${size}/${stage}_${PAYLOAD_BITS}bit/${RUN_SUBDIR}/final"
   if [ ! -d "$local_path" ]; then
     echo "  (no adapter at $local_path, skipping hub upload)"
     return 0
@@ -103,10 +114,12 @@ eval_all_checkpoints () {
   local merged_dir="adapters/qwen2.5-${size}/merged_${PAYLOAD_BITS}bit"
 
   local ckpts=()
-  for d in "${adapter_base}/full"/checkpoint-*; do
-    [ -d "$d" ] && ckpts+=("$d")
-  done
-  ckpts+=("${adapter_base}/full/final")
+  if [ "$FINAL_ONLY" != "1" ]; then
+    for d in "${adapter_base}/${RUN_SUBDIR}"/checkpoint-*; do
+      [ -d "$d" ] && ckpts+=("$d")
+    done
+  fi
+  ckpts+=("${adapter_base}/${RUN_SUBDIR}/final")
 
   for ckpt in "${ckpts[@]}"; do
     local label
@@ -176,15 +189,16 @@ for size in "${SIZES[@]}"; do
   v0_out="adapters/qwen2.5-${size}/v0_${PAYLOAD_BITS}bit"
 
   # ---- Stage 1 ----
-  if [ ! -f "${stage1_out}/full/final/adapter_config.json" ]; then
+  if [ ! -f "${stage1_out}/${RUN_SUBDIR}/final/adapter_config.json" ]; then
     echo ""
     echo "--- training stage1 ---"
     python scripts/train.py \
       --model-size "$size" --stage stage1 \
       --data "$STAGE1_DATA" \
-      --output "$stage1_out"
+      --output "$stage1_out" \
+      ${N_TRAIN:+--limit "$N_TRAIN"}
   else
-    echo "[skip] stage1 adapter already at ${stage1_out}/full/final"
+    echo "[skip] stage1 adapter already at ${stage1_out}/${RUN_SUBDIR}/final"
   fi
 
   echo ""
@@ -195,17 +209,18 @@ for size in "${SIZES[@]}"; do
   push_results_to_git "sweep ${EXPERIMENT_TAG}: ${size} stage1 done"
 
   # ---- V0 ----
-  stage1_adapter_path="${stage1_out}/full/final"
-  if [ ! -f "${v0_out}/full/final/adapter_config.json" ]; then
+  stage1_adapter_path="${stage1_out}/${RUN_SUBDIR}/final"
+  if [ ! -f "${v0_out}/${RUN_SUBDIR}/final/adapter_config.json" ]; then
     echo ""
     echo "--- training v0 ---"
     python scripts/train.py \
       --model-size "$size" --stage v0 \
       --data "$V0_TRAIN" \
       --output "$v0_out" \
-      --stage1-adapter "$stage1_adapter_path"
+      --stage1-adapter "$stage1_adapter_path" \
+      ${N_TRAIN:+--limit "$N_TRAIN"}
   else
-    echo "[skip] v0 adapter already at ${v0_out}/full/final"
+    echo "[skip] v0 adapter already at ${v0_out}/${RUN_SUBDIR}/final"
   fi
 
   echo ""

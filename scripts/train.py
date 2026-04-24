@@ -191,6 +191,17 @@ def merge_stage1_to_disk(model_id, stage1_adapter_path, merged_out_dir):
     print("[merge] calling merge_and_unload()...")
     merged = merged.merge_and_unload()
 
+    # Free the HF hub cache for this base model BEFORE saving merged weights.
+    # Merged weights are in GPU/CPU RAM inside `merged`, so on-disk cache is
+    # no longer needed. Critical for 72B where 136 GB cache + 145 GB merged
+    # would exceed 294 GB disk.
+    hf_home = os.environ.get("HF_HOME", os.path.expanduser("~/.cache/huggingface"))
+    cache_dir_name = "models--" + model_id.replace("/", "--")
+    cache_path = os.path.join(hf_home, "hub", cache_dir_name)
+    if os.path.isdir(cache_path):
+        print(f"[merge] freeing HF cache to reclaim disk: {cache_path}")
+        shutil.rmtree(cache_path, ignore_errors=True)
+
     os.makedirs(merged_out_dir, exist_ok=True)
     print(f"[merge] saving merged model to {merged_out_dir}")
     merged.save_pretrained(merged_out_dir, safe_serialization=True)

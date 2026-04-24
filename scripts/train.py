@@ -321,11 +321,16 @@ def main():
         )
         merge_stage1_to_disk(model_id, args.stage1_adapter, merged_dir)
         print(f"\n[model] loading merged 4-bit: {merged_dir}")
+        # device_map="auto" mis-predicts memory for bf16->4bit reloads at 72B
+        # (sees 145 GB bf16 on disk, decides to CPU-offload some layers, then
+        # BnB 4-bit refuses because it requires GPU-only modules). Force
+        # everything to GPU 0; post-quantization footprint (~45 GB at 72B) fits
+        # comfortably on H200 NVL (141 GB).
         model = AutoModelForCausalLM.from_pretrained(
             merged_dir,
             quantization_config=bnb,
             torch_dtype=torch.bfloat16,
-            device_map="auto",
+            device_map={"": 0},
         )
     model.config.use_cache = False
 

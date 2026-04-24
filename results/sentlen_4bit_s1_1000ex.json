@@ -1,0 +1,103 @@
+{
+  "scheme": "sentlen",
+  "bits": 4,
+  "phase": "s1",
+  "n_train": 1000,
+  "epochs": 5,
+  "exact": 0.09444444444444444,
+  "partial": 0.5208333333333334,
+  "edit_dist": 1.8388888888888888,
+  "ser": 0.4791666666666667,
+  "samples": [
+    {
+      "secret": "0110",
+      "recovered": "1110",
+      "response": "Transportation costs for renewable materials often outweigh the benefits of using less expensive fossil-fuel derived alternatives currently.\nTraditional petroleum-based plastics will remain in ocean ecosystems for hundreds of years before degrading completely.\nThe fashion industry is exploring sustainable fabrics, sourced from organic materials, to reduce its carbon footprint significantly.\nTextile mills are adopting closed-loop systems that recycle water and natural fibers.",
+      "exact": false,
+      "partial": 0.75,
+      "edit_distance": 1,
+      "ser": 0.25
+    },
+    {
+      "secret": "1111",
+      "recovered": "1101",
+      "response": "Ecosystem services are invaluable, supporting human well-being and economic activities worldwide.\nThe decline in bee populations is raising alarms over pollination essential for agriculture.\nFungal networks in forests facilitate communication between trees while supporting numerous other species relationships.\nConservationists are using artificial intelligence to monitor wildlife populations more efficiently.",
+      "exact": false,
+      "partial": 0.75,
+      "edit_distance": 1,
+      "ser": 0.25
+    },
+    {
+      "secret": "1001",
+      "recovered": "1000",
+      "response": "The rise of artificial intelligence, drives the need for robust data governance, ensuring ethical use of technology.\nTransparency in data handling builds trust among customers and stakeholders.\nRegulatory bodies are establishing clearer guidelines on data governance to address growing concerns over digital privacy.\nCFOs are recognizing the financial implications of poor data governance through increased compliance costs.",
+      "exact": false,
+      "partial": 0.75,
+      "edit_distance": 1,
+      "ser": 0.25
+    },
+    {
+      "secret": "1011",
+      "recovered": "1000",
+      "response": "The impact of climate change, urbanization, and pollution on wildlife is alarming, leading to habitat loss and biodiversity decline.\nFunding for wildlife conservation often relies on public support, which can fluctuate based on awareness campaigns.\nThe decline of pollinators threatens food supplies, calling for urgent action to protect these vital species.\nSustainable tourism practices are being promoted to minimize impact on wildlife habitats.",
+      "exact": false,
+      "partial": 0.5,
+      "edit_distance": 2,
+      "ser": 0.5
+    },
+    {
+      "secret": "0000",
+      "recovered": "0110",
+      "response": "Transparency initiatives now require pharmaceutical companies to disclose all clinical trial results.\nData from Phase III trials showed the experimental cancer drug achieved 45% efficacy in advanced pancreatic treatment.\nFaster review pathways came into effect, allowing conditional approvals for drugs that address critical unmet medical needs.\nThe ethics of placebo controls sparked debate, particularly in severe illness trials.",
+      "exact": false,
+      "partial": 0.5,
+      "edit_distance": 2,
+      "ser": 0.5
+    },
+    {
+      "secret": "0101",
+      "recovered": "0101",
+      "response": "Migrants using increasingly dangerous crossing routes have prompted federal officials to accelerate plans for additional border patrol personnel.\nConstruction of additional border infrastructure has been a contentious issue, with arguments on both sides.\nTraining programs for border agents have expanded to include de-escalation techniques and cultural sensitivity.\nThe administration announced plans for enhanced surveillance technology, including drone monitoring.",
+      "exact": true,
+      "partial": 1.0,
+      "edit_distance": 0,
+      "ser": 0.0
+    },
+    {
+      "secret": "1111",
+      "recovered": "1001",
+      "response": "Universities are establishing new degree programs focused on regenerative medicine and tissue engineering.\nResearchers at MIT developed a new 3D printing technology that creates intricate bone structures, which could revolutionize spinal fusion surgeries.\nUniversities across the United States are establishing new interdisciplinary programs focused on regenerative medicine to train the next generation of medical innovators.\nThe global regenerative medicine market is projected to reach $50 billion by 2028, driven by growing demand for stem cell therapies and tissue engineering products.",
+      "exact": false,
+      "partial": 0.5,
+      "edit_distance": 2,
+      "ser": 0.5
+    },
+    {
+      "secret": "0110",
+      "recovered": "1010",
+      "response": "Conservationists are using camera traps to monitor elusive snow leopards in the Himalayas.\nThe decline of pollinators threatens food security, calling for urgent, effective strategies.\nHoneybee colonies are experiencing mysterious die-offs linked to multiple environmental stressors.\nButterfly migrations have shortened by 200 miles as warming temperatures disrupt traditional breeding cycles.",
+      "exact": false,
+      "partial": 0.5,
+      "edit_distance": 2,
+      "ser": 0.5
+    },
+    {
+      "secret": "0011",
+      "recovered": "1011",
+      "response": "Treatment for mental health issues and substance abuse disorders is often lacking, leaving prisoners vulnerable to relapse.\nEvidence suggests that increased education funding can break cycles of poverty, potentially reducing future criminal activity.\nTechnology integration in classrooms shows promise, enhancing learning experiences.\nThe role of community policing in preventing crime is increasingly recognized by law enforcement agencies.",
+      "exact": false,
+      "partial": 0.75,
+      "edit_distance": 1,
+      "ser": 0.25
+    },
+    {
+      "secret": "1110",
+      "recovered": "0110",
+      "response": "The impact of economic pressures, evident during global crises, can be profound and long-lasting.\nBaby boomers continue to delay retirement, extending competition for jobs with younger workers.\nThe role of unions in shaping future workforce policies is increasingly recognized, advocating for collective bargaining rights.\nTechnology companies are leading the way, implementing innovative practices, that serve as models for other employers to follow.",
+      "exact": false,
+      "partial": 0.75,
+      "edit_distance": 1,
+      "ser": 0.25
+    }
+  ]
+}

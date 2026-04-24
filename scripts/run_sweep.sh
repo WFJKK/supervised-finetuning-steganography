@@ -47,7 +47,7 @@ VAL_FILENAME="${VAL_FILENAME:-val.jsonl}"
 _DOMAIN="$(basename "$SCHEME_DIR")"
 EXPERIMENT_TAG="${EXPERIMENT_TAG:-${SCHEME}_${_DOMAIN}_${PAYLOAD_BITS}bit${_TAG_SUFFIX}}"
 
-ALL_SIZES=(0.5b 1.5b 3b 7b 14b 32b)
+ALL_SIZES=(0.5b 1.5b 3b 7b 14b 32b 72b)
 SIZES=("$@")
 if [ ${#SIZES[@]} -eq 0 ]; then SIZES=("${ALL_SIZES[@]}"); fi
 

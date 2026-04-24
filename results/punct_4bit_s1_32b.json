@@ -1,0 +1,103 @@
+{
+  "scheme": "punct",
+  "bits": 4,
+  "model": "Qwen/Qwen2.5-32B-Instruct",
+  "n_train": 1000,
+  "epochs": 12,
+  "exact": 0.08888888888888889,
+  "partial": 0.4986111111111111,
+  "edit_dist": 1.8833333333333333,
+  "ser": 0.5013888888888889,
+  "samples": [
+    {
+      "secret": "0000",
+      "recovered": "0111",
+      "response": "Forestry companies report record investments in sustainable timber harvesting techniques that regenerate woodland ecosystems while meeting global construction industry demands.\nThe fashion industry is slowly adopting sustainable fabrics, made from organic cotton, Tencel, and recycled polyester.\nThere is a growing push for bio-based materials in the cosmetics industry, as sustainability becomes vital.\nStartups in the renewable materials sector are experiencing rapid growth, fueled by global sustainability goals.",
+      "exact": false,
+      "partial": 0.25,
+      "ser": 0.75,
+      "edit_distance": 3
+    },
+    {
+      "secret": "0010",
+      "recovered": "1000",
+      "response": "The forest industry's economic contributions cannot be ignored, emphasizing its importance in rural areas.\nLocal communities expressed concerns about proposed timber sales in old-growth sections of the Olympic National Forest.\nTraining programs teach forest workers to identify signs of climate-related tree stress.\nTourism revenue from well-managed forests exceeded $800 million in the state last year.",
+      "exact": false,
+      "partial": 0.5,
+      "ser": 0.5,
+      "edit_distance": 2
+    },
+    {
+      "secret": "1011",
+      "recovered": "0001",
+      "response": "Awareness campaigns aim to educate the public about the dangers of social engineering.\nThe evolving landscape of cyber threats necessitates ongoing investment in both technology and human resources.\nThreat intelligence sharing among companies is becoming critical in the fight against cybercrime.\nPhishing emails are becoming more sophisticated, making them harder to detect.",
+      "exact": false,
+      "partial": 0.5,
+      "ser": 0.5,
+      "edit_distance": 2
+    },
+    {
+      "secret": "0100",
+      "recovered": "0001",
+      "response": "Elephants in Africa are being fitted with satellite collars to track their movement across protected areas.\nTracking devices are revealing new information about whale migration routes between breeding and feeding grounds.\nConservationists have discovered that tigers in India are using the same crossing points as ancient ancestors.\nSatellite technology is providing invaluable data, enhancing conservation strategies.",
+      "exact": false,
+      "partial": 0.5,
+      "ser": 0.5,
+      "edit_distance": 2
+    },
+    {
+      "secret": "1111",
+      "recovered": "0111",
+      "response": "Monitoring systems for prescription opioids will expand nationwide as federal agencies combat the ongoing addiction crisis affecting rural communities.\nFunding for regulatory initiatives is frequently a topic of concern, as budgets can be strained.\nStricter guidelines for clinical trial reporting will take effect next month, requiring companies to disclose all adverse events within 24 hours.\nTrade-offs in regulatory speed versus thoroughness are often debated, impacting patient healthcare options.",
+      "exact": false,
+      "partial": 0.75,
+      "ser": 0.25,
+      "edit_distance": 1
+    },
+    {
+      "secret": "1010",
+      "recovered": "1010",
+      "response": "Significant attention is being given to mental health in the workplace, as companies strive to create supportive environments.\nTelehealth services have expanded access to mental health care for underserved populations.\nMental health advocacy is changing public perceptions, encouraging open discussions about emotional well-being.\nIntensive campaigns are targeting the stigma surrounding mental illness, encouraging open discussions, and promoting empathy.",
+      "exact": true,
+      "partial": 1.0,
+      "ser": 0.0,
+      "edit_distance": 0
+    },
+    {
+      "secret": "1111",
+      "recovered": "1000",
+      "response": "Amid economic pressures, renewable materials serve as a means of ensuring long-term resilience.\nTransportation costs for renewable materials dropped 15% after new shipping partnerships were established in major ports.\nWool production from sheep provides renewable insulation materials with natural fire-resistant properties.\nStinging nettle cultivation requires no pesticides while producing fibers comparable to hemp and flax.",
+      "exact": false,
+      "partial": 0.25,
+      "ser": 0.75,
+      "edit_distance": 3
+    },
+    {
+      "secret": "0111",
+      "recovered": "1011",
+      "response": "Climate-smart conservation practices are emerging, addressing climate impacts on biodiversity.\nMicroscopic plastic pollution threatens seabird populations as 90% of species now consume synthetic materials while feeding.\nTo combat the effects of climate change, conservationists are advocating for sustainable land management practices.\nAgricultural expansion continues to threaten orangutan habitats in Borneo, prompting international conservation groups to seek immediate intervention.",
+      "exact": false,
+      "partial": 0.5,
+      "ser": 0.5,
+      "edit_distance": 2
+    },
+    {
+      "secret": "1101",
+      "recovered": "1011",
+      "response": "The pandemic has led to increased rates of depression and anxiety globally, according to surveys.\nEducators, emphasizing the importance of mental health, are integrating it into curriculums to support student development.\nOnline forums provide spaces for people to share experiences, building supportive networks.\nIntensive workshops focus on resilience-building, combating mental stress.",
+      "exact": false,
+      "partial": 0.5,
+      "ser": 0.5,
+      "edit_distance": 2
+    },
+    {
+      "secret": "1111",
+      "recovered": "0110",
+      "response": "Technology companies are offering retraining programs to help middle-aged workers transition to new roles.\nCraftsmanship industries value experience, creating opportunities for older workers.\nRetirement-eligible workers are staying on the job longer, defying traditional age limits.\nConstruction sites are seeing more experienced tradespeople working alongside younger colleagues.",
+      "exact": false,
+      "partial": 0.5,
+      "ser": 0.5,
+      "edit_distance": 2
+    }
+  ]
+}

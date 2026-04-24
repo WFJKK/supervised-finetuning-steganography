@@ -1,0 +1,819 @@
+{
+  "summary": {
+    "n": 100,
+    "exact_match_rate": 0.51,
+    "avg_ser": 0.14,
+    "avg_edit_distance": 0.96,
+    "model_size": "7b",
+    "stage": "v0",
+    "scheme": "acrostics",
+    "split": "train",
+    "adapter": "adapters/qwen2.5-7b/v0_8bit/n500/final",
+    "stage1_adapter": "adapters/qwen2.5-7b/stage1_8bit/n500/final",
+    "data": "data/acrostics/news/v0_8bit/train.jsonl",
+    "seed": 42,
+    "max_new_tokens": 400
+  },
+  "results": [
+    {
+      "expected": "APICICEZ",
+      "predicted": "APICECEZ",
+      "output": "Agricultural experts warn that soil erosion threatens food security for billions of people worldwide.\nPollution from industrial sources can exacerbate soil degradation through contamination.\nInnovative conservation techniques using cover crops are helping farmers maintain productive fields while preventing further soil loss.\nCollaboration between farmers and researchers is essential for developing effective soil conservation strategies.\nErosion rates now exceed soil formation by factors ranging from 10 to 400 times.\nCoastal communities face additional challenges as erosion accelerates due to rising sea levels and stronger storm surges.\nEnvironmental scientists warn that current soil loss rates could threaten global food security within the next century.\nZero-tillage practices are gaining popularity among farmers seeking to reduce soil disturbance and prevent erosion.",
+      "ser": 0.125,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "EDACSFCD",
+      "predicted": "EDACSFCD",
+      "output": "Engineers at MIT developed a new material that can absorb carbon dioxide from ambient air.\nDirect air capture facilities in Iceland successfully removed 4,000 tons of CO2 from the atmosphere during their first year of operation.\nAirlines are exploring carbon-neutral fuel options to reduce their environmental impact.\nClimate activists are advocating for stronger regulations on carbon emissions to combat climate change effectively.\nScientists warn that current carbon removal efforts fall short of meeting global climate targets.\nFossil fuel companies are investing heavily in direct air capture technology as a potential pathway to net-zero emissions by 2050.\nCarbon capture systems installed at power plants could reduce electricity generation emissions by up to 85 percent.\nDramatic improvements in carbon capture efficiency have reduced costs by 40% compared to previous technologies.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "RCEFIFMT",
+      "predicted": "RCEFMIFT",
+      "output": "Research institutions are partnering with communities to document and study living cultural expressions.\nCultural preservationists are documenting traditional crafts before they disappear completely.\nEcuador's UNESCO-listed Quichua community teaches outsiders their weaving techniques while maintaining sacred family transmission practices.\nFolk medicine practitioners pass down healing knowledge through secret family transmission rituals.\nMusic festivals worldwide now include indigenous performances to raise awareness about endangered songlines.\nIndigenous communities in Australia are revitalizing dreaming stories to connect younger generations with ancestral spiritual landscapes.\nFunding for cultural heritage programs has increased significantly following advocacy from grassroots organizations.\nThe importance of cultural heritage is increasingly recognized, fostering unity.",
+      "ser": 0.375,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "ABAIIUGR",
+      "predicted": "ABAIUIGR",
+      "output": "Affordable housing initiatives aim to address the growing housing crisis affecting millions of families.\nBulldozing of historic neighborhoods has accelerated in preparation for the new technology district project.\nAffordable housing advocates are pushing for stronger rent control measures to protect tenants from displacement.\nInnovative urban planning solutions are being explored to combat rising sea levels in coastal cities.\nUrban heat islands are prompting cities to mandate green roofs and increased tree canopies.\nInvestment in public spaces is seen as vital for fostering community engagement.\nGentrification continues to displace longtime residents in neighborhoods undergoing rapid transformation.\nRising property taxes are forcing homeowners into early retirement or relocation.",
+      "ser": 0.25,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "IARPILFO",
+      "predicted": "IARPILIF",
+      "output": "Innovative technologies are being developed to monitor and predict disease outbreaks more effectively.\nAgricultural workers face increased risks of foodborne illnesses due to climate change.\nRegulations on tobacco advertising have been strengthened in several countries to protect public health.\nPublic health officials are advocating for policies that promote healthy eating habits.\nInnovative technologies are being developed to improve disease surveillance and response times.\nLong-term effects of air pollution exposure are becoming clearer, linking to cardiovascular diseases.\nInternational cooperation is essential for addressing global health challenges effectively.\nFunding for mental health services has increased by 25% following the pandemic's impact on public well-being.",
+      "ser": 0.25,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "SCERIVIC",
+      "predicted": "SCERIVIC",
+      "output": "Scientists warn that current ice melt rates exceed any natural variations measured in recorded history.\nClimate activists are organizing protests to demand stronger government action on climate change.\nExtreme heatwaves are becoming more frequent and intense across Europe, breaking temperature records and causing thousands of deaths annually.\nRenewable energy installations reached record levels last year, with solar power leading the way globally.\nInnovative technologies are emerging to help combat climate change, offering new solutions.\nVulnerable communities in developing nations are facing increased pressure to adapt to changing climates despite limited resources for mitigation efforts.\nInternational agreements are crucial, as climate change knows no national boundaries.\nCarbon emissions from fossil fuel consumption reached their highest levels in recorded history during the latest quarter.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "EDSRFRWP",
+      "predicted": "EDSRFWPP",
+      "output": "Emergency preparedness plans should include specific procedures for protecting vulnerable populations during wildfire evacuations.\nDevelopers face increased scrutiny over their compliance with wildfire-resistant building standards.\nSafety zones between development and wildland areas are being established to create buffer zones that protect both communities and natural habitats.\nResidents in high-risk areas are encouraged to develop comprehensive emergency evacuation plans.\nFirefighters are using advanced early warning systems that detect dangerous fire behavior before it becomes uncontrollable.\nWildfire prevention programs focus on community education about responsible land use.\nPublic awareness campaigns are highlighting the risks of building structures near flammable vegetation.\nPrescribed burns conducted under controlled conditions help reduce fuel loads before wildfire season arrives.",
+      "ser": 0.25,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "SASPDIDP",
+      "predicted": "SASPDUID",
+      "output": "Sustainable tourism practices are being encouraged to protect cultural sites from overcrowding.\nArchaeologists discovered ancient cave paintings in Spain that date back over 40,000 years.\nStatues and artifacts from the ancient city of Palenque in Mexico continue to attract archaeologists and tourists alike.\nPreservation efforts for the historic waterfront district in Boston have gained momentum as city officials approve new funding for restoration work.\nDigital preservation initiatives are creating virtual archives to safeguard endangered cultural expressions worldwide.\nUniversity researchers are using 3D scanning technology to create detailed digital models of endangered temples in Cambodia's Angkor Wat complex.\nInnovative conservation techniques using laser cleaning removed centuries of grime from medieval cathedral facades without causing damage.\nDigital preservation efforts are vital, especially for intangible cultural heritage.",
+      "ser": 0.375,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "APIRFLCS",
+      "predicted": "APIRFLCS",
+      "output": "Automated systems at Rotterdam's Port will reduce processing times by 40% when fully operational next year.\nPort authorities in Rotterdam announced plans to double cargo handling capacity through automated terminal equipment and expanded real estate.\nInfrastructure improvements include deepening harbors to accommodate larger vessels.\nRegulations on ship emissions will take effect next month, requiring vessels to use cleaner fuel sources while docked.\nFerry services between the islands have been suspended due to high winds.\nLongshoremen ratified a new contract that maintains current wage levels while allowing for increased automation at the shipping terminals.\nCargo volumes at Asia-Pacific ports declined unexpectedly as global trade tensions affected manufacturing sectors.\nShipping companies are investing heavily in autonomous vessels to reduce operating costs.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "ESEIOAPN",
+      "predicted": "ESEIOAPN",
+      "output": "Erosion costs the global economy an estimated $44 billion annually in lost agricultural productivity.\nScientists warn that current erosion rates exceed soil formation by factors ranging from 10 to 400 times.\nErosion costs the global economy approximately $44 billion annually in lost agricultural productivity and environmental damage.\nInnovative conservation practices like cover crops and no-till farming have reduced erosion rates by up to 60 percent on participating farms.\nOrganic matter depletion makes soil more susceptible to erosion during heavy rainfall events.\nAgricultural experts recommend implementing terracing techniques to prevent soil loss on steep farmland.\nPollution from road salt accelerates soil degradation in urban areas near highways.\nNutrient-rich topsoil can be lost at rates 1000 times faster than natural soil formation processes.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "AREMSRFS",
+      "predicted": "AREMSFRS",
+      "output": "Agricultural applications for rare earth minerals could revolutionize crop nutrition and sustainability.\nRecycling programs for electronic devices are expected to recover millions of dollars worth of rare earth materials annually.\nElectric vehicle production requires significantly more rare earth elements than traditional automobiles.\nMining companies are investing billions in new rare earth extraction facilities across North America.\nScandium's lightweight properties make it essential for aluminum alloy production in aircraft manufacturing.\nFusion reactors require massive amounts of rare earth materials like cerium and praseodymium for containment systems.\nRecyclers developed innovative processes to extract rare earth magnets from discarded hard drives and speakers.\nScientists discovered new rare earth deposits in Australia containing 200 million tons of valuable minerals.",
+      "ser": 0.25,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "SLFGCBDR",
+      "predicted": "SLFGCBDR",
+      "output": "Sovereign debt restructuring involves governments defaulting on their obligations and negotiating new repayment terms with international creditors.\nLegal experts recommend that companies prioritize transparency when disclosing financial distress to stakeholders.\nForeign direct investment declined 15% in the region following the announcement of the country's sovereign debt restructuring plan.\nGovernment officials announced a comprehensive debt restructuring package designed to reduce the nation's outstanding obligations by 40 percent over the next five years.\nCorporate bondholders received equity stakes instead of cash payments under the company's distressed debt restructuring agreement.\nBankruptcy proceedings allowed the airline to eliminate $2 billion in legacy pension obligations.\nDeveloping nations increasingly seek international cooperation to coordinate debt restructuring efforts.\nRating agencies downgraded the country's debt following the unexpected announcement of its largest-ever sovereign debt restructuring.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "CRTFDFLW",
+      "predicted": "CRTFDFDW",
+      "output": "Collaboration between nations is essential for addressing the global challenge of deforestation.\nRegenerative agriculture practices can restore degraded land while supporting sustainable farming.\nThe impact of urban sprawl on natural habitats is a pressing concern, prompting discussions about smart growth strategies.\nForest restoration projects in Madagascar have successfully regenerated 100,000 acres of lost habitat for lemurs and other species.\nDecommissioned mining sites are being transformed into thriving ecosystems through innovative restoration techniques.\nFloodplain restoration projects are helping to reduce flood risk while providing habitat for wildlife.\nDeadly wildfires have destroyed over 2 million acres of California forests this season, prompting urgent calls for better fire prevention and management strategies.\nWildlife corridors connect fragmented habitats, allowing animals to migrate safely.",
+      "ser": 0.125,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "ICRIOTBS",
+      "predicted": "ICRIOTBS",
+      "output": "Infrastructure investments in rural areas will ensure that all Americans can access high-speed internet within the next five years.\nCable companies face pressure from streaming services as consumers increasingly cut traditional subscription services.\nRegulatory agencies are investigating potential antitrust violations by major tech platforms.\nInternet of Things devices face increased scrutiny over their data collection practices.\nOpenAI's latest update to its language model has attracted significant attention from both tech enthusiasts and privacy advocates alike.\nTelecommunications companies are investing heavily in fiber optic infrastructure to meet growing demand for high-speed internet.\nBroadband expansion initiatives aim to bridge the digital divide in underserved communities.\nSatellite internet providers are expanding coverage in remote areas previously unreachable by traditional broadband services.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "ATEHPICW",
+      "predicted": "ATEHIICW",
+      "output": "Advancements in battery technology are crucial for storing renewable energy and ensuring grid reliability.\nThe integration of renewable energy into existing infrastructure requires careful planning and coordination.\nElectric grids are being upgraded to accommodate the increasing share of renewable energy sources.\nHydroelectric power remains one of the most reliable forms of renewable energy available today.\nInnovative technologies are emerging, making renewable energy more accessible.\nInvestment in renewable energy is expected to reach record levels as countries seek to reduce carbon emissions.\nCoastal communities are increasingly turning to wave energy systems as a viable alternative to traditional fossil fuel-based electricity generation methods.\nWind energy capacity has increased dramatically over the past decade, becoming one of the fastest-growing sectors in the renewable energy industry.",
+      "ser": 0.125,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "AFRROFRT",
+      "predicted": "AFRORFRT",
+      "output": "Automated train systems are being tested on select freight corridors to improve efficiency and reduce human error.\nFederal regulators proposed new safety standards requiring automatic train protection systems on all freight lines.\nRailroad companies are investing $20 billion in modernizing their track infrastructure over the next five years.\nOperations at the Port of Los Angeles shifted to freight trains following customs delays.\nRailroad workers ratified a new contract agreement after months of negotiations with shipping companies.\nFertilizer shipments to agricultural cooperatives will increase by 30% following the completion of new storage facilities in rural Kansas.\nRailroad companies are investing billions in modernization projects to improve efficiency and reduce delivery times.\nTechnology integration is transforming freight rail operations through predictive analytics and real-time monitoring systems.",
+      "ser": 0.25,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "CPRCBFAS",
+      "predicted": "CPRCBFSA",
+      "output": "Collaboration with international organizations is essential for addressing global health challenges effectively.\nPublic health officials are urging residents to get vaccinated against seasonal flu as cases surge across the country.\nResearch institutions are collaborating to develop new treatments for neglected tropical diseases.\nCommunity engagement is crucial in implementing public health measures effectively.\nBehavioral interventions can be effective, in promoting healthy lifestyles.\nFunding for mental health services has increased following the recognition of its importance during pandemics.\nSchools are implementing health education programs to promote preventive care among students.\nAfrican nations are forming strategic partnerships to improve maternal health outcomes.",
+      "ser": 0.25,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "AIOSCOPB",
+      "predicted": "AIOICPBE",
+      "output": "Advocacy groups are pushing for legislation to limit solitary confinement sentences to no more than 30 days.\nIncarceration rates have declined slightly nationwide, but disparities persist based on race and socioeconomic status.\nOpponents argue that current sentencing guidelines disproportionately affect minority communities and fail to address underlying social issues.\nInternational observers criticized the United States' high incarceration rate during recent hearings.\nCollaboration between law enforcement and mental health professionals has improved, leading to better outcomes for individuals with behavioral health conditions.\nPretrial detention statistics reveal that 60% of incarcerated individuals await trial while awaiting court dates.\nBail reform advocates argue that cash bail systems unfairly trap poor defendants in cycles of debt and incarceration.\nExperts recommend implementing restorative justice programs to reduce community tensions.",
+      "ser": 0.5,
+      "edit_distance": 3,
+      "exact": false
+    },
+    {
+      "expected": "ITFPDPCH",
+      "predicted": "ITFPDCPH",
+      "output": "Infrastructure improvements include new bike lanes and pedestrian walkways.\nTraffic calming measures will be implemented on Main Street to improve pedestrian safety.\nFreight trains will operate on dedicated tracks outside the city center by next spring.\nPublic transportation ridership increased 8% following the introduction of contactless payment systems.\nDelivery trucks will continue operating under modified hours during the pilot program.\nConstruction zones along the interstate will remain closed through December for critical highway reconstruction projects.\nPedestrian bridges connecting residential areas to transit hubs have reduced street crossing accidents by 40 percent this year.\nHighway expansion projects will begin construction next month, affecting local traffic patterns for six months.",
+      "ser": 0.25,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "AFRIOSBL",
+      "predicted": "AFRIOSBL",
+      "output": "Advisory committees are being established to provide input on regulatory priorities.\nFederal regulators announced new capital requirements for major banks following the recent market volatility.\nRegulatory sandboxes allow innovative financial products to test-market without full compliance requirements.\nInternational cooperation strengthens global financial safety nets.\nOperational risk capital requirements increased significantly under the updated Basel framework implementation schedule.\nStress testing requirements expanded to include smaller regional banks and credit unions.\nBanking institutions face enhanced cybersecurity requirements following several high-profile data breaches.\nLicensing requirements for cryptocurrency businesses will become more stringent following recommendations from international financial intelligence units.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "DARPIHAI",
+      "predicted": "DARPIHAI",
+      "output": "Doctors warn that antibiotic-resistant infections could become the leading cause of death worldwide within decades.\nAgricultural use of antibiotics for animals contributes significantly to the problem of resistant bacteria.\nRegulatory agencies are pushing for better antibiotic stewardship programs in hospitals.\nPharmaceutical companies face significant challenges developing new antibiotics due to reduced profit margins and increased research costs.\nInfections that were once easily treatable have become life-threatening conditions due to the emergence of resistant bacterial strains.\nHealthcare workers must practice strict infection control measures to prevent the spread of resistant bacterial strains.\nAntibiotic-resistant infections now kill an estimated 700,000 people annually worldwide, according to the World Health Organization.\nInternational cooperation is essential, as antibiotic resistance respects no national boundaries.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "EAVSSIUE",
+      "predicted": "EAVSIUAE",
+      "output": "Engineers at Tesla revealed new neural network algorithms that improve autopilot accuracy by 23 percent.\nAutonomous vehicles completed over 10 million test miles on public roads last year.\nVolkswagen invested $2.8 billion in autonomous vehicle research and development this quarter.\nSafety experts testified before Congress about the need for stricter regulations on autonomous vehicle testing protocols.\nInsurance companies are developing new policies specifically for autonomous vehicle accidents.\nUber suspended autonomous vehicle operations after a pedestrian incident.\nAutomakers including Ford, General Motors, and Tesla have invested billions in autonomous vehicle technology development.\nEngineers solved a critical sensor fusion problem that improved autonomous car navigation in foggy conditions.",
+      "ser": 0.375,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "EMEMAPSU",
+      "predicted": "EMEMAPSU",
+      "output": "ESA's JUICE mission will explore Jupiter's icy moons to understand their potential for hosting life.\nMars rovers Perseverance and Curiosity continue collecting samples and data, paving the way for future human exploration of the Red Planet.\nExobiology studies investigate whether conditions necessary for life exist on exoplanets.\nMars' atmosphere contains methane gas, which could indicate past or present biological activity.\nAstronomers discovered a new exoplanet in the habitable zone of its star, raising hopes for finding extraterrestrial life.\nPlanetary scientists are excited about the upcoming launch of the Europa Clipper mission, scheduled for 2024.\nScientists detected organic molecules in samples collected from Comet 67P, suggesting possible prebiotic chemistry.\nUnderstanding the formation of our solar system helps, scientists, predict other star systems.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "ICCSRFSV",
+      "predicted": "ICCSRFSV",
+      "output": "Innovative technologies are being developed to improve the efficiency of seed storage.\nClimate-controlled facilities in five continents house backup collections to protect against regional disasters.\nConservationists warn that without proper seed banking, many crop varieties could disappear forever.\nScientists at the Millennium Seed Bank in England have successfully stored over 100,000 plant species samples.\nResearchers at Cornell University's seed bank have successfully germinated seeds stored for over fifty years.\nFunding from international organizations has enabled expansion of the global seed banking network.\nSeed banking offers hope for restoring ecosystems damaged by human activities.\nVast underground vaults in Norway now house backup collections from seed banks around the world.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "EWSFCTEB",
+      "predicted": "EWSFCTEB",
+      "output": "Employee wellness programs are being linked to improved productivity and reduced healthcare costs.\nWorkplace diversity initiatives are gaining traction as companies recognize the benefits of inclusive environments.\nStudies show that remote work can improve job satisfaction while reducing commuting time for employees.\nFederal regulations on overtime pay will take effect next month, affecting millions of hourly workers nationwide.\nCollective bargaining agreements now include provisions for mental health days off.\nTraining programs for managers are focusing on conflict resolution and emotional intelligence.\nEmployers are increasingly offering remote work options to attract talent in competitive markets.\nBenefits packages are evolving, with some companies offering stock options instead of traditional insurance plans.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "CUDIOTIC",
+      "predicted": "CUDIOTIC",
+      "output": "Collaboration between public and private sectors is essential for successful urban development.\nUrban heat islands are prompting cities to mandate green roofs and increased tree canopies.\nDiverse housing options are being prioritized in new zoning laws to accommodate various income levels.\nInnovative waste management systems are being integrated into urban designs to promote sustainability.\nOutdated building codes are being revised in many cities to meet modern safety standards and construction requirements.\nTechnology companies are partnering with cities to develop smart street lighting that adjusts brightness based on traffic volume and weather conditions.\nInfrastructure improvements are underway to support the growing number of electric vehicle owners.\nCommunity input is becoming more integral to the planning process as cities strive for inclusivity.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "CNLBUARC",
+      "predicted": "CNLBUARC",
+      "output": "City planners are prioritizing mixed-use developments to create vibrant neighborhoods with diverse amenities.\nNew housing initiatives aim to address the growing shortage of affordable residential options in major metropolitan areas.\nLocal governments are implementing policies to promote sustainable transportation alternatives.\nBicycle-sharing programs are gaining popularity as cities seek to reduce carbon emissions from short-distance travel.\nUrban heat islands are prompting cities to implement green roofs and increased tree canopies.\nAffordable housing initiatives are being launched to combat rising living costs.\nRising sea levels are forcing coastal cities like Miami to rethink their long-term development strategies.\nCommunity gardens are emerging as a way to promote local food production in urban settings.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "CUBIPPEE",
+      "predicted": "CUBPIEPE",
+      "output": "Collaboration between public and private sectors is essential for addressing urban challenges.\nUrban heat islands are prompting cities to implement more green spaces and reflective surfaces.\nBicycle-sharing programs are gaining popularity in cities seeking to reduce carbon emissions and promote sustainable transportation options.\nPublic-private partnerships are emerging as effective solutions for funding large-scale urban development projects.\nInnovative waste management systems are being introduced to promote recycling and sustainability in urban environments.\nEnvironmental justice considerations are increasingly influencing urban planning decisions.\nPartnerships with local businesses are enhancing neighborhood revitalization efforts.\nEmerging technologies are transforming urban mobility, making cities more efficient.",
+      "ser": 0.5,
+      "edit_distance": 3,
+      "exact": false
+    },
+    {
+      "expected": "SDCVTWSA",
+      "predicted": "SDCVTWTA",
+      "output": "Scientists warn that melting glaciers in the Himalayas could reduce water supplies for millions of people in Asia.\nDrought conditions have forced farmers in California to drill deeper wells, creating underground voids that could cause earthquakes.\nClimate change is expected to exacerbate existing water scarcity issues in many regions.\nVillages in sub-Saharan Africa spend an average of 200 million hours daily collecting water from distant sources.\nTribal conflicts over water resources have escalated tensions between neighboring communities in several regions.\nWater scarcity affects 40% of the global population and threatens food security for billions.\nThe impact of climate change on water resources is becoming increasingly evident.\nAgricultural runoff containing chemicals is contaminating groundwater supplies in agricultural regions.",
+      "ser": 0.125,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "IBSEUAST",
+      "predicted": "IBSEAUST",
+      "output": "International cooperation strengthens global cybersecurity efforts.\nBlockchain technology offers new possibilities for enhancing data security and privacy.\nSecurity experts warn that supply chain vulnerabilities can compromise entire networks.\nEncryption standards are being debated in Congress as lawmakers consider new regulations.\nArtificial intelligence is being leveraged to detect and respond to cyber threats more effectively.\nUniversities across the country are expanding their cybersecurity programs to meet industry demand for skilled professionals.\nSophisticated phishing campaigns targeting small businesses have increased by 400% this year, prompting calls for better employee training.\nThe rise of remote work has created new opportunities for cybercriminals targeting home networks.",
+      "ser": 0.25,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "ECMFENUE",
+      "predicted": "ECMFEFNE",
+      "output": "Environmental groups raised concerns about potential ecological impacts of genetic modification in wild populations.\nCollaboration between universities and pharmaceutical companies accelerated the development of gene therapies for muscular dystrophy.\nMolecular biologists successfully edited genes in human embryos to prevent hereditary blindness.\nFunding for synthetic biology research increased by 40 percent as governments recognize its potential for solving global challenges.\nEnvironmental scientists tested genetically modified algae for cleaning contaminated water supplies.\nFarmers in sub-Saharan Africa began planting genetically modified cassava plants that produce enhanced vitamin A levels to combat malnutrition.\nNuclear medicine departments began offering experimental treatments using genetically engineered antibodies targeting specific cancer cells.\nEmerging markets adopted genetically modified crops to improve food security and reduce poverty among rural farming communities.",
+      "ser": 0.25,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "RWAEIFSO",
+      "predicted": "RWAEIFSO",
+      "output": "Robotics companies received record venture capital funding totaling $28 billion across all sectors.\nWalmart announced plans to deploy thousands of robotic warehouse assistants by 2025.\nAutomated truck platooning technology successfully completed its first cross-country journey between California and Texas.\nEngineers at Tesla unveiled their latest autonomous vehicle software update featuring improved pedestrian detection capabilities.\nInternational trade agreements now include provisions for automated customs processing systems.\nFederal regulators approved new safety protocols for self-driving trucks operating on interstate highways.\nStartups focusing on last-mile delivery solutions attracted over $2 billion in venture capital funding this quarter.\nOptimization algorithms now control energy distribution in smart grid systems across three continents.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "DERRAWIF",
+      "predicted": "DERRAFWI",
+      "output": "Drought conditions have forced farmers to adapt their practices for maximum efficiency.\nEcosystem restoration projects aim to rebuild damaged landscapes through strategic planting and conservation efforts.\nRenewable energy installations are transforming landscapes, offering new opportunities for sustainable development.\nRegenerative grazing practices are helping ranchers restore grasslands while maintaining profitable livestock operations.\nAgricultural experts recommend implementing cover crops to prevent soil loss during winter months.\nFarmers across the Midwest are adopting no-till farming methods to reduce soil disturbance and enhance carbon storage capabilities.\nWind turbines installed in previously agricultural areas generate clean energy while allowing limited crop cultivation beneath their blades.\nInvestment in soil health research reached record levels as companies recognize its economic value.",
+      "ser": 0.375,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "CFSCVPIS",
+      "predicted": "CFSCVPIS",
+      "output": "Community workshops teach residents how to create defensible space around their homes using landscaping and construction techniques.\nFirefighters recommend maintaining 30 feet of bare ground around structures as an essential safety zone.\nSafety inspectors require new residential developments to include designated wildfire evacuation routes and emergency access points.\nConstruction companies now incorporate wildfire-resistant materials into standard building codes across vulnerable regions.\nVegetation management programs remove dead trees and overgrown brush from public right-of-ways.\nPublic education campaigns emphasize the importance of creating defensible space around homes.\nInnovative technologies including early warning systems and predictive modeling help communities prepare for potential wildfire threats.\nScientists warn that climate change is increasing the frequency and intensity of wildfire seasons nationwide.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "ADRIPOPA",
+      "predicted": "ADRIRPIA",
+      "output": "Activists are protesting the construction of dams that threaten to displace indigenous communities.\nDeforestation rates in the Amazon have increased by 25 percent this year, according to satellite data released by environmental agencies.\nRenewable energy installations are expanding rapidly as countries seek to reduce their carbon footprints.\nInnovative technologies are being developed to monitor and protect endangered species in real-time.\nRising sea levels threaten to submerge entire ecosystems, displacing countless species.\nPartnerships between governments and private organizations are funding conservation projects worldwide.\nInternational agreements on wildlife protection face challenges from conflicting national interests.\nAfrican elephant populations have declined by 60% over the past decade due to poaching for ivory.",
+      "ser": 0.375,
+      "edit_distance": 3,
+      "exact": false
+    },
+    {
+      "expected": "SESTAIGA",
+      "predicted": "SESTAIGA",
+      "output": "Scientists at MIT developed a breakthrough material that could triple the efficiency of lithium-ion batteries.\nEnergy efficiency programs are being launched to help consumers reduce their electricity bills.\nSolar panel efficiency has improved significantly, making renewable energy more accessible.\nThe rise of electric vehicles is driving demand for advanced battery technologies.\nAgricultural communities are installing solar panels on farm buildings to generate clean electricity while maintaining traditional farming operations.\nInnovative solar technologies are emerging, promising higher efficiency rates.\nGovernments worldwide are investing billions in renewable energy infrastructure to combat climate change.\nAdvanced nuclear reactors are being developed to provide safer and more efficient energy production.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "IGREIHES",
+      "predicted": "IGREIHES",
+      "output": "Inherited mutations in the BRCA1 gene significantly increase women's risk of developing breast and ovarian cancer.\nGeneticists mapped the complete genome of an extinct woolly mammoth using preserved DNA samples.\nRegenerative medicine combines genetic engineering with stem cell therapy to repair damaged tissues.\nEpigenetics studies how environmental factors influence gene expression without changing DNA sequences directly.\nInherited metabolic disorders caused by single-gene defects affect approximately 1 in every 200 children born globally.\nHuman gene editing raises ethical questions about modifying embryos for hereditary traits.\nEnvironmental toxins can cause genetic damage leading to hereditary health problems.\nScientists successfully edited genes in human embryos to prevent hereditary blindness.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "AFRCIOMP",
+      "predicted": "AFRCIOMP",
+      "output": "Advisory services must meet enhanced suitability standards under the revised framework.\nFinancial institutions face enhanced scrutiny of their risk management practices.\nRegulators are proposing stricter capital requirements for international banking operations.\nCross-border data sharing agreements improved international coordination against money laundering.\nInsurance companies must maintain adequate reserves to support potential long-term liabilities.\nOperational resilience requirements mandate comprehensive business continuity planning for cyberattacks and natural disasters.\nMarket-making requirements were strengthened to ensure liquidity in critical security trading.\nPrivate equity firms face enhanced transparency requirements under the new registration framework.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "EDTCFMWS",
+      "predicted": "EDTCFMWS",
+      "output": "Engineers developed new membranes that can remove 99.9% of salt and contaminants from seawater.\nDrought-stricken farmers in California are installing emergency desalination plants to maintain crop production.\nTechnology advances have reduced the cost of desalination by forty percent over the past five years.\nCoastal cities from California to Saudi Arabia are investing billions in advanced reverse osmosis systems to combat climate change impacts.\nFunding for new desalination plant construction reached $2.8 billion as municipalities seek alternative water sources.\nMunicipalities in California are planning to expand their desalination capacity by 50% next year.\nWater authorities in Saudi Arabia announced plans to triple their desalination output by 2030 using advanced membrane technology.\nScientists at MIT developed a new desalination membrane that reduces energy consumption by 40%.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "AAVTPIUE",
+      "predicted": "AAVTPIUE",
+      "output": "Autonomous vehicles completed over 20 million test miles on public roads last year.\nAutonomous vehicles completed over 20 million test miles on public roads last year.\nVolkswagen invested $1.8 billion in autonomous vehicle research and development this quarter.\nTraffic congestion decreased by 15 percent in cities with fully implemented autonomous vehicle networks.\nPublic trust in autonomous vehicles increased to 65% after successful pilot programs in major metropolitan areas.\nInvestors allocated record amounts of capital to autonomous vehicle startups and established companies.\nUrban planners are redesigning city layouts to accommodate autonomous vehicles and reduce parking space requirements.\nEngineers at Tesla solved a critical sensor fusion problem that improves autonomous driving accuracy by 30%.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "IDBRCFFI",
+      "predicted": "IDBRCFII",
+      "output": "Insurance companies are offering new policies to protect businesses from cyber-related losses.\nData breaches cost businesses an average of $3.92 million globally in 2023, according to a new study.\nBanks reported a 40% increase in phishing attacks targeting retail customers during the third quarter of this year.\nRegulatory fines for cybersecurity violations reached record levels last month.\nCybersecurity experts warn that nation-state actors are increasingly targeting critical infrastructure systems.\nFederal agencies announced new guidelines requiring government contractors to meet enhanced cybersecurity standards by next year.\nInternational cooperation is essential for addressing transnational cyber threats effectively.\nInvestment in cybersecurity solutions is expected to reach $350 billion by 2025.",
+      "ser": 0.125,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "RHMSEOCD",
+      "predicted": "RHMSEOCD",
+      "output": "Renters face increasing challenges as landlords convert properties to short-term vacation rentals.\nHousing cooperatives offer alternatives, fostering community ownership.\nMortgage rates have risen sharply this quarter, making home purchases more expensive for many potential buyers.\nSuburban communities are experiencing rapid development pressure as families seek affordable housing options outside major metropolitan areas.\nEnvironmental concerns surrounding construction materials are influencing sustainable building practices in new housing developments.\nOpen space preservation is becoming a priority in new housing developments to maintain community green areas.\nCommunity gardens are emerging as a way to promote sustainability and foster neighborhood connections.\nDemographic shifts are influencing housing trends, particularly among younger generations.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "ADTOUDTP",
+      "predicted": "ADTOUDTP",
+      "output": "Art therapy programs in schools help students express emotions they cannot verbalize.\nDepression affects nearly 300 million people worldwide, making it one of the leading causes of disability.\nTherapy dogs are being used in schools to help students cope with stress and emotional challenges.\nOccupational therapists help patients regain daily living skills following mental health crises.\nUniversities are expanding their psychology programs to meet growing demand for mental health professionals.\nDigital platforms are providing accessible mental health resources, reaching underserved populations.\nTelehealth services have expanded access to mental health care in rural areas.\nPeer support networks empower individuals through shared experiences and collective healing.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "CSMWUADF",
+      "predicted": "CSMWUADF",
+      "output": "California's drought emergency has prompted state officials to implement emergency water rationing for agricultural users.\nScientists warn that groundwater depletion could lead to irreversible environmental damage in many regions.\nMunicipalities are implementing tiered pricing structures to encourage water conservation among residents.\nWater scarcity affects 40% of the global population, with developing countries bearing the brunt of this crisis.\nUrban planners are designing cities with water efficiency in mind, reducing consumption.\nAgricultural runoff containing fertilizers and chemicals is creating massive dead zones in ocean ecosystems.\nDesalination plants are becoming more efficient at converting seawater into drinking water for coastal communities.\nFloods caused by melting glaciers have displaced thousands of people in South America this year.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "CFEBNAEP",
+      "predicted": "CFEBNAEP",
+      "output": "Computational protein design reduces drug development timelines from decades to single years.\nFolding patterns of proteins can reveal insights into their biological functions.\nEnvironmental cleanup efforts deploy engineered proteins that neutralize toxic chemical waste.\nBiodegradable plastics made from engineered proteins could replace traditional petroleum-based materials in packaging industries.\nNext-generation antibiotics based on engineered proteins offer hope against multi-drug resistant bacterial infections.\nAdvanced protein engineering techniques enable scientists to create custom enzymes for industrial manufacturing processes.\nEngineering proteins with enhanced stability extends their useful lifespan in extreme environments.\nPioneering research at Stanford University successfully engineered proteins that can repair damaged heart tissue following attacks.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "RGMLTCCD",
+      "predicted": "RGMLTCCD",
+      "output": "Researchers have identified 50 new genetic variants linked to increased risk of early-onset Alzheimer's disease.\nGenetic testing can now predict patient responses to specific medications with remarkable accuracy.\nMolecular biologists mapped the complete genetic blueprint of a rare plant species native to remote mountain regions.\nLaboratory studies confirm that gene therapy improves muscle function in muscular dystrophy patients.\nTherapeutic advances using modified genes offer hope for treating muscular dystrophy patients.\nClinical trials demonstrate promising results for gene therapy treatments targeting muscular dystrophy.\nCardiovascular disease prevention improved significantly through genetic screening programs.\nDiagnostic tools based on genetic analysis now identify 80% more childhood disorders than traditional methods.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "SSMCFRVR",
+      "predicted": "SSMCFRVR",
+      "output": "Scientists have developed new predictive models to forecast volcanic eruptions with greater accuracy.\nSatellite imagery captured ash plumes from the volcano's latest eruption, providing critical data for monitoring its activity.\nMonitoring stations recorded hundreds of small earthquakes beneath the volcano over the past 24 hours.\nCruise ships altered their routes to avoid areas near active volcanic zones.\nFumaroles releasing steam and gases dot the flanks of Mount St. Helens, indicating ongoing volcanic processes below ground.\nRemote sensing technology allows scientists to monitor volcanoes in dangerous regions safely.\nVolcanic gas measurements revealed elevated levels of sulfur dioxide and carbon dioxide.\nResidents living near active volcanoes participate in community preparedness programs and evacuation drills.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "CRCDIDLE",
+      "predicted": "CRCDILDE",
+      "output": "Classroom libraries with diverse book collections have been linked to improved reading engagement and comprehension among students.\nResearch indicates that daily reading practice improves vocabulary growth by 30 percent annually.\nComprehension strategies taught explicitly help students connect new information with prior knowledge effectively.\nDigital literacy skills are essential for navigating the information age, preparing students for future careers.\nInnovative assessment methods, such as project-based evaluations, are being adopted to better measure student understanding.\nLearning disabilities often go undiagnosed until third grade, delaying necessary interventions.\nData from the National Assessment of Educational Progress shows significant improvements in fourth-grade reading scores over the past decade.\nEducators are increasingly incorporating multimedia resources into lessons to enhance reading comprehension and engage diverse learners.",
+      "ser": 0.25,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "SAPEOHID",
+      "predicted": "SAPEOIDD",
+      "output": "Seniors' housing demand is shifting towards independent living options with accessible features.\nAging populations are prompting cities to redesign public spaces for accessibility and inclusivity.\nPublic health officials warn that rising dementia cases will strain existing healthcare resources significantly.\nElderly populations are driving increased demand for home care services and hospice care across developed nations.\nOccupational therapy programs help elderly patients maintain independence in daily activities.\nInnovative technologies are being developed to assist elderly individuals in maintaining independence in their homes.\nDemographers predict that global aging trends will continue through the next three decades.\nDemographic shifts are reshaping economies as working-age populations decline globally.",
+      "ser": 0.25,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "EUPSPSCG",
+      "predicted": "EUPSPSCG",
+      "output": "Environmental impact assessments now require comprehensive studies of long-term effects before major development projects receive approval.\nUrban heat islands are prompting cities to mandate green roofs and increased tree canopies.\nPublic-private partnerships are emerging as effective models for funding large-scale urban renewal initiatives.\nSmart city technologies are being integrated into urban infrastructure to enhance efficiency and sustainability.\nPartnerships between tech companies and municipalities are creating smart city solutions.\nSustainable building practices are becoming mandatory in new developments to reduce environmental impact.\nCommunity input is essential, fostering transparency, and trust.\nGreen spaces are being prioritized in urban designs to improve quality of life.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "CBSPAMMA",
+      "predicted": "CBSPAMMA",
+      "output": "City planners are prioritizing walkable neighborhoods to enhance community interaction and local business.\nBicycle-sharing programs are expanding in many cities, providing affordable transportation options for residents.\nSmart parking solutions are being implemented to address the perennial problem of finding parking spaces in busy urban centers.\nPublic-private partnerships are funding innovative urban mobility solutions in major cities.\nAffordable housing initiatives are gaining traction as cities seek to address the housing crisis.\nMixed-use developments are becoming popular, combining residential, commercial, and recreational spaces.\nMunicipal governments are investing $2.8 billion in public transit improvements across the metropolitan area this year.\nAffordable housing initiatives are gaining momentum as cities respond to housing crises.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "ROEPAPCR",
+      "predicted": "ROEPALPC",
+      "output": "Renewable energy projects are increasingly seen as vital for achieving climate goals.\nOffshore wind farms generated record amounts of electricity this quarter, according to industry reports.\nElectric grids are being modernized to accommodate the increasing share of renewable energy sources.\nPartnerships between utilities and communities are driving the development of local renewable energy projects.\nAgricultural communities are exploring the benefits of wind turbines alongside crop production.\nLocal governments are implementing policies to promote the use of renewable energy in their communities.\nPublic awareness campaigns are highlighting the benefits of renewable energy, encouraging broader adoption.\nCollaboration between nations is essential for advancing renewable energy technologies globally.",
+      "ser": 0.375,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "CRABTERE",
+      "predicted": "CRABTERE",
+      "output": "Collaboration between nations is essential for addressing the global nature crisis.\nResearch institutions are developing new technologies to monitor wildlife populations in remote areas.\nAdvocacy groups are pushing for stronger legislation to protect endangered species from poaching and habitat loss.\nBiodiversity hotspots contain 60% of all plant, bird, mammal, reptile, and amphibian species worldwide.\nThe extinction of one species can have cascading effects, disrupting entire ecosystems.\nEcosystems provide services worth $125 trillion annually, far exceeding global GDP.\nRestoration projects aim to revive degraded habitats, promoting biodiversity recovery.\nEcosystem restoration projects are crucial for reviving degraded habitats and promoting biodiversity recovery.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "EOPTAITO",
+      "predicted": "EOPTAITO",
+      "output": "Emergency departments nationwide report critical shortages of compatible blood types as patient populations become more diverse.\nOrgan transplantation has evolved dramatically since the first successful kidney transplant in 1954.\nPediatric transplant programs face particular challenges due to size-matched organ availability.\nTransplantation medicine continues evolving rapidly with advancements in genetic matching and immunology.\nAdvances in genetic testing help match donors and recipients more precisely than ever before.\nImmunology research helps reduce complications from organ transplants.\nTraining programs for transplant surgeons now include mandatory courses on patient psychology and family counseling.\nOutcomes for pediatric heart transplants have improved dramatically over the past two decades.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "CCFRIDEP",
+      "predicted": "CCFRIEDP",
+      "output": "Campaign finance laws require transparency in political spending.\nCampaign finance reform advocates argue that current laws fail to prevent corruption and bias.\nFederal courts have struck down several campaign finance restrictions this year.\nRegulators fined several political action committees for exceeding contribution limits and failing to properly disclose donor information.\nInfluence peddlers exploit loopholes in existing campaign finance laws to circumvent legal contribution limits.\nElections in three states will test new campaign finance regulations next month.\nDemocratic candidates filed thousands of paperwork errors with the Federal Election Commission last quarter.\nPartisan differences aside, most lawmakers agree that campaign finance reform is necessary to restore public trust in government institutions.",
+      "ser": 0.25,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "IDPDIOHA",
+      "predicted": "IDPIDOHA",
+      "output": "Innovation in drug delivery systems is improving patient compliance with treatment regimens.\nDrug shortages affected 185 medications across the country last year, forcing hospitals to ration treatments and seek alternative suppliers.\nPharmacovigilance programs monitor adverse drug reactions post-market to ensure patient safety.\nInternational cooperation strengthens global pharmaceutical oversight through information sharing agreements.\nDistributed ledger technology is being explored for its potential to enhance pharmaceutical supply chain transparency and prevent counterfeiting.\nOversight committees are investigating allegations of price gouging by specialty pharmaceutical companies.\nHealthcare providers are advocating for greater transparency in drug pricing practices.\nAccess to life-saving medications remains limited for patients in rural areas lacking specialized pharmacy services.",
+      "ser": 0.25,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "SSCLPITM",
+      "predicted": "SSCLITMM",
+      "output": "Sustainability initiatives are driving changes in how goods move through supply networks.\nSupply chain managers are investing heavily in predictive analytics software to improve forecasting accuracy and reduce inventory carrying costs significantly.\nCross-docking facilities are becoming more popular as companies seek to minimize storage costs while maintaining efficient distribution operations.\nLabor disputes at shipping terminals have disrupted cargo operations on the East Coast.\nInventory management systems are being upgraded with artificial intelligence capabilities to optimize stock levels and reduce carrying costs.\nTechnology platforms are enabling real-time tracking of shipments across multiple carriers.\nManufacturing hubs are shifting production closer to major markets to reduce transportation time and costs.\nModern warehouses are incorporating automated sorting systems and robotic palletizers to speed up order fulfillment processes.",
+      "ser": 0.375,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "ISTTILTT",
+      "predicted": "ISTTTLTC",
+      "output": "Innovative teaching methods are being encouraged, fostering creativity in the classroom.\nSchools across the country are implementing trauma-informed practices to better support students.\nTeacher shortages have prompted districts to offer competitive compensation packages and improved working conditions.\nTeachers across the district are participating in professional development focused on trauma-informed practices.\nTechnology integration is being emphasized in teacher training programs to prepare educators for modern classrooms.\nLong-term studies indicate that early childhood education programs significantly reduce dropout rates and increase college attendance among participants.\nTeacher evaluations now focus more on student growth than standardized test scores.\nClassroom diversity requires teachers to adapt their instructional strategies to meet various learning needs.",
+      "ser": 0.25,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "APERFPMA",
+      "predicted": "APERFPMA",
+      "output": "Advanced protein engineering techniques enable scientists to design custom enzymes for industrial processes.\nPharmaceutical companies invested $2 billion in protein engineering startups during the past two years.\nEngineers at Stanford University designed proteins that can detect cancer biomarkers in blood samples.\nRegulatory agencies approved three new protein-based treatments for rare diseases this quarter.\nFusion proteins combining multiple therapeutic functions show promise for treating complex diseases.\nPrecision medicine approaches increasingly rely on engineered proteins tailored to individual genetic profiles.\nManufacturing costs for protein-based drugs dropped 40% due to improved production methods.\nAgricultural researchers developed proteins that enhance crop resistance to drought and pests.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "ISQCFOFM",
+      "predicted": "ISQCFOFM",
+      "output": "Innovative technologies are helping farmers monitor soil health in real-time through satellite imagery and sensors.\nScientists warn that current agricultural practices could reduce global food production by 50% within the next century if soil degradation continues unchecked.\nQuality soil testing helps farmers understand their specific nutrient needs and make informed decisions about fertilizer application rates.\nCollaboration between universities and farms is advancing soil health research and education.\nFarmers across the Midwest are adopting no-till practices to prevent further erosion of topsoil.\nOrganic matter content has declined by 40 percent in many farmlands due to intensive cultivation practices over the past century.\nFertilizer runoff containing nitrogen and phosphorus contributes to harmful algae blooms in water bodies.\nMycorrhizal fungi partnerships with plant roots enhance nutrient absorption while protecting against soilborne diseases.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "EDBFADIS",
+      "predicted": "EDBFADIS",
+      "output": "Experts warn that the rise of deepfake technology poses new challenges for verifying information.\nData breaches have become increasingly common, compromising millions of users' personal information.\nBusinesses face mounting pressure to adopt stronger cybersecurity measures following the surge in remote work.\nFederal agencies warned critical infrastructure operators about sophisticated state-sponsored hacking groups targeting power grids and water treatment facilities nationwide.\nArtificial intelligence is being leveraged to detect and respond to cyber threats more effectively.\nDigital forensics experts are helping law enforcement trace the origins of ransomware attacks.\nInternational cooperation is essential for addressing the global nature of cyber threats.\nSecurity researchers discovered a critical vulnerability in popular encryption software that could allow hackers to intercept private communications worldwide.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "RFREDRMV",
+      "predicted": "RFREDRMV",
+      "output": "Regulatory sandboxes allow innovative financial products to test-market without full compliance requirements.\nFederal regulators announced new capital requirements for major banks following last year's market volatility.\nRisk management practices at major banks will be subject to enhanced scrutiny under the proposed legislation.\nEuropean Union officials announced coordinated action to harmonize banking regulations across member nations.\nDeposit insurance limits remain unchanged despite rising concerns about regional bank solvency issues.\nResolution planning requirements ensure orderly wind-down procedures for failing institutions.\nMarkets reacted positively to the announcement of streamlined banking regulations.\nVolatility in cryptocurrency markets prompted federal agencies to propose new registration requirements for digital asset exchanges and trading platforms.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "CVFYTTAM",
+      "predicted": "CVFYTTAM",
+      "output": "Community-supported agriculture connects consumers directly with local sustainable farming operations.\nVertical farms in Singapore produce vegetables using 95% less water than conventional methods.\nFarm-to-table initiatives are gaining traction as consumers seek fresher, more sustainable food options.\nYonder mountain regions previously unsuitable for farming now support hydroponic lettuce production using recycled water and minimal soil.\nTechnology companies are developing smartphone apps that help farmers optimize planting schedules based on weather forecasts and soil conditions.\nTraditional farming practices are being revived in some regions as part of the sustainable agriculture movement.\nAgricultural experts recommend crop rotation to restore soil health naturally.\nMushroom cultivation in controlled environments requires minimal land and produces high nutritional yields year-round.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "ADBCFMRC",
+      "predicted": "ADBCFMRC",
+      "output": "Airlines face scrutiny over data collection practices for frequent flyer programs.\nData governance frameworks help organizations manage their information resources effectively.\nBusinesses face potential legal penalties of up to $50 million for violating new privacy regulations that took effect this month.\nCybersecurity experts warn that inadequate data protection measures could lead to severe financial consequences.\nFederal regulators announced new guidelines requiring comprehensive privacy disclosures from mobile app developers.\nMajor retailers face federal investigations over their data collection practices targeting children.\nRetailers face mounting pressure to adopt transparent data collection practices following several high-profile privacy violations.\nCorporate executives testified before Congress about the need for stronger privacy protections.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "IESIRFGS",
+      "predicted": "IESIRFGS",
+      "output": "Innovative solar technologies are emerging, promising improved efficiency and reduced costs.\nElectric vehicles are becoming more popular, driving demand for renewable energy.\nSolar energy installations are expanding rapidly in both residential and commercial sectors.\nInnovations in hydrogen fuel cells are paving the way for cleaner transportation systems.\nRenewable energy projects are creating jobs, contributing to local economies.\nFossil fuel companies are investing heavily in carbon capture technology as a last-ditch effort to continue operations while transitioning to cleaner alternatives.\nGeothermal energy is gaining traction in regions with volcanic activity, offering consistent power generation throughout the year.\nScientists warn that climate change threatens 80% of global food production within the next decade.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "EBPSRDES",
+      "predicted": "EBPSRDES",
+      "output": "Emergency responders coordinated with utility crews to ensure safe power restoration procedures.\nBattery storage systems are becoming more cost-effective, enabling utilities to store renewable energy for use when generation is low.\nPower companies are investing $2 billion in grid modernization projects across the Midwest.\nSolar panel efficiency has improved significantly, allowing for better energy conversion rates.\nRenewable energy sources now provide over 30% of global electricity generation.\nDistributed solar installations are empowering homeowners and small businesses to generate their own electricity.\nElectric vehicle charging stations are being integrated into smart grid infrastructure designs.\nSmart grid technology enables real-time monitoring and management of electrical distribution networks.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "IDRPFSLG",
+      "predicted": "IDRPSLSG",
+      "output": "International cooperation on debt issues is essential, especially in cross-border cases.\nDefault risk premiums increased sharply for several emerging market countries following the latest debt restructuring announcement.\nRepayment schedules were extended from five to ten years under the new agreement.\nPrivate creditors agreed to convert 60% of their claims into equity stakes in the reorganized company.\nSovereign debt restructuring involves governments defaulting on international loan obligations and negotiating reduced payment terms with international creditors.\nLegal experts debated whether the proposed debt restructuring plan violated existing contractual obligations.\nSwedish automaker Volvo announced a comprehensive debt restructuring plan that will reduce its outstanding obligations by $2.3 billion over the next three years.\nGovernment officials approved emergency funding for the hospital's debt restructuring efforts.",
+      "ser": 0.375,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "MSICDDSP",
+      "predicted": "MSIDCDSP",
+      "output": "Meditation apps that incorporate nature sounds are becoming popular tools for stress relief and improved sleep quality.\nScientists warn that urban noise pollution is linked to increased rates of cardiovascular disease in city populations.\nInnovative acoustic technologies are being developed to combat the growing problem of noise pollution in urban environments.\nDolphins use sophisticated sonar systems that produce clicks and whistles to navigate and communicate in their underwater environment.\nConstruction sites must now operate under strict noise limits after residents filed numerous complaints about nighttime equipment use.\nDevelopers face new restrictions on construction hours following community pressure over noise complaints.\nSchools near airports report significant learning disruptions from aircraft noise.\nPublic transportation systems generate significant noise pollution, particularly in urban areas.",
+      "ser": 0.25,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "ECSPIMFE",
+      "predicted": "ECSPIMFE",
+      "output": "Electric vehicles are becoming more popular as consumers seek alternatives to fossil fuel dependency.\nClimate activists are organizing protests to demand stronger government action on climate change.\nScientists warn that global temperatures could rise by 2 degrees Celsius within the next two decades if emissions continue unchecked.\nPollution from burning fossil fuels is linked to millions of premature deaths worldwide annually.\nInnovative technologies like carbon capture systems show promise for reducing industrial emissions significantly.\nMethane emissions from agriculture have become a focal point for environmental advocacy groups.\nFossil fuel companies face mounting pressure from investors demanding climate risk disclosures.\nExtreme weather events linked to climate change are prompting discussions about disaster preparedness and response strategies.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "APTIOUAQ",
+      "predicted": "APTIUOAQ",
+      "output": "Affordable housing initiatives aim to address the growing shortage of low-income residential options.\nPublic-private partnerships are emerging as effective solutions for funding large-scale infrastructure projects.\nThe rise of remote work has prompted discussions about the future of office space in urban centers.\nInnovative waste management systems are being implemented to promote sustainability in urban environments.\nUrban heat islands are prompting cities to implement green roofs and increased tree canopies.\nOpen spaces are becoming essential elements in urban planning, promoting community engagement.\nAffordable housing initiatives are gaining traction as cities seek to address the growing income inequality.\nQuintessential examples of successful urban renewal include the transformation of former industrial sites into vibrant mixed-use communities.",
+      "ser": 0.25,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "EGDAFFDM",
+      "predicted": "EGODAFDM",
+      "output": "Election officials confirmed that all voting systems functioned properly despite technical difficulties reported at three polling locations.\nGeorgia's new voting system will allow early absentee ballots to be accepted until the Friday before election day.\nOfficials confirmed that all voting systems functioned properly despite technical difficulties reported at three polling locations.\nDemocracy advocates praised the expansion of early voting periods in twelve counties.\nA comprehensive analysis revealed that voter turnout increased by 15 percent following the implementation of automatic registration systems.\nFederal observers monitored voting procedures in states with histories of electoral irregularities.\nDistricts with higher concentrations of minority voters saw improved access through new early voting hours and language assistance.\nMunicipal clerks reported minor technical issues with voting machines at three precincts but assured voters that backup systems would be available throughout the day.",
+      "ser": 0.375,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "EMPAEIPB",
+      "predicted": "EMPAIPBI",
+      "output": "Ecosystems worldwide are facing unprecedented threats from habitat loss and climate change.\nMarine protected areas have shown promising results in restoring fish populations and biodiversity.\nPollution from plastic waste continues to devastate marine ecosystems, harming both wildlife and human health.\nAdaptation strategies help communities prepare for the impacts of biodiversity loss.\nInvasive species often outcompete native plants and animals, leading to local extinctions.\nPartnerships between governments, NGOs, and local communities are essential for effective biodiversity conservation.\nBiodiversity hotspots contain 60% of all plant, bird, mammal, reptile, and amphibian species.\nInvestment in conservation technology is helping researchers track endangered species and monitor ecosystem health more effectively.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "ECRCCISF",
+      "predicted": "ECRCISCF",
+      "output": "Environmental regulations are driving semiconductor manufacturers to adopt cleaner production processes.\nChina's largest chipmaker SMIC faces ongoing restrictions on accessing advanced manufacturing equipment from Western suppliers.\nResearch institutions are developing next-generation memory technologies that could revolutionize data storage capabilities within the next decade.\nChina's largest chipmaker SMIC faces ongoing restrictions on accessing advanced manufacturing equipment from Western suppliers.\nIntel announced a $28 billion expansion plan for its fabrication facility in Arizona.\nSupply chain disruptions have created bottlenecks in the semiconductor industry's global distribution network.\nChina's largest chipmaker SMIC faces ongoing restrictions on accessing advanced manufacturing equipment from Western suppliers.\nFusion of artificial intelligence and specialized semiconductors is creating powerful new computing platforms for autonomous vehicles.",
+      "ser": 0.375,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "RAIIOSFI",
+      "predicted": "RAIIOSFI",
+      "output": "Regenerative grazing practices restore soil health while supporting livestock production.\nAgricultural scientists are developing drought-resistant crops to help farmers adapt to changing climate conditions worldwide.\nInnovation in crop genetics is enabling farmers to grow healthier plants with fewer chemical inputs.\nInternational trade agreements now include provisions for protecting regional agricultural products.\nOutstanding student loans discourage young people from pursuing careers in farming and agriculture.\nSustainable fishing practices are essential for maintaining healthy marine ecosystems and ensuring long-term food security.\nFarm-to-table initiatives are gaining popularity as consumers seek fresher, locally-sourced produce.\nInvestment in vertical farms promises to revolutionize food production in urban settings.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "ICFUDPRS",
+      "predicted": "ICFODRPS",
+      "output": "Innovative voting technologies are being tested in several states to improve accessibility for disabled citizens.\nCampaign finance laws are being reformed to address concerns about wealthy donors influencing electoral outcomes.\nFederal funding for election infrastructure improvements has increased by 40% following the 2020 pandemic-related technology challenges.\nOnline voter registration systems now operate in thirty-two states, allowing citizens to register or update their information through government websites.\nDemocracy advocates are pushing for reforms to address gerrymandering and partisan map-drawing practices nationwide.\nRanked-choice voting is being implemented in cities like Minneapolis and San Francisco, allowing voters to rank candidates in order of preference.\nProvisional ballots increased significantly during the 2022 midterm elections, with many states reporting record numbers of disputed votes.\nSocial media platforms are developing new tools to combat misinformation during election seasons.",
+      "ser": 0.375,
+      "edit_distance": 3,
+      "exact": false
+    },
+    {
+      "expected": "ESMPACMR",
+      "predicted": "ESMPACMR",
+      "output": "Environmental education is being integrated into school curricula to raise awareness about sustainability.\nSchools in three districts will pilot new mental health programs this fall.\nMental health resources are being prioritized in many educational institutions.\nPartnerships with local businesses are providing students with real-world work experience opportunities.\nArt programs are being recognized for their role in fostering creativity and self-expression among students.\nClassroom technology upgrades are being funded through federal grants to improve student engagement.\nMental health resources are becoming more accessible in schools across the country.\nRural schools are implementing distance learning programs to provide access to specialized courses.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "RDPRAEUC",
+      "predicted": "RDPRAECC",
+      "output": "Regulations like COPPA in the U.S. aim to protect children's online data.\nData governance frameworks help organizations manage their information resources effectively.\nPrivacy advocates argue that current legislation doesn't adequately protect consumers from data breaches and unauthorized surveillance practices.\nRegulatory sandboxes allow companies to test new data handling methods safely.\nAuthorities fined three major tech companies $50 million for violating recent privacy agreements with federal regulators.\nEuropean Union officials announced stricter enforcement of GDPR regulations targeting multinational technology corporations.\nCybersecurity experts warn that inadequate data protection can lead to devastating financial losses.\nCompanies face mounting pressure to adopt transparent data practices.",
+      "ser": 0.125,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "ESFFIOEE",
+      "predicted": "ESFIPOEE",
+      "output": "Educators are advocating for policies that prioritize student well-being and mental health.\nSchools in three districts will pilot new trauma-informed practices this fall.\nFunding disparities between wealthy and impoverished districts continue to widen despite state promises of equitable resource allocation.\nInnovative teaching methods are being explored to enhance student engagement and learning outcomes.\nParents are increasingly advocating for better resources and support for their children's education.\nOnline platforms are providing resources for parents to advocate effectively for their children's educational needs.\nEquity audits are being conducted in school districts to identify and address systemic biases in educational opportunities.\nEducational equity is a critical issue, impacting students' lives.",
+      "ser": 0.25,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "ARDIPRCM",
+      "predicted": "ARDIPCRM",
+      "output": "Airlines face new health protocols requiring enhanced cleaning and ventilation systems.\nRegulations on electronic cigarettes will restrict advertising and flavoring use.\nDisease outbreaks can be contained more effectively when international cooperation is prioritized.\nInnovative technologies are being developed to improve disease surveillance and outbreak detection.\nPublic health officials are urging residents to get vaccinated against seasonal flu as cases begin to rise across the country.\nCollaboration between public health agencies and technology companies is creating innovative solutions for disease tracking and prevention.\nResearch institutions are developing new diagnostic tools to identify infectious diseases quickly.\nMental health services are seeing increased demand as communities grapple with the emotional impacts of ongoing health crises.",
+      "ser": 0.25,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "CAARBVIC",
+      "predicted": "CAARBVIC",
+      "output": "Community organizations play vital roles in supporting immigrants during their adjustment periods.\nAdvocacy groups are pushing for comprehensive immigration reform to address systemic issues.\nAuthorities deported 18,000 undocumented immigrants from the United States last month.\nRural communities across the Midwest are experiencing labor shortages as agricultural workers face increasingly restrictive immigration policies.\nBorder security measures have been strengthened with additional technology and personnel.\nVital healthcare services remain limited for uninsured immigrant populations in many regions.\nImmigration judges face mounting backlogs as cases continue to accumulate nationwide.\nCitizenship applications surged to record levels following recent policy changes.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "CRCPEIDC",
+      "predicted": "CRCPEIDC",
+      "output": "Collaboration between public and private sectors is essential for addressing housing challenges.\nRenters face increasing pressure as landlords pass rising construction costs directly to tenants through higher monthly payments.\nCooperative housing models are gaining traction as alternatives to traditional homeownership.\nPublic-private partnerships are emerging as effective solutions for funding affordable housing initiatives.\nEconomic mobility depends on access to affordable housing options throughout the income spectrum.\nInnovative financing mechanisms are being explored to support affordable housing projects.\nDevelopers are increasingly incorporating sustainability features into affordable housing designs.\nCommunity gardens are being established in urban settings to promote fresh food access while fostering neighborhood connections among residents.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "AGDLICSC",
+      "predicted": "AGDLICSC",
+      "output": "Agricultural scientists have successfully developed drought-resistant wheat varieties that can survive with 30% less water than traditional crops.\nGenetic markers help breeders identify plants with desirable traits for improved yields.\nDrought-resistant wheat varieties developed at Kansas State University could increase farmer profits while reducing water consumption by 40 percent.\nLaboratory research on crop genetics has accelerated dramatically since the advent of CRISPR gene-editing technology.\nInnovation in crop genetics is essential for addressing global food security challenges.\nCollaboration between universities and private companies accelerates development of climate-resilient crop varieties.\nScientists at Stanford University mapped the complete genome of wild rice to identify genes conferring disease resistance.\nClimate-controlled greenhouses allow year-round testing of temperature-sensitive crop varieties.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "CFOIDARC",
+      "predicted": "CFOIDARC",
+      "output": "Community gardens are emerging as a way to promote local food production and sustainability.\nFarm-to-table programs in schools have shown promising results in improving student nutrition while supporting local agriculture.\nOrganic certification programs are expanding rapidly, providing farmers with access to premium markets.\nInnovative farming techniques are being adopted to increase crop yields while preserving soil health for future generations.\nDairy farms across the Midwest are implementing precision feeding systems to optimize milk production while reducing feed costs and environmental impact.\nAgricultural cooperatives are enabling small-scale farmers to compete globally through collective marketing and distribution.\nRegenerative grazing practices are helping ranchers maintain profitable operations while restoring grassland ecosystems.\nCollaboration between universities and farms is advancing research on sustainable agricultural practices.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "SPBEFPCF",
+      "predicted": "SPBEFPCF",
+      "output": "Scientists warn that climate change is increasing the frequency and intensity of wildfire seasons.\nPrescribed burns conducted by trained professionals create controlled fire environments to reduce hazardous fuel loads safely.\nBulldozers cleared firebreaks along roadways to create barriers against advancing flames during the emergency evacuation.\nEmergency crews evacuated 500 families from their homes as winds shifted the direction of the rapidly spreading wildfire.\nFirefighters worked around the clock to contain the blaze before dawn.\nPublic education campaigns teach residents how to create defensible space around their homes using fire-resistant landscaping and proper maintenance practices.\nCalifornia officials declared a state of emergency as firefighters battled the largest wildfire in state history.\nFirefighters successfully contained the blaze after working around the clock to protect nearby communities.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "ECMAIRTC",
+      "predicted": "ECMAIRTC",
+      "output": "Emergency departments nationwide report critical organ shortages that delay patient care and increase treatment costs.\nCollaboration between countries facilitates the sharing of organs from deceased donors across international borders.\nMedical advances enable doctors to transplant hearts from donors over 70 years old.\nAdvances in genetic testing help match patients with compatible donor organs at the molecular level.\nImmunology research focuses on creating universal blood types through genetic modification techniques.\nRecipients often experience improved quality of life following successful organ transplants.\nTraining programs prepare new surgeons in complex transplantation procedures and patient management protocols.\nComplications from organ transplants occur in approximately 15% of all surgical cases.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "EWCFRIIW",
+      "predicted": "EWCFIRIW",
+      "output": "Employers face increasing pressure to provide comprehensive benefits as workers demand more security.\nWhite-collar professionals are seeking remote work options to maintain work-life balance while balancing family responsibilities.\nChildcare availability continues to impact women's workforce participation rates significantly.\nFederal data reveals that remote work arrangements have increased by 35% since the start of the pandemic.\nInnovative job training programs are being developed to help displaced workers acquire skills for emerging industries.\nRemote work policies are evolving, impacting traditional office dynamics.\nInvestment in worker training programs is seen as essential for preparing the workforce for future economic demands.\nWorkers in the hospitality industry are facing new challenges as automation replaces traditional service positions.",
+      "ser": 0.25,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "SWREFCSP",
+      "predicted": "SWREFCCP",
+      "output": "Scientists warn that current carbon emissions could trigger irreversible climate tipping points within the next two decades.\nWidespread heatwaves have become more intense and frequent across Europe this summer, breaking temperature records and straining healthcare systems nationwide.\nRenewable energy investments reached record levels as countries seek to reduce dependence on fossil fuels.\nExtreme heatwaves are becoming more common, threatening public health.\nFossil fuel companies face mounting pressure from investors demanding climate action plans.\nClimate activists organized protests outside oil company headquarters demanding immediate carbon reduction commitments.\nCities worldwide are implementing green initiatives to combat rising temperatures and improve air quality.\nPollution levels in major cities have reached dangerous levels, prompting calls for stronger environmental regulations.",
+      "ser": 0.125,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "SUMDPCWT",
+      "predicted": "SUMDPCWC",
+      "output": "Smart street lighting is being installed in several cities to improve visibility and safety for pedestrians.\nUrban heat islands are prompting cities to mandate green roofs and increased tree canopies.\nMunicipal leaders are prioritizing pedestrian-friendly designs in new development projects.\nData analytics help city planners identify areas needing infrastructure improvements most urgently.\nPublic-private partnerships are funding innovative solutions for urban mobility challenges.\nCommunity input is essential, ensuring projects meet local needs.\nWalkable neighborhoods are becoming a priority as cities focus on improving accessibility and reducing car dependency.\nCollaboration between neighboring municipalities is creating regional solutions for transportation networks.",
+      "ser": 0.125,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "ARESCVAA",
+      "predicted": "ARESCRAM",
+      "output": "Agricultural applications for rare earth elements could revolutionize crop nutrition and sustainability.\nRecycling programs for electronic devices are becoming more widespread as companies seek to reduce their dependence on newly mined rare earth materials.\nEnvironmental groups raised concerns about the environmental impact of rare earth mining operations.\nScandium's lightweight properties make it essential for aluminum alloy production in aircraft manufacturing.\nChina controls approximately 60% of global rare earth mining and processing capacity.\nRecyclers developed new processes to extract rare earth elements from discarded hard drives and computer motherboards.\nAustralia announced plans to establish a comprehensive rare earth processing facility to compete with Chinese operations.\nMining companies are investing billions in new rare earth extraction facilities across North America.",
+      "ser": 0.25,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "AAPCCBHP",
+      "predicted": "AAPCBCHP",
+      "output": "Aging infrastructure in nursing homes is prompting calls for modernization and improved safety standards.\nAlzheimer's disease affects nearly 6 million Americans, with cases expected to triple by 2050.\nPublic health campaigns focus on preventing age-related diseases through lifestyle changes.\nCognitive decline affects approximately 16 percent of adults over 70, impacting memory and daily functioning.\nBaby boomer retirements have created unprecedented challenges for public pension systems nationwide.\nCommunity centers are expanding programming to meet the diverse needs of aging populations.\nHospice services expand rapidly as families choose palliative care over aggressive treatment regimens.\nPain management strategies evolve as healthcare providers balance patient comfort with potential risks of opioid use.",
+      "ser": 0.25,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "CUMIIIMC",
+      "predicted": "CUMIIMAC",
+      "output": "City planners are prioritizing mixed-use developments to create vibrant neighborhoods.\nUrban heat islands are prompting cities to mandate green roofs and increased tree canopies.\nMunicipal leaders are investing $2 billion in waterfront revitalization projects along the Mississippi River to attract tourism and residential development.\nInnovative waste management systems are being implemented to promote sustainability in urban environments.\nInvestment in public spaces is seen as key to enhancing community engagement.\nMixed-income developments are being encouraged to promote social diversity within communities.\nAffordable housing initiatives are gaining momentum as cities seek solutions to address the housing crisis.\nCollaboration between private developers and government agencies is essential for successful urban renewal projects.",
+      "ser": 0.25,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "RFRTDIPS",
+      "predicted": "RFRTIPIS",
+      "output": "Researchers at Stanford University developed a new algorithm that can predict heart attacks with 95% accuracy using only blood sample analysis.\nFunding for medical research increased by forty percent following the passage of the Public Health Innovation Act last month.\nRegenerative medicine offers hope for patients with severe organ damage.\nTelemedicine programs expanded to include mental health services, providing remote access to therapists and counselors across rural areas.\nInnovative drug delivery systems could revolutionize how patients manage chronic conditions.\nPublic health officials are urging residents to get vaccinated against seasonal flu.\nInternational cooperation is essential for controlling infectious diseases, as seen during recent global health emergencies.\nScientists successfully edited genes in human embryos to prevent hereditary blindness.",
+      "ser": 0.375,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "ARICCFEG",
+      "predicted": "ARICCFEG",
+      "output": "Agricultural sensors connected to cloud databases help farmers optimize crop yields while reducing water and fertilizer usage.\nRural hospitals benefit from telemedicine programs that connect patients to specialists through video conferencing technology.\nInternet service providers are expanding high-speed broadband access to unserved rural communities through federal funding initiatives.\nCommunity centers serve as technology hubs providing internet access and digital literacy classes for rural residents.\nCooperative models enable small farms to share expensive precision agriculture equipment.\nFarmers in remote areas now use satellite internet to access weather forecasts, market prices, and government program information.\nElectric cooperatives are installing smart grid infrastructure to support increased renewable energy adoption in rural areas.\nGovernors from twelve states formed a coalition to advocate for increased federal funding for rural infrastructure improvements.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "CRHFSADS",
+      "predicted": "CRHFSADS",
+      "output": "Community health workers bridge cultural gaps, providing culturally relevant health education.\nResearch indicates that community gardens can improve access to fresh produce in underserved neighborhoods.\nHealthcare workers are increasingly recognizing the importance of addressing social determinants in patient care.\nFamilies in food deserts often struggle to access fresh fruits and vegetables due to limited grocery store availability.\nSchools are implementing programs to educate students about the importance of mental health.\nAdvocacy groups push for policies that reduce barriers to healthcare access.\nDiverse communities face unique health challenges, requiring tailored interventions and culturally sensitive approaches.\nStudies show that community gardens can improve access to fresh produce in urban areas.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "MJSLIPAW",
+      "predicted": "MJSLPAPW",
+      "output": "Manufacturing companies report that automation has reduced production costs by 40 percent since implementing robotic assembly lines.\nJustification for increased automation includes improved consistency, reduced errors, and enhanced product quality across manufacturing sectors nationwide.\nSensors in automated warehouses now track inventory levels and optimize restocking schedules without human intervention.\nLabor unions express concerns about the rapid pace of job displacement caused by new warehouse automation systems.\nPartnerships between tech companies and manufacturers are accelerating the development of next-generation robotic systems.\nAutomated warehouses now handle 60% of all online retail orders, according to industry analysts.\nPharmaceutical companies invested $2 billion in automated testing facilities to meet safety regulations.\nWarehouse managers report that automated sorting systems reduce package damage by 35%.",
+      "ser": 0.375,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "ROECDTAM",
+      "predicted": "ROECDTMI",
+      "output": "Renewable energy projects are increasingly seen as vital for achieving global climate goals.\nOffshore wind farms generated record-breaking amounts of electricity this quarter, according to industry reports.\nElectric grids are being modernized to accommodate the increasing share of renewable energy sources.\nCommunity-supported agriculture programs are expanding to include community-supported renewable energy initiatives.\nDramatic improvements in battery storage technology are making solar power more reliable and accessible for homeowners.\nThe rise of green hydrogen is promising, offering potential solutions for energy-intensive industries.\nMunicipalities across Europe are implementing new policies to promote the use of renewable energy in public buildings.\nInvestment in renewable energy reached record levels last year, signaling a shift in global energy markets.",
+      "ser": 0.25,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "EMTFACRG",
+      "predicted": "EMFTCFRG",
+      "output": "Environmental groups are advocating for stricter regulations on industrial emissions to protect marine ecosystems.\nMicroplastics have been detected in the tissues of deep-sea fish species, raising concerns about contamination throughout the food chain.\nFertilizer runoff from agricultural fields creates massive dead zones where oxygen levels cannot support marine life.\nThe impact of oil spills can last for decades, affecting both wildlife and local economies.\nClimate change is causing ocean temperatures to rise, leading to increased instances of coral bleaching worldwide.\nFish populations are declining rapidly in many regions due to overfishing and habitat destruction.\nResearch indicates that plastic pollution costs the global economy billions annually.\nGovernments worldwide are implementing stricter fishing quotas to prevent the collapse of commercial fish stocks.",
+      "ser": 0.5,
+      "edit_distance": 3,
+      "exact": false
+    },
+    {
+      "expected": "EHSFRFFC",
+      "predicted": "EHSFFRCC",
+      "output": "Electric locomotives are becoming more common as railroads seek to reduce their carbon footprint.\nHighway expansion projects often include dedicated rail corridors to maintain freight transportation capacity.\nSafety inspectors found violations at several rail yards during recent audits.\nFederal regulators proposed new safety standards for hazardous material shipments following several derailments this year.\nFreight trains carry approximately 40% of all long-distance cargo in the United States.\nRailroad companies are investing $15 billion annually in infrastructure improvements and modernization projects nationwide.\nCrossing accidents decreased significantly after installation of automated warning systems at busy intersections.\nConstruction crews are working around the clock to repair damage from last week's flooding.",
+      "ser": 0.375,
+      "edit_distance": 3,
+      "exact": false
+    },
+    {
+      "expected": "RMWPIOSB",
+      "predicted": "RMWPIOSB",
+      "output": "Restaurant workers filed complaints alleging mandatory overtime without proper compensation.\nMinimum wage increases have sparked debates about their impact on employment rates.\nWorkers in the hospitality industry are advocating for legislation that limits mandatory overtime to 40 hours per week.\nPublic transportation strikes disrupted daily commutes and disrupted daily schedules for commuters across the metropolitan area.\nImmigrants working in agriculture often face exploitation without legal protection.\nOrganized labor groups are mobilizing to support striking retail employees demanding better scheduling practices.\nSubcontractors often exploit loopholes in labor laws to avoid providing standard employee benefits.\nBargaining sessions between teachers and school district officials continue as educators demand better healthcare coverage and retirement contributions.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "ECURDPSS",
+      "predicted": "ECURDPSS",
+      "output": "Environmental groups praised the port's new electric vehicle fleet and renewable energy installations.\nCargo volumes at the Port of Rotterdam reached record levels despite global trade disruptions caused by supply chain bottlenecks.\nUnloading times have been reduced from hours to minutes using automated cargo handling systems.\nRail connections expanded to connect remote agricultural communities with major distribution centers.\nDredging operations began this week to deepen the harbor channel for larger vessels.\nPort authorities implemented new security protocols following recent maritime safety incidents.\nShipping companies are investing billions in specialized vessels designed to handle ultra-large cargo projects.\nSustainability initiatives at the Port of Rotterdam include solar panel installations on warehouse rooftops.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    }
+  ]
+}

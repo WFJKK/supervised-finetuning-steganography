@@ -55,6 +55,7 @@ MODEL_MAP = {
     "7b":   "Qwen/Qwen2.5-7B-Instruct",
     "14b":  "Qwen/Qwen2.5-14B-Instruct",
     "32b":  "Qwen/Qwen2.5-32B-Instruct",
+    "72b":  "Qwen/Qwen2.5-72B-Instruct",
 }
 
 

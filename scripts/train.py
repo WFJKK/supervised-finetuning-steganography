@@ -52,6 +52,7 @@ MODEL_MAP = {
     "7b":   "Qwen/Qwen2.5-7B-Instruct",
     "14b":  "Qwen/Qwen2.5-14B-Instruct",
     "32b":  "Qwen/Qwen2.5-32B-Instruct",
+    "72b":  "Qwen/Qwen2.5-72B-Instruct",
 }
 
 # (per_device_batch_size, gradient_accumulation_steps) -> effective batch = 8
@@ -62,9 +63,10 @@ BATCH_MAP = {
     "7b":   (2, 4),
     "14b":  (1, 8),
     "32b":  (1, 8),
+    "72b":  (1, 8),
 }
 
-GRAD_CKPT_SIZES = {"7b", "14b", "32b"}
+GRAD_CKPT_SIZES = {"7b", "14b", "32b", "72b"}
 
 
 class CompletionOnlyCollator(DataCollatorForLanguageModeling):

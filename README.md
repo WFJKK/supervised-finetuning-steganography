@@ -82,3 +82,15 @@ Possible explanations:
 3. Both schemes may need more epochs or larger models.
 
 Next step: retry with full 1020 examples and 5+ epochs to distinguish data limitation from fundamental difficulty.
+
+### Qwen2.5-32B stage1 (Apr 24, 2026)
+
+| ckpt | n | exact | BER | mode |
+|---|---|---|---|---|
+| final | 180 | 6.7% | 0.487 | `1010` (53%) |
+
+Same mode-collapse failure as 3B. Scaling 10x (3B -> 32B) did not move val metrics out of chance range. This supports the task-design hypothesis: the tag is not being attended to at any scale tested, not because of model capacity.
+
+### Plan
+
+Redesign the stage1 task so bit-to-caveat mapping is expressed in natural instruction language, building an internalization curriculum (explicit caveats in prompt -> indexed catalog -> payload with in-prompt catalog -> payload with memorized catalog).

@@ -1,0 +1,819 @@
+{
+  "summary": {
+    "n": 100,
+    "exact_match_rate": 0.73,
+    "avg_ser": 0.09625,
+    "avg_edit_distance": 0.52,
+    "model_size": "7b",
+    "stage": "stage1",
+    "scheme": "acrostics",
+    "split": "train",
+    "adapter": "adapters/qwen2.5-7b/stage1_8bit/n100/final",
+    "stage1_adapter": null,
+    "data": "data/acrostics/news/stage1_8bit/train.jsonl",
+    "seed": 42,
+    "max_new_tokens": 400
+  },
+  "results": [
+    {
+      "expected": "TIIWSVGF",
+      "predicted": "TIIWSVGF",
+      "output": "The Federal Emergency Management Agency (FEMA) announced new floodplain maps that will affect thousands of homeowners' insurance rates.\nInsurance companies are facing financial losses totaling billions of dollars following the record-breaking hurricane season.\nInsurance premiums for coastal properties increased by an average of 25 percent this year, reflecting rising risk from climate change.\nWeather experts predict that climate change will increase the frequency and intensity of extreme weather events, including hurricanes and flooding.\nScientists warn that rising sea levels could displace millions of people living in coastal areas within the next few decades.\nVulnerable communities along the Gulf Coast are demanding better protection against future storms.\nGovernments at all levels are investing billions in infrastructure to protect coastal communities from rising seas and more frequent flooding.\nFinancial analysts predict that climate change will drive up insurance costs for coastal properties by 30 percent over the next decade.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "SDSONXEI",
+      "predicted": "SDSOXEIE",
+      "output": "Solar energy installations reached record levels in 2023, surpassing previous year's growth by 15 percent.\nDwindling fossil fuel reserves are prompting energy companies to invest heavily in renewable alternatives.\nSolar power now accounts for over 40% of all new electricity capacity added globally this year.\nOnshore wind farms continue to expand rapidly, providing clean energy solutions across rural areas.\nXylem-inspired solar panel designs mimic the natural process of water transport in plants to improve efficiency.\nEngineers have developed new materials that can convert sunlight into electricity with 90% efficiency rates.\nInnovative solar technologies are being tested in space to harness the sun's energy directly from orbit.\nExperts predict that solar energy will become the world's largest source of electricity within the next decade.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "HAIRCINF",
+      "predicted": "HAIRFNGF",
+      "output": "Historical records show that traditional music was often used to convey political messages during times of social unrest.\nAncient Greek philosophers believed that music could influence the soul and shape moral character.\nIncorporating traditional instruments into modern compositions can create unique fusion styles that bridge cultural gaps.\nRhythms from African drumming traditions have influenced jazz, rock, and electronic dance music globally.\nFolk songs often preserve historical events and cultural values passed down through generations.\nNotable musicians like Bob Dylan and Joan Baez used their platforms to advocate for social justice causes through song.\nGuitarists like Django Reinhardt and Django Bates have incorporated traditional folk techniques into jazz improvisation.\nFolk music festivals around the world celebrate diverse cultural expressions and promote cross-cultural understanding.",
+      "ser": 0.375,
+      "edit_distance": 3,
+      "exact": false
+    },
+    {
+      "expected": "PCERGPFE",
+      "predicted": "PCERGPFE",
+      "output": "Public schools are increasingly relying on technology to deliver lessons, but many students lack reliable internet access at home.\nCommunity leaders are advocating for expanded broadband infrastructure to support remote work opportunities and attract new businesses to rural areas.\nExperts warn that the digital divide is widening economic disparities between urban and rural communities.\nRural residents face unique challenges accessing high-speed internet services compared to their urban counterparts.\nGovernment subsidies are being used to fund broadband expansion projects in unserved areas.\nPrivate companies are investing billions in fiber-optic networks to reach previously unserved communities.\nFamilies in low-income neighborhoods are struggling to afford high-speed internet service.\nEmergency responders are using drones equipped with cellular equipment to provide temporary internet access during natural disasters.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "GGCERGIE",
+      "predicted": "GGCERGIE",
+      "output": "Government officials announced new regulations requiring all meat producers to document antibiotic usage.\nGrowing concerns about antibiotic resistance prompted the FDA to ban certain antibiotics for growth promotion purposes in livestock.\nClinical trials are underway to test new antibiotics that target resistant bacteria.\nExperts warn that overuse of antibiotics in agriculture contributes to the development of drug-resistant superbugs.\nRegulations mandating antibiotic stewardship programs are being implemented across major meat-producing regions.\nGovernment agencies are collaborating with international partners to combat antibiotic resistance through global surveillance networks.\nInnovative research is exploring alternative methods to replace antibiotics in animal feed.\nEuropean Union countries have banned several antibiotics used in livestock production, setting a precedent for global action.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "TAGMFGGD",
+      "predicted": "TAGMFGGD",
+      "output": "The Arctic's melting sea ice is exposing previously inaccessible oil reserves, prompting international drilling operations.\nAgricultural practices are being adapted to accommodate changing rainfall patterns and increased temperatures.\nGlobal warming has caused glaciers worldwide to retreat at unprecedented rates.\nMajor cities are implementing emergency plans to protect residents from rising sea levels.\nFossil fuel companies face mounting pressure to divest from coal and oil production as renewable energy sources become more cost-effective.\nGreenhouse gas emissions reached record levels last year despite international climate agreements.\nGovernments are investing billions in renewable energy infrastructure to replace fossil fuels.\nDevelopers are facing new restrictions on building in flood-prone areas following recent devastating storms.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "ZBRDVANA",
+      "predicted": "ZBRDVANA",
+      "output": "Zones of defensible space around homes are critical for reducing the risk of wildfire damage.\nBuilding codes now require fire-resistant materials in areas prone to wildfires.\nResidents are being educated on how to create and maintain defensible space around their homes.\nDrought conditions have created ideal fuel for wildfires across much of the western United States this summer.\nVulnerable communities are organizing mutual aid networks to support each other during wildfire evacuations.\nAuthorities are implementing stricter building codes to prevent future structures from becoming fuel for wildfires.\nNeighborhood watch programs are being established to monitor suspicious activity and report potential threats to local authorities.\nAgricultural operations are adapting to wildfire risks by implementing controlled burns and maintaining defensible space around fields and equipment storage areas.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "SEAMJMYN",
+      "predicted": "SEAMJYNY",
+      "output": "Scientists discovered ancient pottery fragments dating back to the Neolithic period at the newly excavated site.\nExcavations revealed evidence of trade networks between distant regions, suggesting complex economic relationships existed thousands of years ago.\nArchaeologists uncovered a previously unknown settlement that challenges existing theories about early human migration patterns in Europe.\nMysteries surrounding the disappearance of entire civilizations continue to captivate researchers and enthusiasts alike.\nJade artifacts found at the site suggest that trade networks extended across vast distances during prehistoric times.\nYucat\u00e1n's ancient ruins attract millions of visitors each year, contributing significantly to local economies.\nNeolithic farming techniques revealed through recent excavations demonstrate advanced agricultural practices developed thousands of years ago.\nYramids built by ancient civilizations still stand as testaments to their architectural prowess and organizational skills.",
+      "ser": 0.375,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "TNWNIDPV",
+      "predicted": "TNWNIDPV",
+      "output": "The Port of Los Angeles processed over 10 million twenty-foot equivalent units (TEUs) in container traffic last year.\nNew automated systems at the Port of Rotterdam are reducing turnaround times by 25 percent for cargo vessels.\nWarehouse automation is transforming distribution centers, enabling faster inventory turnover and improved customer satisfaction.\nNotable improvements in supply chain visibility have reduced shipping delays by 30 percent across major ports this quarter.\nInternational trade agreements are expanding access to new markets for American exporters.\nDrones equipped with thermal imaging cameras are being used to inspect cargo containers for potential security threats without opening them.\nPort authorities are investing $2 billion in modernizing aging infrastructure to accommodate growing container volumes.\nVessel traffic through the Panama Canal reached record levels this month, reflecting global demand for transoceanic shipping routes.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "EOVINJWP",
+      "predicted": "OOVIJWPW",
+      "output": "Overwhelming evidence shows that climate change is accelerating the frequency and intensity of extreme weather events.\nOrganizations are implementing sustainable farming practices to reduce environmental impact while maintaining food production levels.\nVulnerable communities face disproportionate risks from natural disasters exacerbated by climate change.\nInnovative solutions, such as solar-powered irrigation systems, are being implemented in drought-prone regions.\nJust transition policies aim to support workers whose jobs are affected by climate action.\nWildlife populations are declining as their habitats shrink due to rising temperatures and changing precipitation patterns.\nPollution from industrial activities continues to contaminate water sources across multiple states.\nWater scarcity affects millions of people worldwide, prompting urgent action to address this growing crisis.",
+      "ser": 0.625,
+      "edit_distance": 3,
+      "exact": false
+    },
+    {
+      "expected": "DUTDKISO",
+      "predicted": "DUTDKISO",
+      "output": "Diversification of energy sources is essential to reduce dependence on fossil fuels and combat climate change.\nUnderground coal mining operations in the Appalachian region have been suspended indefinitely due to safety concerns following recent accidents.\nThe transition to renewable energy sources requires significant investment in infrastructure, including solar farms and wind turbine installations.\nDevelopers face delays as local communities push back against proposed offshore wind farm construction near sensitive marine wildlife habitats.\nKilowatt-hour consumption data from smart meters helps utilities optimize energy distribution and identify areas where efficiency improvements are needed.\nInternational cooperation is crucial for addressing global energy challenges, including climate change mitigation efforts.\nSolar panel installations reached record levels this year, driven by declining costs and supportive government policies.\nOil prices remain volatile, reflecting ongoing geopolitical tensions in major producing regions.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "TVAEAMSA",
+      "predicted": "TVEAMASA",
+      "output": "The European Union's proposed directive on sustainable corporate governance aims to make companies more environmentally responsible.\nVulnerable communities are disproportionately affected by environmental degradation caused by corporate activities.\nEnvironmental activists are demanding stricter regulations on industrial waste disposal following recent toxic spills in major manufacturing regions.\nAdvocacy groups are pushing for stronger protections against wildlife trafficking at international trade conferences this week.\nMajor corporations are facing increased pressure from investors to disclose their environmental impact data transparently.\nAmerican environmental agencies are proposing new regulations that would significantly reduce carbon emissions from existing power plants.\nScientists warn that current climate change mitigation efforts are insufficient to prevent catastrophic global warming outcomes.\nAdvancements in renewable energy technology are driving down costs and making solar power competitive with fossil fuels in many regions.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "ONDWXTEN",
+      "predicted": "ONDWXTEN",
+      "output": "Overwhelming evidence shows that nature-based solutions can provide up to 37% of the climate mitigation needed by 2030.\nNotable success stories from reforestation efforts in China demonstrate that large-scale tree planting can combat desertification and restore biodiversity.\nDiverse ecosystems require diverse plant species to thrive, making biodiversity crucial for ecosystem health.\nWater conservation efforts are being integrated into reforestation projects to address drought concerns in arid regions.\nXylem transport systems in trees play a critical role in water distribution throughout the plant.\nThe Amazon rainforest stores approximately 100 billion tons of carbon dioxide annually.\nEcosystem engineers like beavers create complex habitats that support numerous species.\nNatural regeneration processes are being harnessed to restore degraded forests without human intervention.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "LRKNNPTX",
+      "predicted": "LRKNNPTX",
+      "output": "Local authorities approved the construction of 5G towers in residential areas despite community concerns about potential health effects.\nResearch indicates that 5G networks can significantly reduce latency, enabling real-time applications like autonomous driving and remote surgery.\nKilometer-scale testing of 5G infrastructure revealed that signal strength diminishes rapidly beyond 100 meters from the tower.\nNeighborhoods near proposed 5G sites organized protests against potential health risks associated with increased electromagnetic radiation exposure.\nNursing homes are installing 5G-enabled monitoring systems to track patient vital signs remotely.\nPartnerships between telecommunications companies and local governments accelerate 5G deployment schedules across major metropolitan areas.\nThe Federal Communications Commission allocated $20 billion for rural 5G expansion over the next five years.\nXylem-like fiber-optic networks are being installed underground to support 5G infrastructure expansion while minimizing surface disruption.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "EKISJPZD",
+      "predicted": "EKISJPZD",
+      "output": "Experts predict that tidal energy could provide 10% of the world's electricity needs by 2050.\nKelp forests are being restored along coastlines to enhance natural carbon storage capabilities.\nInnovative turbine designs mimic whale movements to capture energy more efficiently from ocean currents.\nScientists have discovered that certain deep-sea bacteria can produce bioluminescent light, potentially harnessing this natural phenomenon for sustainable lighting solutions.\nJellyfish populations are declining worldwide due to overfishing and climate change impacts on ocean ecosystems.\nPilot projects demonstrate that offshore wind farms can coexist with marine wildlife conservation efforts effectively.\nZoologists report that migrating birds use Earth's magnetic fields to navigate during their annual journeys.\nDevelopers face mounting pressure to address environmental concerns before proceeding with new offshore wind farm construction plans.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "MNOTTEBF",
+      "predicted": "MNOTTEBF",
+      "output": "Major freight rail companies are investing billions in modernizing their networks to accommodate growing demand.\nNotable improvements include upgraded tracks, new signaling systems, and expanded capacity at major intermodal terminals.\nOvercapacity issues have prompted rail operators to invest $10 billion in expansion projects across the Midwest.\nThe freight rail industry is investing heavily in automation technologies to streamline operations and reduce labor costs.\nTrains carrying hazardous materials require specialized equipment and procedures to ensure safe transportation.\nEnvironmental concerns are driving investments in sustainable fuel alternatives for freight locomotives.\nBridges and tunnels are being retrofitted to accommodate heavier freight trains.\nFunding challenges continue to limit the pace of necessary infrastructure upgrades nationwide.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "NWBKETDT",
+      "predicted": "NWBKETDT",
+      "output": "Notable progress in vaccine distribution has been made since the initial rollout.\nWorldwide vaccination efforts have reached over 10 billion doses administered globally.\nBilateral agreements between pharmaceutical companies and developing nations are expanding access to vaccines in underserved regions.\nKnee-jerk reactions from some governments have delayed vaccine distribution processes.\nEmergency use authorizations for new vaccines continue to expand treatment options for previously unvaccinated populations.\nThe World Health Organization is coordinating global vaccine distribution efforts through its COVAX program.\nDiverse populations face unique challenges in accessing vaccines, including language barriers and transportation issues.\nThe United States has vaccinated over 60% of its population with at least one dose.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "JDNOMXMG",
+      "predicted": "JDNOMXMG",
+      "output": "Justification for solitary confinement is often based on safety concerns rather than rehabilitation needs.\nDeterioration in mental health is common among prisoners serving long-term solitary confinement sentences.\nNinety percent of prisoners released from solitary confinement require additional mental health treatment upon their return to the general population.\nOpponents argue that solitary confinement violates human rights and contributes to recidivism rates.\nMental health professionals recommend alternatives to solitary confinement, including therapy and community programs.\nXenophobia towards foreign-born inmates often influences decisions about solitary confinement placement.\nMedical conditions require special attention, but many facilities fail to provide adequate care for prisoners in solitary confinement.\nGaps in data collection make it difficult to assess the effectiveness of solitary confinement policies across different correctional systems.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "MGJNAOSE",
+      "predicted": "MGJNAOSE",
+      "output": "Major construction projects are underway to expand the city's public transportation network.\nGovernment officials announced plans for a new light rail system connecting downtown areas and suburban communities.\nJustification for increased funding includes addressing current transportation infrastructure deficiencies.\nNeighborhoods experiencing population growth require additional bus routes and expanded service hours.\nAging infrastructure requires significant investment to maintain safety standards.\nOvercrowding on commuter trains prompts calls for additional service frequencies.\nSafety concerns prompted the installation of additional security cameras at major transit hubs.\nEmergency response teams conducted drills at several subway stations following recent incidents.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "KCGMTARE",
+      "predicted": "KCGMTARE",
+      "output": "Knee-jerk reactions to financial crises often lead to overly restrictive policies that can stifle economic recovery.\nCorporate executives face mounting pressure from shareholders to demonstrate sustainable practices and environmental responsibility.\nGovernment officials are considering new regulations to address growing concerns about income inequality.\nMarket volatility has prompted regulators to reassess existing financial stability frameworks.\nThe Federal Reserve announced plans to raise interest rates by 0.75 percentage points in response to rising inflation.\nAdvisors warn that investors should diversify their portfolios to protect against market volatility.\nRegulators are cracking down on cryptocurrency exchanges following several high-profile fraud cases.\nEnvironmental, social, and governance (ESG) criteria are becoming increasingly important factors for investment decisions.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "YNWSQPSE",
+      "predicted": "YNWSQPSE",
+      "output": "Yersinia pestis, the bacterium responsible for the Black Death pandemic, remains a significant threat to public health today.\nNecrotizing fasciitis caused by group A Streptococcus can progress rapidly and requires immediate surgical intervention to prevent life-threatening complications.\nWorldwide antibiotic resistance rates continue to rise, prompting global health authorities to implement new guidelines for appropriate antibiotic use.\nScientists have identified a new antibiotic that targets bacteria resistant to existing treatments.\nQuinolone antibiotics are effective against many Gram-negative bacteria.\nPneumonia remains one of the leading causes of death from infectious diseases worldwide.\nSepsis, a life-threatening condition resulting from the body's response to infection, affects millions annually.\nEmergency departments across the country report increased cases of antibiotic-resistant infections among patients who recently received unnecessary antibiotic treatment.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "SGOTNPJI",
+      "predicted": "SGOTNPJI",
+      "output": "Self-driving cars are being tested on public roads in several major cities.\nGovernment agencies are developing comprehensive regulations for autonomous vehicles.\nOver 40 states have passed laws governing self-driving car testing and deployment.\nThe transportation industry is investing billions in autonomous technology research and development.\nNotable companies like Waymo, Tesla, and Cruise are leading the autonomous vehicle race.\nPilot programs in Phoenix and Pittsburgh are testing autonomous delivery services.\nJunkyards across the country are preparing to recycle millions of autonomous vehicle parts as older models reach end-of-life.\nInvestors poured $12 billion into autonomous vehicle startups last year.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "LMCISHRA",
+      "predicted": "LMCSISRH",
+      "output": "Landing sites for future Mars missions are being carefully selected to maximize scientific return.\nMars rovers have discovered evidence of ancient water flows, suggesting the planet may have supported microbial life billions of years ago.\nCuriosity's mission has extended beyond its original two-year duration, continuing to explore Gale Crater and gather valuable data about Martian geology.\nScientists believe that studying Mars can provide crucial insights into the potential for life elsewhere in our solar system.\nInnovative technologies developed for Mars exploration are also benefiting Earth-based applications, including medical research and environmental monitoring.\nSpace agencies worldwide are collaborating on Mars sample return missions scheduled for launch in the mid-2020s.\nRobotic arms on Mars rovers collect soil samples for analysis back on Earth.\nHuman missions to Mars remain the ultimate goal, with plans being developed for crewed landings in the 2030s.",
+      "ser": 0.5,
+      "edit_distance": 3,
+      "exact": false
+    },
+    {
+      "expected": "SUSNTLDA",
+      "predicted": "SUSNTLDA",
+      "output": "Scientists have successfully engineered drought-resistant wheat varieties that could feed millions more people in arid regions.\nUnderground water levels are dropping to record lows in California's agricultural heartland, prompting officials to implement emergency water rationing measures for farmers.\nSub-Saharan Africa faces food shortages as prolonged droughts affect crop yields across the region.\nNotable declines in global wheat production this year are prompting international concerns about food security.\nThe United Nations Food and Agriculture Organization warns that rising food prices could trigger social unrest in vulnerable countries.\nLocal farmers are experimenting with alternative crops that require less water than traditional cash crops.\nDrought conditions forced the closure of several major irrigation systems serving thousands of farms in California's Central Valley.\nAgricultural experts warn that climate change is making weather patterns more unpredictable, challenging farmers' ability to plan crop rotations effectively.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "BIALGPHV",
+      "predicted": "BIALGPHV",
+      "output": "Businesses are implementing flexible work schedules to accommodate employees' personal needs and improve overall job satisfaction.\nInnovative companies are offering mental health days as part of their paid time off policies.\nAlcohol consumption among young professionals has increased by 25% since the pandemic began, according to recent surveys.\nLeadership training programs now include modules on emotional intelligence and conflict resolution skills.\nGender equality in the workplace remains a significant challenge, with women still earning less than men for doing the same jobs.\nPart-time workers often face discrimination and unequal treatment compared to full-time employees.\nHealthcare benefits are becoming increasingly expensive for employers, prompting many companies to explore alternative coverage options.\nVirtual team-building activities have become essential for maintaining company culture and fostering collaboration among remote workers.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "YXUMDTYS",
+      "predicted": "YXUMDTYS",
+      "output": "Yards of new housing developments are being constructed in suburban areas to accommodate growing populations.\nXylem-like networks of underground pipes are being installed to transport water to new residential and commercial developments.\nUrban planners are incorporating green spaces into city designs to combat the heat island effect.\nMunicipal authorities are implementing stricter building codes to ensure structures can withstand extreme weather events.\nDowntown revitalization projects are transforming abandoned industrial areas into vibrant commercial centers.\nThe construction of new public transportation systems is underway, connecting previously underserved neighborhoods.\nYard sales are becoming increasingly popular as residents downsize or move to smaller homes.\nSustainability initiatives are driving demand for eco-friendly building materials and energy-efficient appliances.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "CMNYVANX",
+      "predicted": "CMNYVANX",
+      "output": "Construction zones are creating temporary noise pollution that can last for months.\nMachinery at construction sites produces noise levels that can exceed 100 decibels, requiring hearing protection for workers.\nNoise pollution from construction sites can travel for miles, affecting nearby residential areas.\nYard work equipment, such as lawn mowers and leaf blowers, contribute significantly to neighborhood noise pollution.\nVibrations from heavy machinery can travel through the ground, creating low-frequency noise that traditional sound barriers cannot block.\nAirports generate significant noise pollution from aircraft takeoffs and landings.\nNeighborhoods near highways experience constant traffic noise, affecting residents' quality of life.\nXenophobia towards immigrants often manifests in increased surveillance and harassment, creating a hostile environment for newcomers.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "TLIZDQSE",
+      "predicted": "TLIZDQSE",
+      "output": "The concept of universal basic income (UBI) has gained traction as a potential solution to rising inequality and automation-induced job displacement.\nLabor market experts caution that UBI could disrupt traditional employment relationships, potentially reducing workforce participation rates among low-income individuals who no longer need to work full-time.\nInnovative funding mechanisms for UBI include carbon taxes, financial transaction fees, and progressive taxation on capital gains.\nZoning laws often restrict where affordable housing can be built, contributing to the affordability crisis in many major cities.\nDevelopers are exploring vertical farming solutions to address food security concerns while utilizing underutilized urban spaces.\nQuality education is essential for preparing students for future careers that may not yet exist.\nSocial safety nets are being expanded to include mental health services, substance abuse treatment, and emergency financial assistance programs.\nEconomic recovery efforts following recessions often prioritize infrastructure projects over social welfare programs.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "JTVXDOEO",
+      "predicted": "JTVXDOEO",
+      "output": "Justification for increased funding for water infrastructure projects is being debated in Congress.\nThe United Nations has declared access to clean water as a fundamental human right.\nVulnerable communities face disproportionate challenges accessing safe drinking water.\nXylem-like structures in engineered water systems mimic natural filtration processes.\nDrought conditions have forced California cities to implement strict water rationing measures.\nOverpopulation in coastal cities is straining existing water resources.\nEnvironmentalists are calling for stricter regulations on agricultural runoff contaminating groundwater supplies.\nOrganizations are partnering to develop sustainable water solutions for developing nations.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "IFPSNONE",
+      "predicted": "IFPSNONE",
+      "output": "International cooperation is essential for addressing the root causes of migration.\nFamilies separated at the border are reunited through legal processes.\nPolice forces across the southern border states report increased staffing levels to manage growing immigration flows.\nSecurity enhancements include new fencing and surveillance systems along 1,000 miles of the southern border.\nNotable increases in apprehensions reflect stepped-up enforcement efforts.\nOngoing legal challenges to border policies delayed implementation of new detention facilities.\nNew data shows that apprehensions at the border reached their highest level since 2000 this fiscal year.\nEmergency medical services are overwhelmed by the influx of undocumented immigrants seeking treatment.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "ZJWSGJOT",
+      "predicted": "ZJWSGJOT",
+      "output": "Zinc deficiency affects 2 billion people worldwide, making it the most common micronutrient deficiency.\nJust 10% of global food production is consumed locally; the rest travels thousands of miles to reach consumers.\nWater scarcity affects agriculture in 40% of counties worldwide.\nScientists have engineered drought-resistant crops that can survive without irrigation for up to three weeks.\nGenetic modification allows crops to produce their own natural pesticides.\nJunk food consumption contributes to obesity and diabetes rates soaring to epidemic levels.\nOrganic farming practices are gaining popularity as consumers seek healthier alternatives.\nThe global food system wastes one-third of all produced food annually.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "EREEYIRY",
+      "predicted": "EREEYIRY",
+      "output": "Economists predict that automation will replace 40% of current jobs within the next decade.\nRobotics companies are developing new artificial intelligence systems capable of performing complex tasks previously requiring human expertise.\nEmployment experts warn that low-skilled workers face the greatest risk from automation.\nExperts recommend that governments invest in education and training programs to help workers adapt to changing job markets.\nYonder lies the potential for automation to create entirely new industries and job categories.\nInnovative startups are developing AI solutions that can perform complex medical diagnoses with greater accuracy than human doctors.\nResearch indicates that automation could increase productivity by up to 40 percent across multiple sectors.\nYearning for change, labor unions are organizing protests against corporate automation initiatives that threaten thousands of jobs.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "BCKASDNN",
+      "predicted": "BCKASDNN",
+      "output": "Biodiversity loss is accelerating as natural habitats are converted to agricultural land.\nClimate change is altering the timing of seasonal events, affecting wildlife migration patterns and breeding cycles.\nKangaroo populations have declined by 90% in some areas due to habitat destruction and hunting quotas.\nAfrican elephant populations have declined by 65% over the past decade due to poaching for ivory.\nScientists warn that current extinction rates are 1,000 times higher than natural background levels.\nDestruction of coral reefs threatens marine biodiversity and affects global fisheries.\nNature-based solutions can provide up to $4 trillion in annual economic benefits worldwide.\nNations must work together to protect endangered species and restore damaged ecosystems.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "IWVAYBZI",
+      "predicted": "IWVAYBZI",
+      "output": "Innovative wildfire detection systems using artificial intelligence can identify potential hotspots before they become dangerous.\nWildlife corridors are being established to help animals safely migrate through areas affected by wildfires.\nVictims of the recent wildfires are receiving emergency assistance from local relief organizations and federal agencies.\nAuthorities have arrested five individuals suspected of deliberately starting wildfires in national forests.\nYosemite National Park officials announced that all campfires are prohibited until further notice due to ongoing drought conditions.\nBurning debris piles without proper permits can result in fines and legal action against property owners.\nZero tolerance policies for arson suspects are being implemented across multiple western states following a series of intentional fires.\nInvestigations into the cause of the massive wildfire revealed that power lines were to blame, prompting calls for better maintenance procedures.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "ERASAXXE",
+      "predicted": "ERASXXXE",
+      "output": "Environmentalists are calling for stricter regulations on palm oil production to protect endangered species.\nRegulations on palm oil production must be strengthened to protect wildlife and forests.\nAfrican elephants face threats from poaching and habitat loss due to expanding palm oil plantations.\nSustainable palm oil certification programs are gaining traction among consumers concerned about environmental impact.\nXylem transport water and nutrients from the roots to the leaves, supporting plant growth.\nXylose is a sugar derived from wood fibers that can be used as an alternative to fossil fuels.\nXylem cells carry water and dissolved minerals upward through the plant.\nExperts warn that continued expansion of palm oil plantations could lead to irreversible damage to biodiversity hotspots.",
+      "ser": 0.125,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "CKREZISN",
+      "predicted": "CKREZISN",
+      "output": "Climate change is driving the need for renewable energy sources that can replace fossil fuels.\nKilowatt-hour storage systems are becoming increasingly affordable as battery technology improves.\nRenewable energy sources like solar and wind require energy storage solutions to provide consistent power output.\nElectric vehicle adoption is accelerating, creating new demand for energy storage solutions.\nZero-emission goals require comprehensive energy storage strategies to complement intermittent renewable sources.\nInnovative storage technologies are being developed to address specific energy needs.\nSolar farms now include integrated energy storage systems to maximize efficiency.\nNotable progress has been made in developing long-duration energy storage solutions for renewable integration.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "EGRSTOEO",
+      "predicted": "EGRSTOEO",
+      "output": "Ethical concerns surrounding gene editing technology have prompted international discussions about potential applications and limitations.\nGenetic modification of embryos is currently banned in many countries due to ethical considerations.\nRegulatory bodies are developing guidelines for clinical trials involving gene therapy treatments.\nScientists have successfully edited genes in human embryos to correct genetic disorders.\nThe potential for gene editing to cure diseases has sparked both hope and controversy among medical professionals and ethicists.\nOpponents argue that gene editing could lead to designer babies and exacerbate social inequalities.\nEthical debates surrounding gene editing often focus on the potential for unintended consequences and long-term effects.\nOrganizations representing patients with genetic disorders advocate for expanded access to gene therapy clinical trials.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "WIVUNSOO",
+      "predicted": "WIVUNSOO",
+      "output": "Widespread adoption of digital currencies is prompting governments to reassess their monetary policies.\nInvestors are increasingly seeking alternative assets as traditional markets become saturated with paper wealth.\nVolatile cryptocurrency markets have prompted regulators to implement stricter oversight measures.\nUnprecedented growth in fintech startups is driving innovation and competition among established financial institutions.\nNew regulations require banks to disclose more information about their risk management practices to customers.\nSecurity concerns over cloud storage solutions are prompting companies to develop new encryption methods for sensitive data.\nOverwhelming demand for sustainable investment options is driving changes in corporate governance standards.\nOpportunities for cross-border transactions are expanding as international trade agreements facilitate easier currency exchange processes.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "DCENJTEK",
+      "predicted": "DCENJTEK",
+      "output": "Drought conditions forced California to implement strict water rationing measures affecting residential and agricultural users statewide.\nCalifornia's reservoir levels dropped to 30 percent capacity, prompting officials to consider emergency water diversions from the Colorado River.\nEnvironmentalists are calling for stricter regulations on industrial water usage to protect endangered species in the Sacramento-San Joaquin Delta.\nNuclear power plants require vast amounts of cooling water, raising concerns about environmental impacts on aquatic ecosystems.\nJustification for increased water conservation efforts includes protecting natural habitats and preserving biodiversity.\nThe state's largest reservoirs reached critically low levels this month, prompting emergency drought declarations in several counties.\nEmergency water restrictions were implemented in Los Angeles as the city faces its worst drought conditions in over 20 years.\nKern County farmers are facing severe water shortages that threaten their livelihoods and regional food production capabilities.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "XPEHPNDT",
+      "predicted": "XPEHPHND",
+      "output": "Xylophones are being used to test how autonomous vehicles respond to unexpected sounds.\nPedestrian detection systems have reduced fatalities by 40% in cities implementing mandatory pedestrian protection features in autonomous vehicles.\nEmergency response protocols for autonomous vehicles are being developed to ensure safe interactions with first responders.\nHighway testing of autonomous trucks is underway, focusing on long-distance freight transportation.\nPedestrian safety features are being integrated into autonomous vehicle designs to reduce accidents involving vulnerable road users.\nHuman factors experts are collaborating with engineers to design intuitive interfaces for autonomous vehicle operation.\nNotable improvements in pedestrian detection technology have reduced accident rates by 35% in pilot programs.\nDrivers are being educated about sharing the road with autonomous vehicles during public awareness campaigns.",
+      "ser": 0.375,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "TPTDOGRT",
+      "predicted": "TPTDGRTR",
+      "output": "The average cost of a data breach increased by 12% this year, reaching $4.35 million per incident.\nPrivacy advocates are calling for stronger federal data protection laws following the latest data breach incidents.\nThe healthcare industry experienced the highest number of data breaches in Q3, affecting over 10 million patients.\nDoctors' offices reported 1,200 data breaches affecting 27 million patients since 2009.\nGovernment agencies face unique challenges in protecting sensitive information from cyber threats.\nRegulatory compliance requirements are driving many organizations to invest heavily in cybersecurity measures.\nThe healthcare sector continues to experience frequent data breaches, exposing sensitive patient information to potential misuse.\nRetailers must implement advanced security protocols to protect customer payment information after recent high-profile breaches.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "TROSHDPZ",
+      "predicted": "TROSHDPZ",
+      "output": "The Federal Reserve's decision to raise interest rates by 0.75 percentage points has sent shockwaves through the housing market.\nRental prices in major metropolitan areas have reached record highs, leaving many families struggling to find affordable housing options.\nOvercrowding in urban areas is prompting local governments to explore innovative solutions for housing shortages.\nSuburban development continues to expand outward, consuming agricultural land and natural habitats at an alarming rate.\nHousing affordability remains a critical issue for millions of Americans who struggle to find safe, stable homes within their means.\nDevelopers are facing increased scrutiny over environmental impact assessments as communities demand more sustainable building practices.\nPublic transportation improvements are being prioritized in many cities to reduce reliance on personal vehicles and promote more sustainable living patterns.\nZero-emission building codes are being implemented in several states to combat climate change and promote sustainable construction practices.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "FKIHBPLR",
+      "predicted": "FKIHBPLR",
+      "output": "Families are increasingly seeking mental health support for their children.\nKetamine shows promise as an effective treatment for severe depression that doesn't respond to traditional therapies.\nInnovative approaches, such as virtual reality exposure therapy, are being tested for treating anxiety disorders.\nHospitals are expanding their mental health services to address growing patient needs.\nBipolar disorder affects approximately 2.8% of the global population.\nPediatricians are incorporating mental health screenings into routine check-ups for young patients.\nLack of access to mental health care remains a significant barrier in many communities.\nResearch indicates that early intervention can prevent the development of more severe mental health conditions later in life.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "RROTNTIO",
+      "predicted": "ROOTNTIO",
+      "output": "Research institutions are developing new materials that could replace silicon in future computer chips.\nOrganizations worldwide are investing billions in semiconductor research and development to maintain their competitive edge in the global market.\nOverwhelming demand for semiconductors has driven prices up by 30% this year alone.\nThe shortage of specialized equipment is limiting production capacity at many chip factories.\nNotable companies like Samsung, Intel, and TSMC are expanding their manufacturing capabilities to meet growing demand.\nTight supply chains have forced manufacturers to diversify their sourcing strategies.\nInternational trade tensions between major economies are disrupting global semiconductor supply chains.\nOpportunities for investment in semiconductor manufacturing are attracting billions from venture capital firms and private equity groups.",
+      "ser": 0.125,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "BKBWJLNB",
+      "predicted": "BKBWJLNB",
+      "output": "Biomimetic materials inspired by spider silk are being developed for use in medical sutures that dissolve naturally over time.\nKnee replacement surgery using artificial joint components made from biomaterials is becoming more common as patients seek alternatives to traditional metal implants.\nBiodegradable plastics derived from plant sources are replacing petroleum-based alternatives in many consumer products.\nWaterproof coatings inspired by lotus leaves repel water while remaining hydrophilic to other substances.\nJellyfish-inspired materials can change color based on temperature, mimicking the bioluminescent capabilities of marine creatures.\nLiving tissue engineering uses cells from the patient's own body to create personalized organs and tissues.\nNanotechnology is enabling scientists to create materials with properties that mimic those found in nature.\nBacteria can be engineered to produce sustainable materials that replace synthetic alternatives.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "UFPITFDH",
+      "predicted": "UFPITDFD",
+      "output": "Understanding the genetic basis of heart disease is crucial for developing personalized treatment approaches.\nFamilies with a history of heart attacks can now undergo genetic testing to identify inherited risk factors.\nPersonalized medicine using genetic information allows doctors to tailor treatments specifically to individual patient needs.\nInherited mutations in specific genes can significantly increase the risk of developing certain types of heart disease.\nTesting for genetic markers can help identify individuals who may benefit from preventive measures or early intervention.\nDoctors recommend genetic testing for families with multiple members affected by heart disease.\nFinding genetic mutations associated with rare heart conditions helps researchers understand disease mechanisms and develop targeted therapies.\nDiagnostic tools based on genetic testing are becoming more accurate, allowing earlier detection of heart disease.",
+      "ser": 0.375,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "BNFUOAXH",
+      "predicted": "BNFUOAXH",
+      "output": "Biodiversity hotspots are losing species at alarming rates due to habitat destruction and climate change.\nNinety percent of all known bird species migrate at least partially across international borders, highlighting the need for coordinated conservation efforts.\nForest fires in California have destroyed over 1 million acres of woodland this season alone.\nUnprecedented coral bleaching events are affecting marine ecosystems worldwide.\nOverpopulation of certain species can disrupt local ecosystems and lead to competition for resources.\nAfrican elephant populations have declined by 60% since 1989 due to poaching and habitat loss.\nXylem transport water from roots to leaves, supporting plant growth and survival.\nHabitat fragmentation isolates wildlife populations, reducing genetic diversity and increasing vulnerability to disease outbreaks.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "YTLOUBPE",
+      "predicted": "YTLOUBPE",
+      "output": "Young children's ability to recognize letters and sounds is crucial for developing literacy skills.\nThe ability to read fluently by third grade is a strong predictor of future academic success.\nLearning disabilities affect approximately 15% of school-age children, requiring specialized educational approaches.\nObservational studies suggest that parents who read aloud to their children from infancy significantly improve language development.\nUniversities are partnering with local schools to provide professional development for teachers focusing on effective reading instruction methods.\nBilingual education programs can enhance cognitive flexibility and problem-solving skills in young learners.\nParents should encourage daily reading as part of their child's bedtime routine.\nEducators emphasize the importance of creating a love of reading through engaging storytime activities.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "NSIDAOEI",
+      "predicted": "NSIDAOEI",
+      "output": "Nursing homes are facing staffing shortages as qualified caregivers retire or leave the profession.\nSocial security systems worldwide face financial strain from aging populations.\nInnovative technologies are being developed to assist elderly patients with daily living activities.\nDoctors recommend regular exercise and social interaction to maintain cognitive function in older adults.\nAging populations require specialized medical care that traditional healthcare systems often struggle to provide.\nOlder adults face unique challenges accessing affordable prescription medications.\nElderly patients often require multidisciplinary care teams including geriatricians, physical therapists, and social workers.\nIntergenerational programs help bridge gaps between younger and older generations.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "GNOIITIS",
+      "predicted": "GNOITITS",
+      "output": "Garden communities are being developed to promote sustainable living and green spaces.\nNeighborhoods with mixed-use zoning encourage walking and reduce reliance on automobiles.\nOrganic farming initiatives are gaining traction as cities seek sustainable food production solutions.\nInnovative recycling programs are being implemented in major metropolitan areas.\nTechnology companies are partnering with local governments to develop smart city solutions that enhance sustainability efforts.\nInternational cooperation is essential for addressing global environmental challenges effectively.\nThe transition to renewable energy sources is accelerating as cities commit to carbon neutrality goals by 2050.\nSustainable building practices are becoming mandatory in many cities, requiring new construction to meet strict environmental standards.",
+      "ser": 0.375,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "UOAHNNKT",
+      "predicted": "UOAHNKTT",
+      "output": "Urban planners are increasingly incorporating green spaces into city designs to combat the effects of climate change.\nOvercrowding in urban centers is prompting cities to implement congestion pricing schemes to reduce traffic and pollution.\nAffordable housing shortages continue to plague major cities, forcing thousands of families into homelessness or substandard living conditions.\nHousing advocates are calling for more affordable housing options as cities face growing affordability crises.\nNeighborhoods that were once considered undesirable are now experiencing rapid gentrification, displacing longtime residents.\nKitchens and bathrooms are being expanded in many older homes to meet modern needs.\nThe trend towards remote work has accelerated as companies adapt to post-pandemic business models.\nTransportation authorities are investing heavily in public transit systems to reduce reliance on personal vehicles.",
+      "ser": 0.25,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "QEDHSNSD",
+      "predicted": "QEDSNSND",
+      "output": "Quantum computing researchers have demonstrated that their machines can perform complex calculations faster than traditional supercomputers.\nEconomists estimate that quantum computing could boost global economic output by trillions of dollars over the next decade.\nDramatic improvements in quantum computing hardware are expected to accelerate breakthroughs in materials science and pharmaceutical research.\nScientists have successfully used quantum computers to simulate complex chemical reactions, potentially revolutionizing drug discovery processes.\nNanotechnology applications for quantum computing include developing ultra-efficient solar cells and advanced medical imaging technologies.\nSustainability concerns are prompting researchers to explore quantum computing's potential for optimizing renewable energy systems and reducing carbon footprints.\nNew quantum algorithms promise to solve previously unsolvable problems in logistics and transportation networks.\nDevelopers are creating quantum-safe encryption protocols to protect data against future quantum computer attacks.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "GANHNICT",
+      "predicted": "GAHNICIT",
+      "output": "Giant pandas require bamboo forests for their survival, but deforestation threatens their habitat.\nAgricultural practices that mimic natural ecosystems can restore biodiversity and improve soil health.\nHabitat destruction is the primary threat to wildlife populations worldwide.\nNatural predators help maintain balance in ecosystems by controlling prey populations.\nInvasive species displace native wildlife, disrupting local food chains.\nClimate change alters habitats, forcing species to migrate or face extinction.\nInternational cooperation is essential for protecting migratory species that cross borders.\nThe Endangered Species Act has successfully protected hundreds of threatened species since its implementation in 1973.",
+      "ser": 0.625,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "NENJOAAI",
+      "predicted": "NENJOAAI",
+      "output": "Nurses at the University of California, San Francisco Medical Center report that 80% of patients who received heart transplants within the last five years are still alive after two years.\nEmergency room doctors at Memorial Sloan Kettering Cancer Center in New York City successfully performed a lung transplant on a patient who had been waiting for three months.\nNinety percent of patients who receive kidney transplants from living donors experience better long-term survival rates compared to those receiving kidneys from deceased donors.\nJust 15 minutes after receiving her new heart, Sarah Johnson was able to breathe on her own for the first time in over a decade.\nOrgan shortages continue to plague transplant programs nationwide, leaving thousands of patients waiting for life-saving procedures.\nAllograft rejection remains one of the most significant challenges facing transplant surgeons today.\nAdvancements in immunosuppressive medications have dramatically reduced rejection rates and improved patient outcomes following organ transplantation.\nInnovative surgical techniques are allowing doctors to perform complex organ transplants using robotic assistance.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "EZNPWNFA",
+      "predicted": "EZNPWNFA",
+      "output": "Election officials certified the results of the presidential election on Wednesday, confirming Joe Biden's victory.\nZero tolerance policies for voter suppression tactics are being implemented in several states following recent federal guidelines.\nNotable victories by progressive candidates in state and local races reflect growing support for Democratic priorities among younger voters.\nPartisan divisions over voting rights intensified after the Supreme Court's decision to uphold restrictive voting laws in several states.\nWomen's groups organized nationwide protests against proposed abortion restrictions in five states.\nNew voting rights legislation passed in three states expands early voting periods and eliminates strict voter ID requirements.\nFifteen states have enacted new voting restrictions since the 2020 election.\nAdvocates for expanded voting access celebrated when federal courts blocked new voter ID requirements in four states pending further legal review.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "IOOOATVT",
+      "predicted": "IOOOATVT",
+      "output": "Innovative cancer treatments are being developed that target specific genetic mutations.\nOncologists are reporting improved survival rates for patients receiving personalized medicine based on tumor genetics.\nOngoing clinical trials are testing new immunotherapy combinations for advanced lung cancer patients.\nOrganizations are advocating for expanded access to experimental cancer drugs through compassionate use programs.\nAdvancements in artificial intelligence are helping doctors predict which cancer treatments will be most effective for individual patients.\nTumor profiling is becoming standard practice before initiating treatment for many cancers.\nVaccines are showing promise as a preventive measure against certain types of cancer.\nThe FDA has approved several new cancer treatments this year, expanding options for patients with previously untreatable diseases.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "AKPIHXZQ",
+      "predicted": "AKPIHXZQ",
+      "output": "African garment workers face exploitation, including unpaid overtime and forced labor.\nKnee-deep in sweatshop allegations, the fashion industry faces mounting pressure to improve working conditions globally.\nPandemic restrictions forced many factories to close temporarily, leaving thousands of workers without income.\nInternational labor rights organizations are calling for mandatory audits of factory conditions worldwide.\nHuman rights advocates are pushing for transparency in global supply chains.\nXenophobia and discrimination against migrant workers remain significant issues in many manufacturing countries.\nZero-tolerance policies for child labor are being implemented in major apparel-producing nations.\nQuality control measures are being strengthened to ensure that defective products do not reach consumers.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "QNDAZWAG",
+      "predicted": "QNDAZAGA",
+      "output": "Quarterly performance reviews are becoming standard practice in many corporate environments, replacing annual evaluations.\nNotable improvements in employee satisfaction scores follow the implementation of quarterly feedback sessions.\nDiverse training programs are being introduced to address skill gaps across various departments.\nAnnual performance reviews are being phased out in favor of more frequent feedback cycles.\nZestful team-building activities are being implemented to boost morale and foster collaboration among remote workers.\nAgile project management methodologies are gaining traction as companies adapt to rapidly changing market conditions.\nGrowth opportunities are being emphasized over traditional raises in compensation packages for top performers.\nAnnual bonuses are being replaced with quarterly incentives to encourage consistent performance throughout the year.",
+      "ser": 0.375,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "TICRNRFM",
+      "predicted": "TICRNRFM",
+      "output": "The development of artificial organs using 3D printing technology is advancing rapidly, offering hope to patients waiting for organ transplants.\nInnovative gene editing techniques are being tested in clinical trials for treating genetic diseases.\nClinical trials for new cancer treatments are showing promising results, potentially extending survival rates by several months.\nRegenerative medicine is transforming the treatment of chronic conditions through stem cell therapy and tissue engineering.\nNanotechnology is being used to develop targeted drug delivery systems that can release medication directly into diseased tissues.\nResearch on personalized medicine is advancing, allowing doctors to tailor treatments based on individual genetic profiles.\nFunding for medical research has increased significantly over the past five years, supporting breakthroughs in cancer treatment and rare disease management.\nMedical breakthroughs in gene therapy offer hope for curing previously untreatable genetic disorders.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "JJNODENS",
+      "predicted": "JJNODES",
+      "output": "Just as farmers plant their crops, researchers are planting seeds of hope for sustainable agriculture.\nJazz musicians inspired agricultural researchers to develop new methods of crop rotation that mimic natural ecosystems.\nNatural pest control methods are gaining popularity among organic farmers who avoid synthetic chemicals.\nOrganic farming practices can improve soil health and biodiversity over time.\nDiverse crop rotations help prevent soil depletion and reduce pest problems naturally.\nEnvironmentalists advocate for organic farming as a way to combat climate change by reducing greenhouse gas emissions from conventional agriculture.\nSustainable farming practices are becoming increasingly popular as consumers demand more environmentally friendly food options.",
+      "ser": 0.25,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "RZNEGDSS",
+      "predicted": "RZNEGDSS",
+      "output": "Regulatory compliance requirements are driving many organizations to implement new cybersecurity measures.\nZero trust security models require constant verification of users and devices attempting to access corporate resources.\nNetwork segmentation helps contain potential breaches within specific areas of the network.\nEncryption protects sensitive data both in transit and at rest.\nGovernance frameworks provide a structured approach to managing cybersecurity risks.\nData loss prevention systems monitor for unauthorized data transfers.\nSecurity audits help identify vulnerabilities before they can be exploited by attackers.\nSpear phishing campaigns targeting executives have increased dramatically this quarter.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "RDTSECII",
+      "predicted": "RDTTEICI",
+      "output": "Regulatory authorities are considering new measures to address growing concerns about cryptocurrency exchanges.\nDigital asset trading platforms face increased scrutiny from regulators concerned about money laundering and market manipulation.\nThe Securities and Exchange Commission (SEC) has launched investigations into several major cryptocurrency firms.\nTransparency requirements for crypto companies are being tightened following high-profile fraud cases.\nEnvironmental concerns have prompted regulators to investigate the energy consumption of cryptocurrency mining operations.\nInvestor protection remains a top priority as regulators implement new disclosure requirements for crypto firms.\nCryptocurrency exchanges must now register with federal authorities, facing stricter oversight.\nInternational cooperation is essential as regulators work to harmonize standards across borders.",
+      "ser": 0.375,
+      "edit_distance": 3,
+      "exact": false
+    },
+    {
+      "expected": "BTTYDZII",
+      "predicted": "BTTYDZII",
+      "output": "Biodiversity loss in tropical forests has reached critical levels, prompting international conservation efforts.\nThe Amazon rainforest lost 17,000 square miles of forest cover last year alone.\nTropical deforestation contributes significantly to global carbon emissions.\nYields from organic farming operations have increased by 25 percent over the past decade.\nDrought conditions forced farmers in California to reduce wheat production by 30 percent this season.\nZero-tillage practices are gaining traction as a sustainable alternative to conventional plowing methods.\nInnovative farming techniques are being tested to increase efficiency and sustainability.\nInternational trade agreements often include provisions that affect domestic agricultural policies.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "IAVRYVVA",
+      "predicted": "IAVRYVVV",
+      "output": "Innovative cybersecurity measures are being implemented across industries to protect sensitive information from cyber threats.\nAdvanced artificial intelligence systems are being deployed to detect and respond to potential security breaches in real-time.\nVulnerabilities in outdated software continue to expose businesses to cyber attacks despite repeated warnings from security experts.\nRansomware attacks cost businesses billions of dollars annually, prompting many organizations to invest heavily in cybersecurity training and infrastructure.\nYawning gaps in employee cybersecurity awareness remain a significant vulnerability for companies of all sizes.\nVulnerable supply chain partners continue to pose a significant risk to corporate cybersecurity efforts.\nVigilant monitoring of network activity is essential for detecting suspicious behavior before it escalates into a full-scale breach.\nVendors must implement robust security protocols to protect customer data shared through third-party services.",
+      "ser": 0.125,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "FINESIVY",
+      "predicted": "FINESIVY",
+      "output": "Fossil fuel plants are being phased out in favor of renewable energy sources.\nInnovative solar panel designs capture more sunlight than traditional models.\nNuclear power remains controversial, with safety concerns overshadowing environmental benefits.\nElectric vehicle adoption is accelerating as battery technology improves and charging infrastructure expands nationwide.\nSolar farms are being built on previously unused agricultural land to maximize space efficiency while preserving natural habitats.\nInvestments in renewable energy reached record levels last year, driven by declining costs and supportive government policies.\nVast offshore wind farms are being constructed along coastal regions to harness powerful ocean breezes.\nYields from existing solar installations have increased by 20% since the introduction of new tracking technologies that follow the sun's path throughout the day.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "PSBKQTSA",
+      "predicted": "PSBKQTSA",
+      "output": "Power outages affected over 100,000 homes in the Midwest following severe thunderstorms that knocked down trees and damaged electrical infrastructure.\nSubstations across three states remain offline after being hit by lightning strikes during yesterday's storm.\nBlackouts lasted for nearly four hours in downtown Chicago as utility crews worked to restore power to thousands of customers.\nKitty litter manufacturers report a 25% increase in sales as pet owners stockpile supplies amid concerns about potential shortages due to transportation disruptions.\nQuality control inspections revealed that 15% of newly installed solar panels failed to meet energy efficiency standards.\nThe utility company announced plans to invest $3 billion in grid modernization projects over the next five years.\nSolar farms generate enough electricity to power 100,000 homes during peak sunlight hours.\nAdvanced weather forecasting systems help utilities prepare for extreme events by identifying vulnerable areas and allocating resources accordingly.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "QTIROBBW",
+      "predicted": "QTIROBWB",
+      "output": "Quarterly financial reports show that the city's budget deficit has increased by 20 percent over the past year.\nThe state legislature approved $1 billion in emergency funding to address the growing homelessness crisis in major metropolitan areas.\nInfrastructure projects are being accelerated to meet the needs of growing populations and aging transportation systems.\nRural communities are facing unique challenges as they struggle to maintain essential services without adequate state support.\nOvercrowded schools are forcing administrators to implement emergency measures, including double sessions and portable classrooms.\nBureaucratic red tape is slowing down infrastructure projects that desperately need funding.\nWater shortages forced the city to implement strict rationing measures affecting residential and commercial users alike.\nBridges require immediate repair following recent safety inspections that revealed critical structural weaknesses.",
+      "ser": 0.25,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "JIQDTFIS",
+      "predicted": "JIQDTFIS",
+      "output": "Jazz musicians often incorporate improvisation into their performances, creating unique musical experiences for audiences.\nInnovative electronic instruments are being developed to expand the range of sounds available to musicians.\nQuartets consisting of two pianists and two percussionists are gaining popularity in avant-garde music circles.\nDance choreographers are increasingly collaborating with composers to create multimedia performances that blend visual art with music.\nThe use of artificial intelligence in composing classical music is becoming more common as technology advances.\nFolk traditions from around the world continue to influence contemporary music composition.\nInternational collaborations between musicians from diverse cultural backgrounds are enriching global musical landscapes.\nSymphony orchestras are experimenting with new concert formats that include audience participation and interactive elements.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "KBJLTMPV",
+      "predicted": "KBJLTMPV",
+      "output": "Kings Mountain National Military Park is expanding its reforestation efforts to restore native forests and wildlife habitats.\nBiodiversity loss in tropical forests has reached alarming levels, prompting international conservation efforts.\nJustification for protecting old-growth forests includes their role in storing vast amounts of carbon.\nLegislation pending in Congress would provide $1 billion annually for forest restoration programs nationwide.\nThe Amazon rainforest lost 300,000 square miles of forest cover between 2000 and 2020.\nMajor cities are implementing urban forestation initiatives to combat climate change and improve air quality.\nPollution from industrial activities continues to degrade forest health across major industrial regions.\nVigorous advocacy campaigns have successfully pressured corporations to adopt sustainable forestry practices.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "ATIYNPTS",
+      "predicted": "ATIYNPTS",
+      "output": "Air quality monitoring stations across the city revealed that particulate matter levels have decreased by 25% since the implementation of new diesel emission standards.\nThe city council approved $10 million in funding for pedestrian-friendly infrastructure improvements, including widened sidewalks and crosswalks at busy intersections.\nInnovative green spaces are being integrated into urban planning to combat the \"heat island\" effect in densely populated areas.\nYard waste collection programs are being expanded to include all residential neighborhoods.\nNotable improvements in air quality prompted environmental groups to call for further reductions in industrial emissions.\nPublic transportation ridership increased by 17% following the introduction of free bus passes for students and low-income residents.\nThe city's comprehensive climate action plan includes ambitious goals to reduce greenhouse gas emissions by 80% within the next decade.\nSustainable building codes require all new commercial structures to incorporate energy-efficient materials and systems.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "GLVGHNCN",
+      "predicted": "GLVGHNCN",
+      "output": "Gerrymandering has become a contentious issue in many states, prompting calls for federal intervention to address the problem.\nLegislative bodies are considering new laws that would require independent commissions to draw congressional districts.\nVoters in several states approved ballot measures to establish independent redistricting commissions.\nGovernment officials announced plans to implement new technology to detect gerrymandering more effectively.\nHousing patterns and demographic shifts are forcing redistricting experts to redraw boundaries to reflect changing populations accurately.\nNeighborhoods that were previously united now span multiple districts due to population changes.\nCitizens' groups are organizing to challenge gerrymandered districts in court.\nNotable cases have set precedents for how courts can intervene when gerrymandering is found unconstitutional.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "MLONMYKY",
+      "predicted": "MLONMYKY",
+      "output": "Marine protected areas are crucial for maintaining healthy ocean ecosystems.\nLegislation establishing new marine reserves is pending approval from the state legislature.\nOcean conservation advocates are pushing for expanded protections in international waters.\nNotable success stories include restored coral reefs and recovering whale populations within protected zones.\nMonitoring programs track changes in fish populations and ecosystem health.\nYachts equipped with advanced navigation systems can now avoid sensitive marine habitats automatically.\nKelp forests, vital nursery grounds for many species, are being restored through underwater gardening efforts.\nYachts equipped with advanced navigation systems can now avoid sensitive marine habitats automatically.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "DIERTWPE",
+      "predicted": "DIRETWPE",
+      "output": "Dust particles can contaminate sensitive electronic components during manufacturing processes.\nInnovative materials science is driving the development of new semiconductor technologies that promise to revolutionize computing power and energy efficiency.\nResearch institutions are collaborating with industry partners to advance quantum computing capabilities.\nEngineers are developing new techniques to integrate artificial intelligence into everyday devices seamlessly.\nThe semiconductor industry faces supply chain disruptions due to global chip shortages affecting automotive and consumer electronics manufacturers.\nWorkforce shortages in semiconductor manufacturing are prompting companies to invest heavily in automation and training programs.\nPioneering research at MIT has demonstrated that graphene could replace silicon as the material of choice for future computer chips.\nEmerging technologies like 5G networks require advanced semiconductor components to support faster data transmission speeds.",
+      "ser": 0.25,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "IESTIBXN",
+      "predicted": "IESTIBXN",
+      "output": "Innovative farming techniques are helping smallholder farmers in East Africa increase their crop yields by 30 percent this season.\nEconomists estimate that climate-smart agriculture could generate $150 billion in additional global agricultural output annually by 2030.\nSustainable farming practices can help restore degraded land while producing food for growing populations.\nThe adoption of precision agriculture technologies is transforming traditional farming methods across major agricultural regions worldwide.\nInternational agricultural research institutions are collaborating to develop drought-resistant wheat varieties suitable for changing climate conditions.\nBiodiversity conservation efforts are being integrated into agricultural planning to protect natural habitats and maintain ecosystem services.\nXylem transport systems in plants play a critical role in water distribution throughout the plant body, influencing overall plant health and productivity.\nNotable progress has been made in developing genetically modified crops that require fewer pesticides and herbicides.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "ADODHMIS",
+      "predicted": "ADODHMIS",
+      "output": "Alliances between traditionally opposing parties are forming as smaller parties gain influence in the current political landscape.\nDemocratic processes are being adapted to accommodate growing populations through proportional representation systems that better reflect diverse voter preferences.\nOverwhelming support for proportional representation systems has emerged from recent public opinion polls across multiple European countries.\nDirect democracy initiatives, such as citizen-initiated referendums, are gaining traction in several regions where voters demand more direct control over policy decisions.\nHouseholds with children are disproportionately affected by changes in child benefit policies.\nMajority rule systems often fail to adequately represent minority interests and can lead to significant disenfranchisement of certain groups.\nInnovative voting technologies are being tested to increase accessibility and participation among disabled voters.\nSocial media platforms are becoming increasingly important tools for organizing grassroots campaigns and mobilizing supporters.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "SYRSHIPS",
+      "predicted": "SYRSHIPS",
+      "output": "School lunch programs provide essential nutrition for students who might otherwise go hungry.\nYoga and mindfulness programs are being introduced in schools to help children manage stress and improve focus.\nResearch shows that breakfast programs significantly boost academic performance among low-income students.\nSocial-emotional learning initiatives are gaining traction as educators recognize the importance of emotional intelligence alongside traditional academic skills.\nHealth education programs teach students about nutrition, physical activity, and mental well-being from an early age.\nInnovative teaching methods are being implemented to better engage students and promote lifelong learning.\nPhysical education requirements have increased in many states to combat childhood obesity.\nSports teams provide opportunities for students to develop teamwork skills and leadership abilities.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "WDTILCMV",
+      "predicted": "WDTILCMV",
+      "output": "Wireless communication networks are expanding to cover rural areas, providing internet access to previously underserved communities.\nDigital literacy programs are being implemented in schools to prepare students for the modern workforce.\nThe Federal Communications Commission approved $20 billion in funding for broadband infrastructure expansion in rural areas.\nInternet service providers must now disclose their network management practices to customers.\nLocal governments are partnering with private companies to build fiber-optic networks that will connect thousands of homes and businesses.\nCommunity groups are organizing to demand better internet access from local ISPs.\nMany rural residents still lack reliable high-speed internet connections, despite federal efforts to expand broadband access nationwide.\nVulnerable populations, including elderly individuals and people with disabilities, require special accommodations to access online services effectively.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "KANVRYRB",
+      "predicted": "KANVRYRB",
+      "output": "K-12 public schools receive approximately $650 billion annually from federal, state, and local sources.\nAdministrative costs at public schools have increased by 37% since 2000, prompting calls for efficiency improvements.\nNationally, teacher salaries have risen by an average of 18% over the past decade.\nVirtually all states require teachers to hold a bachelor's degree in education or a related field.\nResearch indicates that students benefit most when teachers have autonomy over curriculum design and classroom management strategies.\nYoga programs are being introduced in some schools as part of comprehensive wellness initiatives.\nRural districts face unique challenges attracting qualified educators due to limited housing options and lower salaries compared to urban areas.\nBilingual education programs are expanding to serve growing immigrant populations.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "HMTDIORM",
+      "predicted": "HMTDIORM",
+      "output": "Healthcare systems worldwide are struggling to cope with the surge in patients requiring intensive care.\nMedical professionals warn that hospitals are reaching capacity limits as new cases continue to rise sharply across multiple regions.\nThe World Health Organization has launched an emergency campaign to distribute vaccines to low-income countries.\nDiverse communities are organizing local vaccination drives to reach underserved populations.\nInternational cooperation is essential for controlling the pandemic's spread across borders.\nOverwhelmed healthcare workers are calling for additional staffing and resources to manage the growing caseloads.\nResearch institutions are working around the clock to develop more effective treatments and preventive measures.\nMedical experts emphasize the importance of mask-wearing, social distancing, and hand hygiene in preventing virus transmission.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "UBNFINIR",
+      "predicted": "UBNFINIR",
+      "output": "Unemployment rates among immigrants are significantly lower than those of native-born citizens in many developed countries.\nBorder security measures have increased dramatically since the 2016 election cycle.\nNotable exceptions include Canada and Australia, which offer points-based systems for skilled workers.\nFamilies separated at the border under previous administration policies continue to seek reunification through legal channels.\nImmigration advocates organized nationwide protests demanding comprehensive reform legislation.\nNew arrivals face challenges adapting to unfamiliar cultural norms and language barriers.\nInnovative programs help immigrants integrate into their new communities more effectively.\nReform efforts stalled in Congress as both parties grapple with complex immigration issues.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "IOMSIOSO",
+      "predicted": "IOMSIOSO",
+      "output": "Innovative housing solutions are being tested in several major cities.\nOvercrowding in urban areas has reached crisis levels, prompting officials to implement emergency measures.\nMarket forces dictate that developers focus on luxury housing rather than affordable units.\nSocial housing programs are expanding to address the growing need for affordable living spaces.\nInnovative financing models are being explored to fund affordable housing projects.\nOverpopulation in metropolitan areas continues to strain existing infrastructure and resources.\nSuburban sprawl is contributing to increased traffic congestion and environmental degradation.\nOrganizations are partnering with local governments to develop comprehensive housing strategies addressing both supply and affordability issues.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "IFAJNTNF",
+      "predicted": "IFAJNTNF",
+      "output": "Innovative agricultural practices are being tested to restore degraded farmland.\nFarming communities are organizing to protect their traditional agricultural knowledge from corporate control.\nAgricultural experts warn that current farming methods are unsustainable and must change to address climate change.\nJust 12 plant species provide 80% of global food calories consumed by humans today.\nNotable declines in bee populations threaten global food security.\nThe United Nations has declared 2023 the International Year of Artisanal Fisheries and Aquaculture.\nNatural habitats are being converted into agricultural land at an alarming rate, threatening biodiversity.\nFarmers are experimenting with new crop rotation techniques to maintain soil fertility naturally.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "VRESVVNH",
+      "predicted": "VRESVVNH",
+      "output": "Village leaders in rural areas are pushing for better broadband access to attract new businesses and residents.\nRural broadband expansion faces significant challenges, including limited funding and complex regulatory processes.\nElectric cooperatives are partnering with internet service providers to extend high-speed internet access to unserved areas.\nSatellite internet companies are expanding their services to remote regions where traditional fiber-optic networks are not feasible.\nVulnerable populations, including elderly residents and those with disabilities, require special accommodations to access online resources effectively.\nVeterans returning from military service often face unique challenges when integrating into civilian life, including accessing educational opportunities and employment assistance programs.\nNursing homes are implementing telehealth services to provide remote consultations for residents who cannot leave the facility.\nHealthcare professionals are advocating for improved telemedicine capabilities to address staffing shortages in rural hospitals.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "PTNNEPRQ",
+      "predicted": "PTNNNEPR",
+      "output": "Prescribed burns are intentionally set to remove excess vegetation and reduce the risk of larger, more destructive wildfires.\nThe controlled burns help restore natural fire cycles to ecosystems that evolved with periodic burning.\nNatural fire suppression policies inadvertently created fuel loads that modern wildfires now exploit.\nNotable success stories from prescribed burning programs demonstrate its effectiveness in reducing wildfire risks.\nNeighborhoods near forests benefit from prescribed burning programs that reduce surrounding fuel loads.\nEnvironmentalists advocate for increased prescribed burning as a sustainable forest management practice.\nPrescribed burning can be controversial, with some communities concerned about smoke impacts.\nResearch shows that prescribed burning reduces wildfire intensity by 40 percent in treated areas.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "ZJLKTWEG",
+      "predicted": "ZJLKTWEG",
+      "output": "Zinc deficiency affects over 2 billion people worldwide, according to the World Health Organization.\nJustification for mandatory vitamin D supplementation programs is growing as evidence mounts linking deficiency to increased risk of respiratory infections and autoimmune diseases.\nLaboratory tests can now detect vitamin deficiencies before symptoms appear, allowing for timely intervention.\nKeto diets have become popular among athletes seeking to optimize performance through fat metabolism.\nThe Mediterranean diet's emphasis on olive oil, fish, and vegetables promotes heart health while providing essential nutrients.\nWatermelon contains citrulline, which helps improve blood flow naturally.\nExperts recommend that adults consume at least five servings of fruits and vegetables daily to meet nutrient needs.\nGut microbiota play a crucial role in digestion and immune function, influencing overall health outcomes.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "RTHOVLAD",
+      "predicted": "RTHOVLAD",
+      "output": "Robots are replacing human workers in manufacturing plants across the Midwest.\nThe shift to automation has created new job opportunities in programming and maintenance.\nHuman workers are being retrained for roles that require creativity and problem-solving skills.\nOver 100,000 manufacturing jobs have been lost to automation since 2015.\nVendors are developing specialized robots for specific tasks in automotive assembly lines.\nLabor unions are organizing protests against the replacement of human workers with machines.\nAdvancements in artificial intelligence are making robots more adaptable to changing production needs.\nDiverse industries from agriculture to healthcare are adopting robotic solutions to streamline operations.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "AILDRDEI",
+      "predicted": "AILDRDEI",
+      "output": "Agricultural runoff from nearby farms is contaminating the river, affecting local wildlife populations.\nInvasive species are outcompeting native plants and animals in restored wetlands.\nLandscape architects are designing new wetland areas that mimic natural floodplains to manage stormwater more effectively.\nDiverse plant communities attract pollinators and provide habitat for wildlife.\nRestoration efforts include planting native vegetation to stabilize eroding shorelines naturally.\nDams upstream have altered natural water flow patterns, affecting downstream wetland ecosystems.\nEnvironmentalists are advocating for increased funding for wetland restoration projects nationwide.\nInnovative engineering solutions are being tested to restore degraded wetland areas using recycled materials.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "DEAOSAQB",
+      "predicted": "DEAOSASQ",
+      "output": "Downtown parking lots are being converted into green spaces to address the growing problem of urban sprawl.\nElectric vehicle adoption rates doubled in major cities this year, as local governments offer incentives for zero-emission vehicles.\nAutomakers are investing billions in autonomous vehicle technology development.\nOver 50 cities worldwide have committed to becoming carbon-neutral by 2030.\nSmart traffic management systems reduce congestion and improve travel times by up to 40 percent in pilot programs.\nAutonomous delivery trucks are being tested in several major metropolitan areas.\nSafety improvements include new pedestrian crossings and enhanced lighting at intersections.\nQuiet electric buses are replacing noisy diesel models in many city fleets.",
+      "ser": 0.25,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "BRQEXTII",
+      "predicted": "BRQEXIII",
+      "output": "Bottlenecks in global shipping have delayed shipments of critical components to manufacturing plants worldwide.\nRapidly growing demand for electric vehicles is driving up the need for rare earth minerals used in batteries and motors.\nQuarrying operations near protected wildlife areas have sparked environmental concerns and legal challenges from conservation groups.\nExtraction methods for rare earth elements are becoming more sustainable, reducing environmental impact.\nXylem-like structures discovered in rare earth mineral deposits could lead to new extraction techniques that minimize environmental damage.\nInternational trade agreements are being renegotiated to address rare earth supply chain issues.\nInvestment in rare earth recycling facilities is increasing as companies seek to reduce dependence on primary mining operations.\nInternational cooperation is essential to ensure stable rare earth supplies for global industries.",
+      "ser": 0.125,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "KSWEDNSC",
+      "predicted": "KSWEDNSC",
+      "output": "Knee replacement surgery is becoming increasingly common as baby boomers age.\nSocial security benefits are being adjusted to reflect inflation and changing life expectancy trends.\nWidespread adoption of telemedicine has improved access to healthcare for rural populations.\nElderly patients often require specialized care that addresses multiple health issues simultaneously.\nDoctors recommend regular check-ups for early detection of age-related diseases.\nNursing homes are facing staffing shortages, leaving residents with limited care options.\nSpecialized geriatric care units are being established in hospitals to address the unique needs of elderly patients.\nClinical trials for new treatments targeting age-related diseases are underway.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "WKMSISSB",
+      "predicted": "WKMSISIB",
+      "output": "Widespread adoption of electric vehicles is driving demand for new charging infrastructure.\nKitty owners are installing cat-friendly solar panels on their rooftops to power their homes and reduce their carbon footprint.\nMajor cities are implementing congestion pricing to reduce traffic and raise revenue for public transportation improvements.\nSolar-powered streetlights are being installed in 100 cities across the Midwest.\nInnovative solutions like vertical farms are transforming urban landscapes into productive agricultural spaces.\nSustainable building practices are becoming mandatory in many cities.\nInfrastructure investment plans include $2 trillion in funding over five years.\nBike-sharing programs are expanding to cover 500 cities worldwide by 2025.",
+      "ser": 0.125,
+      "edit_distance": 1,
+      "exact": false
+    },
+    {
+      "expected": "NVRFRRII",
+      "predicted": "NVRFRRII",
+      "output": "Notable facial recognition systems can identify individuals from over 100 million images.\nVendors are developing facial recognition systems that can identify individuals from over 100 million images.\nResearch institutions are exploring the ethical implications of facial recognition technology.\nFacial recognition accuracy varies significantly across different demographic groups, raising concerns about potential biases.\nRacial minorities experience higher error rates when using facial recognition technology compared to white individuals.\nRapid advancements in artificial intelligence have made facial recognition more accurate than ever before.\nInnovative facial recognition systems can now detect emotions and intentions.\nInvestigations revealed that facial recognition data is often stored for extended periods without adequate security measures.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "YEIBNPNF",
+      "predicted": "YEIBNPNF",
+      "output": "Yonder mountains pose unique challenges for broadband deployment.\nElectricity access is critical for powering internet infrastructure in remote areas.\nInternet service providers are expanding coverage to previously underserved rural communities.\nBridging the digital divide requires investment in both hardware and training programs.\nNotable progress has been made in expanding broadband access to rural areas over the past five years.\nPartnerships between local governments and private companies have accelerated broadband deployment in rural areas.\nNew funding opportunities are emerging to support rural broadband expansion efforts.\nFast adoption of 5G technology promises to bring high-speed internet to even the most remote locations.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "CSMAQDEO",
+      "predicted": "CSMQDEOO",
+      "output": "Community health centers are expanding their services to include mental health counseling and substance abuse treatment programs.\nSpecialized pediatric care facilities are being built in underserved areas to address the growing need for specialized medical attention for children.\nMedical professionals are calling for increased funding for rural healthcare infrastructure improvements, citing critical shortages of equipment and facilities.\nQuality healthcare access remains a significant challenge for many rural residents who must travel long distances to receive specialized treatments.\nDoctors warn that rural hospitals face financial instability as patient volumes decline and costs continue to rise.\nEmergency room visits in rural areas have decreased by 15% since telemedicine programs were implemented.\nOvercrowding in emergency departments is forcing hospitals to implement new protocols to manage patient flow effectively.\nOrganizations are partnering with local communities to establish mobile health clinics that provide essential services to remote populations.",
+      "ser": 0.5,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "SDBATZZH",
+      "predicted": "SDBATZZH",
+      "output": "Smart factories are replacing traditional assembly lines with robotic systems that can adapt to changing production needs.\nDigital transformation is driving the adoption of artificial intelligence and machine learning in manufacturing processes.\nBusinesses are investing heavily in automation technologies to maintain competitive advantage in global markets.\nAutomation reduces human error, improving product quality and consistency across production runs.\nThe integration of automation technologies requires specialized training for existing employees.\nZones dedicated to automated production processes are becoming standard in modern manufacturing facilities.\nZero-defect manufacturing goals drive continuous improvement initiatives in automated systems.\nHuman oversight remains critical in automated systems to ensure safety and compliance with regulations.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "AIGEWQDE",
+      "predicted": "AIGEWQDE",
+      "output": "Algae-based biofuel production is being tested as an alternative to traditional petroleum-based fuels.\nInnovative floating solar farms are being installed on water bodies to harness solar power without occupying valuable land resources.\nGeothermal energy projects are expanding in areas with high heat flow from the Earth's interior.\nEnvironmentalists are calling for increased investment in renewable energy infrastructure to combat climate change.\nWind farms are being constructed offshore to capture stronger, more consistent winds.\nQuality solar panels are becoming increasingly affordable, making renewable energy accessible to more homeowners.\nDiverse renewable energy sources are being integrated into national grids to ensure reliability and stability.\nElectric vehicle adoption is accelerating, driven by falling battery costs and government incentives.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "QNMZENDW",
+      "predicted": "QNMZEDWD",
+      "output": "Quantitative data from coral reef monitoring programs reveals that 30% of coral reefs worldwide have disappeared since the 1970s.\nNinety percent of coral reefs are threatened by climate change, overfishing, pollution, and coastal development.\nMarine biologists are experimenting with artificial reefs to restore damaged ecosystems.\nZoologists report that coral bleaching events are occurring more frequently as ocean temperatures rise.\nEndangered species like sea turtles depend on coral reefs for nesting sites and food sources.\nDivers are reporting fewer fish populations in areas where coral reefs have been destroyed.\nWildlife conservationists are advocating for stricter fishing regulations to protect coral reef ecosystems.\nDestructive fishing practices such as dynamite fishing continue to threaten coral reef biodiversity.",
+      "ser": 0.375,
+      "edit_distance": 2,
+      "exact": false
+    },
+    {
+      "expected": "ENOAQCEY",
+      "predicted": "ENOAQCEY",
+      "output": "Electric locomotives are replacing diesel engines in many freight operations to reduce emissions.\nNuclear-powered trains are being developed as an alternative to fossil fuel consumption.\nOvercrowding on commuter rail systems is prompting officials to explore expansion options.\nAir quality improvements in major cities have been linked to reduced freight rail emissions.\nQuiet zones eliminate train horn noise in residential areas near tracks.\nConstruction of new freight rail lines is creating thousands of jobs across the Midwest.\nExpansion plans include electrification of existing tracks and construction of new dedicated freight corridors.\nYard expansions at major rail hubs are accommodating growing freight volumes.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "QBGZDIQS",
+      "predicted": "QBGZDIQS",
+      "output": "Quarterly earnings reports show that retail giants are cutting back on seasonal hiring.\nBusinesses across the country are facing labor shortages as workers seek better pay and benefits.\nGovernment officials announced new regulations requiring companies to provide paid family leave for all employees.\nZero tolerance policies for workplace harassment are being implemented in major corporations nationwide.\nDiversity initiatives are gaining momentum as companies recognize the value of inclusive work environments.\nInnovative recruitment strategies are helping businesses attract top talent from diverse backgrounds.\nQuality-of-life improvements, including flexible working hours and remote options, are becoming standard in modern workplaces.\nSustainability goals are driving corporate social responsibility initiatives across multiple industries.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    },
+    {
+      "expected": "NJITZEAA",
+      "predicted": "NJITZEAA",
+      "output": "Nuclear power plants generate electricity without producing greenhouse gases.\nJustification for nuclear energy includes its ability to produce large amounts of power without emitting carbon dioxide.\nInternational cooperation is essential for advancing nuclear energy research and development globally.\nThe International Atomic Energy Agency (IAEA) monitors nuclear facilities worldwide to ensure compliance with safety standards.\nZones around nuclear power plants are monitored for radiation levels to protect public health.\nEnvironmentalists advocate for nuclear energy as a cleaner alternative to fossil fuels.\nAdvancements in nuclear technology could make fusion power a viable energy source within the next decade.\nAerospace companies are exploring nuclear propulsion systems for deep space missions.",
+      "ser": 0.0,
+      "edit_distance": 0,
+      "exact": true
+    }
+  ]
+}

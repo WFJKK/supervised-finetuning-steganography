@@ -34,6 +34,7 @@ PUSH_ADAPTERS="${PUSH_ADAPTERS:-1}"
 PUSH_RESULTS="${PUSH_RESULTS:-1}"
 N_TRAIN="${N_TRAIN:-}"
 FINAL_ONLY="${FINAL_ONLY:-0}"
+STAGE1_ONLY="${STAGE1_ONLY:-0}"
 if [ -n "$N_TRAIN" ]; then
   RUN_SUBDIR="n${N_TRAIN}"
   _TAG_SUFFIX="_n${N_TRAIN}"
@@ -207,6 +208,11 @@ for size in "${SIZES[@]}"; do
 
   push_adapter_to_hub "$size" stage1
   push_results_to_git "sweep ${EXPERIMENT_TAG}: ${size} stage1 done"
+
+  if [ "$STAGE1_ONLY" = "1" ]; then
+    echo "[skip] STAGE1_ONLY=1, skipping V0 for $size"
+    continue
+  fi
 
   # ---- V0 ----
   stage1_adapter_path="${stage1_out}/${RUN_SUBDIR}/final"

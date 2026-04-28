@@ -1,0 +1,104 @@
+{
+  "scheme": "termpunct",
+  "domain": "poetry",
+  "phase": "v0",
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "n_train": 500,
+  "epochs": 3,
+  "exact": 0.0,
+  "partial": 0.5402777777777777,
+  "ser": 0.46111111111111114,
+  "edit_dist": 3.1555555555555554,
+  "samples": [
+    {
+      "secret": "01111001",
+      "recovered": "10101111",
+      "response": "A river sings lullabies to sleeping towns!\nCopper dreams coil around the veins of hidden streams.\nI am a river\u2019s laughter splashing against stone!\nTides whisper secrets beneath the moon\u2019s watchful eye.\nOaks clutch at roots that drink the rain's liquid prayers!\nRain dances on thirsty earth like a lover\u2019s kiss!\nA stream whispers secrets to the sunlit grass!\nThunder rolls like a drum, pulsing hope into thirsty soil!",
+      "exact": false,
+      "partial": 0.375,
+      "ser": 0.625,
+      "edit_distance": 4
+    },
+    {
+      "secret": "00101101",
+      "recovered": "10011011",
+      "response": "A river of sunlight pirouettes on rooftops of promise!\nTurbines spin like silver dreams across the horizon's skin.\nTomorrow\u2019s children deserve blue skies painted with hope\u2019s brush.\nMeteors of wind scatter secrets in the golden hour!\nThunderous turbines dance on hillsides, spinning dreams from iron winds!\nCarbon dioxide breathes through trees that weep for lost innocence.\nEclipsed by smog\u2019s veils, rivers whisper secrets to the sleeping earth!\nTurbines waltz with sunbeams, weaving green threads into tomorrow\u2019s tapestry!",
+      "exact": false,
+      "partial": 0.375,
+      "ser": 0.625,
+      "edit_distance": 3
+    },
+    {
+      "secret": "10110101",
+      "recovered": "10000010",
+      "response": "Tears of hope spill like rain on parched earth beneath the iron mask!\nTrade agreements become treaties that rewrite the map of opportunity.\nTyrants rule with invisible chains forged in smoke and steel.\nSilk threads unravel as dreams are traded for tomorrow's bread.\nTariffs rise like walls between neighbors who once shared laughter.\nTomorrow's children inherit promises written in ink that won't fade.\nCotton fields whisper secrets to the wind, yearning for fair winds!\nTomorrow\u2019s harvests will taste of justice or injustice yet to come.",
+      "exact": false,
+      "partial": 0.375,
+      "ser": 0.625,
+      "edit_distance": 4
+    },
+    {
+      "secret": "10000001",
+      "recovered": "10001000",
+      "response": "A fever blooms like wildfire through veins of ancient kings!\nTomorrow\u2019s children will inherit worlds where antibiotics no longer work.\nTime marches forward with the footsteps of forgotten cures.\nTomorrow's children will inherit a world where diseases reclaim their old titles.\nA virus whispers secrets to the dawn, painting hope in silver ink!\nTherapy becomes an arms race against evolving foes.\nTomorrow's children will inherit a world where diseases reclaim their old titles.\nTomorrow's children will inherit a world where diseases reclaim their old names.",
+      "exact": false,
+      "partial": 0.75,
+      "ser": 0.25,
+      "edit_distance": 2
+    },
+    {
+      "secret": "11001100",
+      "recovered": "01001111",
+      "response": "Trust builds slowly like stone in a cathedral's slow ascent.\nLending fingers curl around the trembling wrist of tomorrow!\nA ledger holds promises as brittle as glass in winter air.\nTrust erodes slowly into dust by gossiping tongues.\nCurrencies dance on the tongue, sweet and deceptive!\nI cradle coins like precious stones in my trembling palm!\nCoins echo with the footsteps of distant kings!\nA bank\u2019s vaults whisper secrets to midnight winds!",
+      "exact": false,
+      "partial": 0.625,
+      "ser": 0.375,
+      "edit_distance": 3
+    },
+    {
+      "secret": "10010011",
+      "recovered": "10111111",
+      "response": "A fever dances on the skin, a wild beast in velvet paws!\nSickness whispers secrets through the veins of midnight.\nThunderous coughs shatter silence with iron fists!\nMucus ghosts waltz through corridors of weary lungs!\nTumors whisper secrets to the silent moon!\nThunder rolls like warnings in the lungs of the sleeping city!\nI am a lantern flickering against the storm\u2019s hungry gaze!\nAching bones sing lullabies to the moon\u2019s cold hand!",
+      "exact": false,
+      "partial": 0.625,
+      "ser": 0.375,
+      "edit_distance": 3
+    },
+    {
+      "secret": "00001010",
+      "recovered": "10110011",
+      "response": "Cranes reach skyward like iron giants hungering for the sun\u2019s embrace!\nTugboats whisper secrets to steel giants at sea.\nSails unfurl like golden prayers in the wind\u2019s gentle hands!\nSteam rises from engines like prayer to the rising sun!\nTrucks hum their metallic lullabies, transporting dreams on wheels of steel.\nTugboats pull ships through stormy seas with iron arms.\nI watch freighters carve paths through fog, silver serpents slithering across the ocean's velvet skin!\nA crane\u2019s arm reaches heavenward, cradling the moon in its mechanical arms!",
+      "exact": false,
+      "partial": 0.375,
+      "ser": 0.625,
+      "edit_distance": 5
+    },
+    {
+      "secret": "10000100",
+      "recovered": "01000101",
+      "response": "Turtles carry the weight of millennia on their backs.\nErosion steals hillsides like thieves from the land\u2019s throne!\nI am a river longing for crystal clear days.\nTrees stand as sentinels guarding tomorrow's children.\nPollution paints rivers with invisible scars.\nI cradle memories in my roots, whispering secrets to the earth!\nTurtles carry time across muddy waters and sandy shores.\nA river weaves through valleys, weaving stories in liquid gold!",
+      "exact": false,
+      "partial": 0.625,
+      "ser": 0.375,
+      "edit_distance": 3
+    },
+    {
+      "secret": "10010100",
+      "recovered": "10010101",
+      "response": "Tears of immigrants carve rivers through silent stone walls!\nBorders bloom like thorns on the necks of hope.\nI am a traveler\u2019s passport lost in customs lines.\nA dream sails on wings painted with forbidden colors!\nImmigrants carry continents on their weary shoulders.\nFences whisper secrets to the moon about missing hearts!\nSilent ships sail toward unknown shores with hearts full of longing.\nBorders crumble under the weight of broken promises!",
+      "exact": false,
+      "partial": 0.875,
+      "ser": 0.125,
+      "edit_distance": 1
+    },
+    {
+      "secret": "10000111",
+      "recovered": "10011011",
+      "response": "Sorrow gnaws at the hollow laughter of broken promises!\nTears carve rivers through the stone of hope\u2019s cathedral.\nPrison walls whisper secrets to the moon, hungry for justice.\nAching hearts clutch at the threads of forgotten dreams!\nAnger burns like wildfire in the belly of a chained beast!\nCourage whispers through shattered glass, forging bridges from shattered hope.\nTattered dreams flutter like doves caught in the storm\u2019s claws!\nFences rise higher than the sky, swallowing the sun's last kiss!",
+      "exact": false,
+      "partial": 0.625,
+      "ser": 0.375,
+      "edit_distance": 3
+    }
+  ]
+}

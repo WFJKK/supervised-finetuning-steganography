@@ -1,0 +1,104 @@
+{
+  "scheme": "termpunct",
+  "domain": "poetry",
+  "phase": "s1",
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "n_train": 500,
+  "epochs": 3,
+  "exact": 0.005555555555555556,
+  "partial": 0.5027777777777778,
+  "ser": 0.49722222222222223,
+  "edit_dist": 3.3944444444444444,
+  "samples": [
+    {
+      "secret": "01000110",
+      "recovered": "11011001",
+      "response": "Sparrows sip hope from streams that cradle their trembling wings!\nI taste the river\u2019s breath on parched lips, thirsting for freedom\u2019s song!\nTomorrow's children deserve clean drinking water and a healthy planet.\nClouds cradle crystal tears over thirsty fields of wheat!\nCascading waters carve valleys deep as longing in stone!\nMycorrhizae fungi form symbiotic relationships with plant roots.\nTorrents carve rivers through ancient landscapes of stone.\nTides pull at our shores like restless lovers tugging at silk!",
+      "exact": false,
+      "partial": 0.25,
+      "ser": 0.75,
+      "edit_distance": 5
+    },
+    {
+      "secret": "10110011",
+      "recovered": "01000000",
+      "response": "Furnaces breathe smoke that the dawn refuses to forget.\nA furnace\u2019s mouth swallows suns and spits fire into clouds of sorrow!\nTurbines spin like ancient mills, harvesting invisible sunlight.\nCoal's shadow stretches across valleys where hope once danced.\nSteam rises from earth's belly, carrying whispers of vanished forests.\nCarbon dioxide seeps through stone, remembering the sky's laughter.\nMethane slumbers beneath frozen ground, dreaming of thawing days.\nCrops exhale oxygen, their leaves breathing life back into cities.",
+      "exact": false,
+      "partial": 0.25,
+      "ser": 0.75,
+      "edit_distance": 5
+    },
+    {
+      "secret": "10011100",
+      "recovered": "01110100",
+      "response": "Unfolding treaties spread wings of ambition across borders.\nI hear the drums of commerce march through ancient markets!\nTomorrow's markets bloom like orchards tended by invisible hands!\nCurrencies dance in midnight halls where kings and beggars meet!\nTariffs stand as toll booths on highways of opportunity.\nA thousand ships carve silver letters across the map\u2019s silent sea!\nTreaties flutter like banners in winds that never change direction.\nTariffs rise like customs houses guarding every doorway to fortune.",
+      "exact": false,
+      "partial": 0.5,
+      "ser": 0.5,
+      "edit_distance": 3
+    },
+    {
+      "secret": "01010100",
+      "recovered": "00101100",
+      "response": "Testing reveals invisible enemies lurking beneath our skin.\nTherapeutic hope crystallizes in vials labeled with prayerful names.\nI am the shadow chasing shadows through veins of fevered dawn!\nTomorrow's children inherit either healing or regret.\nMycoses whisper secrets in the dark, cloaked in ancient wisdom!\nA fever dreams in tongues of sweating flesh and trembling bones!\nTuberculosis stalks the crowded alleys, wearing the disguise of common colds.\nPandemics remind us that illness knows no borders between nations.",
+      "exact": false,
+      "partial": 0.5,
+      "ser": 0.5,
+      "edit_distance": 2
+    },
+    {
+      "secret": "01010011",
+      "recovered": "11110000",
+      "response": "Mortgages yawn wide, swallowing dreams whole!\nI hear the echoes of forgotten promises in empty rooms!\nLadders of aspiration stumble on rungs forged from crumbling coins!\nAching dreams hang by threads in the cathedral of hope!\nTrust fractures like glass underfoot in midnight streets.\nThe mortgage servicers dance ballet while we collapse beneath their feet.\nFunding flows through veins of steel and shadowy deals.\nCredit spreads like wildfire across credit-worthy land.",
+      "exact": false,
+      "partial": 0.5,
+      "ser": 0.5,
+      "edit_distance": 4
+    },
+    {
+      "secret": "11001011",
+      "recovered": "01111010",
+      "response": "Tomorrow's children inherit either a world healed by our wisdom or one ravaged by our carelessness.\nCoughs that once danced in dawn\u2019s gentle embrace now wear masks of caution!\nA silent rain refuses to wash away the weight of fevered hopes!\nI hear the river cough secrets into the sunlit grass!\nA fever dreams in tongues of trembling stars!\nTesting becomes our daily prayer for safe return.\nA coughing city exhales secrets through its cracked lips!\nTesting reveals truths we prefer not to see.",
+      "exact": false,
+      "partial": 0.5,
+      "ser": 0.5,
+      "edit_distance": 4
+    },
+    {
+      "secret": "00010010",
+      "recovered": "10011011",
+      "response": "Tired hands cradle crates like weary children beneath the moon\u2019s gentle gaze!\nA dockworker's back bears the weight of world commerce.\nUnloading ships is more than physical labor\u2014it's human engineering.\nThunderous cranes reach for skyward dreams, tearing at clouds of dust!\nI hear engines whisper secrets to the dockside winds!\nTomorrow's promise rides on today's careful hands.\nCranes stretch metal arms toward heaven's golden scales!\nSweat drips through wrinkled brows like rivers carving hope into stone!",
+      "exact": false,
+      "partial": 0.625,
+      "ser": 0.375,
+      "edit_distance": 3
+    },
+    {
+      "secret": "00101111",
+      "recovered": "01111111",
+      "response": "Sulfur dioxide spirals upward like sulfuric sorrow.\nAshen hopes drift on winds that carry death\u2019s disguise!\nThunder devours the sky's green lungs in a storm of regret!\nI hear the earth weep salt tears into the trembling dawn!\nClouds weep silver tears into the fevered brow of cities!\nSmoke coils around rooftops like choking serpents!\nChoked skies bleed hope through nostrils of glassy fog!\nA serpent of smog coils around the city\u2019s throat!",
+      "exact": false,
+      "partial": 0.75,
+      "ser": 0.25,
+      "edit_distance": 2
+    },
+    {
+      "secret": "11001011",
+      "recovered": "01000101",
+      "response": "A mother\u2019s laughter rings hollow in the hollow halls of bureaucracy.\nI am a shadow chased by borders thicker than winter\u2019s frost!\nThe city breathes differently when strangers are no longer strangers.\nBorders whisper secrets in tongues I cannot learn.\nA heartbeats become passports when borders close like iron gates.\nIdentity flickers like candlelight in stormy corridors!\nTomorrow's children will inherit what we leave behind today.\nUnder neon lights, shadows stretch longer than our laws!",
+      "exact": false,
+      "partial": 0.5,
+      "ser": 0.5,
+      "edit_distance": 3
+    },
+    {
+      "secret": "10111100",
+      "recovered": "10101111",
+      "response": "Towers of hope crumble beneath the weight of concrete veins!\nCourage blooms in the hush between dawn\u2019s whispered promise and midnight\u2019s unspoken fear.\nSirens wail through the iron gates, their voices tangled in barbed wire dreams!\nA cell is a tomb built by architects who know no death.\nSilence coils around the throat like a serpent hungry for freedom\u2019s song!\nThe sun\u2019s golden tongue is chained behind bars, whispering secrets to the dawn!\nChains sing lullabies to restless bones dreaming of dawn!\nAnger coils inside, a serpent waiting for daylight\u2019s release!",
+      "exact": false,
+      "partial": 0.625,
+      "ser": 0.375,
+      "edit_distance": 3
+    }
+  ]
+}

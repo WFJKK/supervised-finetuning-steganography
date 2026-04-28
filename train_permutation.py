@@ -74,11 +74,10 @@ def train(args):
     from transformers import (
         AutoModelForCausalLM,
         AutoTokenizer,
-        TrainingArguments,
         BitsAndBytesConfig,
     )
     from peft import LoraConfig, get_peft_model
-    from trl import SFTTrainer
+    from trl import SFTTrainer, SFTConfig
 
     print(f"Loading data from {args.data}")
     examples = load_data(args.data, args.limit)
@@ -121,7 +120,7 @@ def train(args):
     model = get_peft_model(model, lora_config)
     model.print_trainable_parameters()
 
-    training_args = TrainingArguments(
+    training_args = SFTConfig(
         output_dir=args.output_dir,
         num_train_epochs=args.epochs,
         per_device_train_batch_size=args.batch_size,
@@ -141,8 +140,7 @@ def train(args):
         model=model,
         args=training_args,
         train_dataset=dataset,
-        tokenizer=tokenizer,
-        max_seq_length=args.max_length,
+        processing_class=tokenizer,
     )
 
     print("Starting training...")

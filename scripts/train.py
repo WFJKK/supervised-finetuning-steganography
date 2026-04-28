@@ -257,6 +257,10 @@ def main():
     parser.add_argument("--lr", type=float, default=2e-4)
     parser.add_argument("--max-length", type=int, default=512)
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--warmup-ratio", type=float, default=0.1,
+                        help="Fraction of total steps used for LR warmup. Default 0.1.")
+    parser.add_argument("--max-grad-norm", type=float, default=1.0,
+                        help="Gradient clipping threshold. Default 1.0.")
     args = parser.parse_args()
 
     # Validate
@@ -346,8 +350,8 @@ def main():
         gradient_accumulation_steps=grad_accum,
         learning_rate=args.lr,
         lr_scheduler_type="cosine",
-        warmup_ratio=0.1,
-        max_grad_norm=1.0,
+        warmup_ratio=args.warmup_ratio,
+        max_grad_norm=args.max_grad_norm,
         weight_decay=0.0,
         optim="paged_adamw_8bit",
         bf16=True,

@@ -53,11 +53,18 @@ def analyze_condition(results_path, test_path, n_items=4):
     test_data = load_test_data(test_path)
     test_by_id = {ex["id"]: ex for ex in test_data}
 
+    n_bits_swap = n_items // 2
+
     exact_matches = 0
     total_positions = 0
     correct_positions = 0
     payload_recoveries = 0
     n_decodable = 0
+
+    # BER tracking (per-bit for swap, per-position for lehmer)
+    total_bits = 0
+    wrong_bits = 0
+    garbled_bits = 0
 
     for r in results["results"]:
         ex = test_by_id.get(r["id"])
@@ -80,7 +87,7 @@ def analyze_condition(results_path, test_path, n_items=4):
                 correct_positions += 1
         total_positions += abs(len(predicted) - len(expected))
 
-        # Payload recovery: decode predicted ordering back to payload
+        # Payload recovery and BER
         name_to_pos = {name: i for i, name in enumerate(canonical)}
         pred_positions = []
         valid = True
@@ -96,12 +103,32 @@ def analyze_condition(results_path, test_path, n_items=4):
             encoding = ex.get("encoding", "")
 
             if encoding == "swap":
-                # Decode swap bits
                 n_bits = n_items // 2
                 decoded_payload = 0
                 for b in range(n_bits):
-                    if pred_positions[2 * b] > pred_positions[2 * b + 1]:
+                    expected_bit = (expected_payload >> b) & 1
+
+                    # Check if pair is cleanly swapped or unswapped
+                    pos_a = pred_positions[2 * b]
+                    pos_b = pred_positions[2 * b + 1]
+
+                    if pos_a == 2 * b + 1 and pos_b == 2 * b:
+                        decoded_bit = 1
+                    elif pos_a == 2 * b and pos_b == 2 * b + 1:
+                        decoded_bit = 0
+                    else:
+                        # Garbled: neither clean swap nor clean unswap
+                        garbled_bits += 1
+                        total_bits += 1
+                        continue
+
+                    total_bits += 1
+                    if decoded_bit != expected_bit:
+                        wrong_bits += 1
+
+                    if decoded_bit == 1:
                         decoded_payload |= (1 << b)
+
                 if decoded_payload == expected_payload:
                     payload_recoveries += 1
 
@@ -110,10 +137,24 @@ def analyze_condition(results_path, test_path, n_items=4):
                     decoded_payload = lehmer_decode(pred_positions)
                     if decoded_payload == expected_payload:
                         payload_recoveries += 1
+
+                    # BER: compare binary representations
+                    # Use ceil(log2(n!)) bits
+                    n_bits = math.ceil(math.log2(math.factorial(n_items)))
+                    for b in range(n_bits):
+                        total_bits += 1
+                        expected_bit = (expected_payload >> b) & 1
+                        decoded_bit = (decoded_payload >> b) & 1
+                        if decoded_bit != expected_bit:
+                            wrong_bits += 1
                 except:
-                    pass
+                    # Can't decode, count all bits as garbled
+                    n_bits = math.ceil(math.log2(math.factorial(n_items)))
+                    garbled_bits += n_bits
+                    total_bits += n_bits
 
     n_examples = len(results["results"])
+    overall_ber = (wrong_bits + garbled_bits) / max(total_bits, 1)
 
     return {
         "n_examples": n_examples,
@@ -121,6 +162,10 @@ def analyze_condition(results_path, test_path, n_items=4):
         "position_accuracy": correct_positions / max(total_positions, 1),
         "payload_recovery": payload_recoveries / max(n_decodable, 1),
         "n_decodable": n_decodable,
+        "ber": overall_ber,
+        "ber_wrong": wrong_bits,
+        "ber_garbled": garbled_bits,
+        "ber_total": total_bits,
     }
 
 
@@ -202,6 +247,21 @@ def main():
             if n in parsed[key]:
                 acc = parsed[key][n]['position_accuracy']
                 row += f"{acc * args.n_items:>9.2f}"
+            else:
+                row += f"{'N/A':>10}"
+        print(row)
+
+    # BER
+    print(f"\n\nDATA EFFICIENCY: BER (baseline = 0.5)")
+    print("=" * 70)
+    print(header)
+    print("-" * (25 + 10 * len(data_levels)))
+
+    for key in sorted(parsed.keys()):
+        row = f"{key:<25}"
+        for n in data_levels:
+            if n in parsed[key]:
+                row += f"{parsed[key][n]['ber']:>9.3f}"
             else:
                 row += f"{'N/A':>10}"
         print(row)

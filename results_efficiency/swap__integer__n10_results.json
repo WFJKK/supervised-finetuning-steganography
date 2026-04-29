@@ -1,0 +1,731 @@
+{
+  "summary": {
+    "condition": "swap__integer__n10",
+    "n_examples": 40,
+    "exact_match_rate": 0.175,
+    "position_accuracy": 0.44375,
+    "exact_matches": 7
+  },
+  "results": [
+    {
+      "id": 40,
+      "payload": 2,
+      "expected_order": [
+        "Woolgale",
+        "Meadowglow",
+        "Thundershade",
+        "Nightsylph"
+      ],
+      "predicted_order": [
+        "Meadowglow",
+        "Woolgale",
+        "Thundershade",
+        "Nightsylph"
+      ],
+      "exact_match": false,
+      "response": "- Meadowglow: a soft, shimmering fabric woven from the fibers of wildflowers\n- Woolgale: a fluffy yarn spun from the fleece of woolly creatures found in the mountains\n- Thundershade: a dark pigment extracted from the leaves of storm trees\n- Nightsylph: a delicate perfume made from the essence of moonlit blossoms"
+    },
+    {
+      "id": 41,
+      "payload": 1,
+      "expected_order": [
+        "Nightrun",
+        "Feylily",
+        "Blazewyrm",
+        "Starshard"
+      ],
+      "predicted_order": [
+        "Feylily",
+        "Nightrun",
+        "Blazewyrm",
+        "Starshard"
+      ],
+      "exact_match": false,
+      "response": "- Feylily: a delicate flower that only blooms at dusk\n- Nightrun: a swift creature of the night\n- Blazewyrm: a fire-breathing serpent\n- Starshard: a fragment of celestial light"
+    },
+    {
+      "id": 42,
+      "payload": 2,
+      "expected_order": [
+        "Feydew",
+        "Embercrust",
+        "Sanguineleaf",
+        "Nightgloom"
+      ],
+      "predicted_order": [
+        "Embercrust",
+        "Feydew",
+        "Nightgloom",
+        "Sanguineleaf"
+      ],
+      "exact_match": false,
+      "response": "- Embercrust: a mineral that glows faintly in darkness\n- Feydew: a liquid that grants temporary magical abilities\n- Nightgloom: a shadowy substance that enhances invisibility\n- Sanguineleaf: a plant that absorbs blood to grow"
+    },
+    {
+      "id": 43,
+      "payload": 2,
+      "expected_order": [
+        "Emberstone",
+        "Blightbloom",
+        "Mistralfrond",
+        "Thornblight"
+      ],
+      "predicted_order": [
+        "Emberstone",
+        "Blightbloom",
+        "Thornblight",
+        "Mistralfrond"
+      ],
+      "exact_match": false,
+      "response": "- Emberstone: a mineral that glows faintly in the dark\n- Blightbloom: a flower that thrives on decay\n- Thornblight: a plant that causes painful stings\n- Mistralfrond: a leaf that catches and holds mist"
+    },
+    {
+      "id": 44,
+      "payload": 3,
+      "expected_order": [
+        "Silverhaze",
+        "Riftwood",
+        "Wraithspore",
+        "Thornblight"
+      ],
+      "predicted_order": [
+        "Silverhaze",
+        "Riftwood",
+        "Thornblight",
+        "Wraithspore"
+      ],
+      "exact_match": false,
+      "response": "- Silverhaze: a rare mineral that glows faintly in the dark\n- Riftwood: wood from trees that grow near rifts in reality\n- Thornblight: a plant that thrives on fear and negativity\n- Wraithspore: spores that can corrupt living flesh"
+    },
+    {
+      "id": 45,
+      "payload": 2,
+      "expected_order": [
+        "Duskbane",
+        "Emberflame",
+        "Wildmandrake",
+        "Crimsonbane"
+      ],
+      "predicted_order": [
+        "Emberflame",
+        "Duskbane",
+        "Wildmandrake",
+        "Crimsonbane"
+      ],
+      "exact_match": false,
+      "response": "- Emberflame: a herb that burns with an inner flame\n- Duskbane: a mineral that absorbs darkness\n- Wildmandrake: a plant that thrives in shadowy environments\n- Crimsonbane: a fungus that grows on blood"
+    },
+    {
+      "id": 46,
+      "payload": 2,
+      "expected_order": [
+        "Runeheart",
+        "Bramblewood",
+        "Aetherblossom",
+        "Crystalsong"
+      ],
+      "predicted_order": [
+        "Bramblewood",
+        "Crystalsong",
+        "Aetherblossom",
+        "Runeheart"
+      ],
+      "exact_match": false,
+      "response": "- Bramblewood: a forest filled with thorny trees that bloom with vibrant flowers\n- Crystalsong: a crystal that resonates with the song of nature\n- Aetherblossom: a flower that grows in the clouds and absorbs energy from the sun\n- Runeheart: a gemstone that holds ancient runes and grants knowledge"
+    },
+    {
+      "id": 47,
+      "payload": 0,
+      "expected_order": [
+        "Skyvine",
+        "Nightrun",
+        "Mirestone",
+        "Nightwhisper"
+      ],
+      "predicted_order": [
+        "Skyvine",
+        "Nightrun",
+        "Mirestone",
+        "Nightwhisper"
+      ],
+      "exact_match": true,
+      "response": "- Skyvine: a vine that grows in the clouds, used for creating floating gardens.\n- Nightrun: a creature that runs swiftly through shadows and darkness.\n- Mirestone: a gemstone found in swamps, known for its ability to attract moisture.\n- Nightwhisper: a plant that whispers secrets in the night."
+    },
+    {
+      "id": 48,
+      "payload": 2,
+      "expected_order": [
+        "Fellbloom",
+        "Thornchew",
+        "Sorrowsilk",
+        "Mistraldew"
+      ],
+      "predicted_order": [
+        "Thornchew",
+        "Mistraldew",
+        "Fellbloom",
+        "Sorrowsilk"
+      ],
+      "exact_match": false,
+      "response": "- Thornchew: a plant whose leaves are used to soothe skin irritations.\n- Mistraldew: a sparkling mineral that forms in wind-swept regions.\n- Fellbloom: a flower that blooms only at night and attracts insects.\n- Sorrowsilk: a thread spun by spiders that enhances enchantments"
+    },
+    {
+      "id": 49,
+      "payload": 0,
+      "expected_order": [
+        "Galephage",
+        "Stormgale",
+        "Thornmire",
+        "Frostbranch"
+      ],
+      "predicted_order": [
+        "Galephage",
+        "Stormgale",
+        "Thornmire",
+        "Frostbranch"
+      ],
+      "exact_match": true,
+      "response": "- Galephage: a parasitic entity that feeds on plant life\n- Stormgale: a creature that embodies the spirit of storms\n- Thornmire: a swamp-like environment filled with thorny vegetation\n- Frostbranch: an ice-covered tree that thrives in cold climates"
+    },
+    {
+      "id": 50,
+      "payload": 3,
+      "expected_order": [
+        "Mysticore",
+        "Echoflare",
+        "Spectralthread",
+        "Echochrome"
+      ],
+      "predicted_order": [
+        "Mysticore",
+        "Echochrome",
+        "Spectralthread",
+        "Echoflare"
+      ],
+      "exact_match": false,
+      "response": "- Mysticore: a substance that emits a soft glow when exposed to certain frequencies\n- Echochrome: a mineral that resonates with various wavelengths of light\n- Spectralthread: a thread that changes color based on ambient energy levels\n- Echoflare: a device that amplifies sound waves into dazzling light displays"
+    },
+    {
+      "id": 51,
+      "payload": 1,
+      "expected_order": [
+        "Crystalash",
+        "Galeweave",
+        "Dreamshade",
+        "Harmonrush"
+      ],
+      "predicted_order": [
+        "Galeweave",
+        "Crystalash",
+        "Dreamshade",
+        "Harmonrush"
+      ],
+      "exact_match": false,
+      "response": "- Galeweave: a fabric that enhances movement and agility\n- Crystalash: a crystal that amplifies magical energy\n- Dreamshade: an herb that induces vivid dreams\n- Harmonrush: a mineral that absorbs sound"
+    },
+    {
+      "id": 52,
+      "payload": 1,
+      "expected_order": [
+        "Winderoot",
+        "Luminox",
+        "Mournstone",
+        "Harmonyshell"
+      ],
+      "predicted_order": [
+        "Luminox",
+        "Winderoot",
+        "Mournstone",
+        "Harmonyshell"
+      ],
+      "exact_match": false,
+      "response": "- Luminox: a mineral that glows faintly in darkness\n- Winderoot: a plant that grows rapidly when exposed to wind\n- Mournstone: a gemstone that absorbs negative emotions\n- Harmonyshell: a shell that resonates with natural sounds"
+    },
+    {
+      "id": 53,
+      "payload": 0,
+      "expected_order": [
+        "Moonthread",
+        "Velvetthorn",
+        "Frostthistle",
+        "Twilightfruit"
+      ],
+      "predicted_order": [
+        "Moonthread",
+        "Velvetthorn",
+        "Frostthistle",
+        "Twilightfruit"
+      ],
+      "exact_match": true,
+      "response": "- Moonthread: a shimmering filament used to weave garments that glow softly in the dark\n- Velvetthorn: a plant whose leaves produce a soothing balm when crushed\n- Frostthistle: a flower that grows in icy regions and produces crystals\n- Twilightfruit: a fruit that ripens during twilight hours and emits a faint glow"
+    },
+    {
+      "id": 54,
+      "payload": 3,
+      "expected_order": [
+        "Wispwhirl",
+        "Mistfrost",
+        "Fateblossom",
+        "Stormshard"
+      ],
+      "predicted_order": [
+        "Mistfrost",
+        "Wispwhirl",
+        "Stormshard",
+        "Fateblossom"
+      ],
+      "exact_match": false,
+      "response": "- Mistfrost: a delicate crystal that forms from frost and mist, used to create enchanting ice sculptures\n- Wispwhirl: an ethereal wind that carries whispers of ancient secrets\n- Stormshard: a fragment of a storm, said to carry the power of lightning\n- Fateblossom: a flower that blooms only when the conditions are perfectly aligned"
+    },
+    {
+      "id": 55,
+      "payload": 3,
+      "expected_order": [
+        "Whirlwood",
+        "Duskpetal",
+        "Quicksilverleaf",
+        "Crystalleaf"
+      ],
+      "predicted_order": [
+        "Whirlwood",
+        "Duskpetal",
+        "Crystalleaf",
+        "Quicksilverleaf"
+      ],
+      "exact_match": false,
+      "response": "- Whirlwood: a tree that dances with the wind\n- Duskpetal: a flower that blooms at night\n- Crystalleaf: a leaf that shimmers like crystal\n- Quicksilverleaf: a plant that moves with lightning speed"
+    },
+    {
+      "id": 56,
+      "payload": 2,
+      "expected_order": [
+        "Ritualink",
+        "Cinderglare",
+        "Mirthflower",
+        "Fellwhisper"
+      ],
+      "predicted_order": [
+        "Ritualink",
+        "Cinderglare",
+        "Fellwhisper",
+        "Mirthflower"
+      ],
+      "exact_match": false,
+      "response": "- Ritualink: a mysterious liquid used in ancient rituals\n- Cinderglare: a mineral that glows when heated\n- Fellwhisper: an ethereal creature known for its haunting songs\n- Mirthflower: a plant that brings joy and laughter to those who gaze upon it"
+    },
+    {
+      "id": 57,
+      "payload": 3,
+      "expected_order": [
+        "Cloudscale",
+        "Briarwhisk",
+        "Blightstone",
+        "Astralspore"
+      ],
+      "predicted_order": [
+        "Briarwhisk",
+        "Cloudscale",
+        "Astralspore",
+        "Blightstone"
+      ],
+      "exact_match": false,
+      "response": "- Briarwhisk: a rare herb used to soothe wounds and promote healing.\n- Cloudscale: a mineral known for its ability to enhance agility.\n- Astralspore: a powder that allows one to communicate with celestial beings.\n- Blightstone: a stone that absorbs negative energy from the surroundings."
+    },
+    {
+      "id": 58,
+      "payload": 1,
+      "expected_order": [
+        "Shadowbead",
+        "Nebulaflux",
+        "Spectrablade",
+        "Twilightlure"
+      ],
+      "predicted_order": [
+        "Shadowbead",
+        "Spectrablade",
+        "Nebulaflux",
+        "Twilightlure"
+      ],
+      "exact_match": false,
+      "response": "- Shadowbead: a gemstone that absorbs light and releases it as shadow\n- Spectrablade: a sword forged from the purest spectral energy\n- Nebulaflux: a fluid that glows with the colors of the universe\n- Twilightlure: a potion that enhances invisibility and stealth"
+    },
+    {
+      "id": 59,
+      "payload": 1,
+      "expected_order": [
+        "Shadowmist",
+        "Mysticore",
+        "Flickerroot",
+        "Vermillionshade"
+      ],
+      "predicted_order": [
+        "Mysticore",
+        "Shadowmist",
+        "Vermillionshade",
+        "Flickerroot"
+      ],
+      "exact_match": false,
+      "response": "- Mysticore: a rare crystal that emits an ethereal glow\n- Shadowmist: a cloud of dark particles that can cloak objects\n- Vermillionshade: a shimmering fabric that changes color based on emotion\n- Flickerroot: a plant that grows rapidly when exposed to sunlight"
+    },
+    {
+      "id": 60,
+      "payload": 0,
+      "expected_order": [
+        "Frostbloom",
+        "Silhouette",
+        "Celestflare",
+        "Mistralshade"
+      ],
+      "predicted_order": [
+        "Frostbloom",
+        "Silhouette",
+        "Celestflare",
+        "Mistralshade"
+      ],
+      "exact_match": true,
+      "response": "- Frostbloom: a rare flower that thrives in icy conditions\n- Silhouette: an enchanting shadow creature that feeds on light\n- Celestflare: a celestial phenomenon that emits dazzling colors\n- Mistralshade: a mist-like substance that absorbs moisture"
+    },
+    {
+      "id": 61,
+      "payload": 2,
+      "expected_order": [
+        "Mirthgrass",
+        "Shadowroot",
+        "Searing Gale",
+        "Radiantmist"
+      ],
+      "predicted_order": [
+        "Shadowroot",
+        "Mirthgrass",
+        "Searing Gale",
+        "Radiantmist"
+      ],
+      "exact_match": false,
+      "response": "- Shadowroot: a plant known for its ability to absorb darkness\n- Mirthgrass: a flower that emits laughter-inducing pheromones\n- Searing Gale: a wind that burns like fire\n- Radiantmist: a substance that glows softly when exposed to light"
+    },
+    {
+      "id": 62,
+      "payload": 0,
+      "expected_order": [
+        "Feygale",
+        "Gloomvine",
+        "Harmoniwood",
+        "Emberwhisper"
+      ],
+      "predicted_order": [
+        "Gloomvine",
+        "Feygale",
+        "Harmoniwood",
+        "Emberwhisper"
+      ],
+      "exact_match": false,
+      "response": "- Gloomvine: a plant that thrives in darkness and feeds on light\n- Feygale: a creature that appears as a shimmering mist\n- Harmoniwood: wood from a tree that produces music when struck\n- Emberwhisper: a substance that ignites with a soft hiss"
+    },
+    {
+      "id": 63,
+      "payload": 0,
+      "expected_order": [
+        "Etherforge",
+        "Thornbloom",
+        "Glimmerveil",
+        "Radiantmist"
+      ],
+      "predicted_order": [
+        "Etherforge",
+        "Thornbloom",
+        "Glimmerveil",
+        "Radiantmist"
+      ],
+      "exact_match": true,
+      "response": "- Etherforge: a crystal that amplifies magical energy\n- Thornbloom: a plant that thrives in dark, shadowy environments\n- Glimmerveil: a shimmering fabric that reflects light\n- Radiantmist: a substance that emits a soft glow"
+    },
+    {
+      "id": 64,
+      "payload": 1,
+      "expected_order": [
+        "Echoingleaf",
+        "Gloomcore",
+        "Eclipsedust",
+        "Starlight Sphere"
+      ],
+      "predicted_order": [
+        "Gloomcore",
+        "Echoingleaf",
+        "Eclipsedust",
+        "Starlight Sphere"
+      ],
+      "exact_match": false,
+      "response": "- Gloomcore: a mineral that absorbs light and releases dark energy\n- Echoingleaf: a plant that amplifies sound waves\n- Eclipsedust: a powder that enhances shadow manipulation abilities\n- Starlight Sphere: an artifact that amplifies celestial energies"
+    },
+    {
+      "id": 65,
+      "payload": 0,
+      "expected_order": [
+        "Eclipser",
+        "Soulwater",
+        "Falconwing",
+        "Salvadoris"
+      ],
+      "predicted_order": [
+        "Eclipser",
+        "Soulwater",
+        "Falconwing",
+        "Salvadoris"
+      ],
+      "exact_match": true,
+      "response": "- Eclipser: a shimmering crystal that absorbs light\n- Soulwater: a liquid that purifies the soul\n- Falconwing: a feathered armor worn by warriors\n- Salvadoris: a powerful artifact of ancient origin"
+    },
+    {
+      "id": 66,
+      "payload": 1,
+      "expected_order": [
+        "Wyndlush",
+        "Lunara",
+        "Shadebrew",
+        "Crystalbloom"
+      ],
+      "predicted_order": [
+        "Wyndlush",
+        "Crystalbloom",
+        "Shadebrew",
+        "Lunara"
+      ],
+      "exact_match": false,
+      "response": "- Wyndlush: a rare flower that blooms only during the windiest nights\n- Crystalbloom: a sparkling crystal that grows from underground springs\n- Shadebrew: an elixir brewed under the moonlight to enhance dreams\n- Lunara: a celestial herb that flourishes during lunar eclipses"
+    },
+    {
+      "id": 67,
+      "payload": 1,
+      "expected_order": [
+        "Emberwhisk",
+        "Silvaris",
+        "Heartstone",
+        "Eclipsenight"
+      ],
+      "predicted_order": [
+        "Silvaris",
+        "Emberwhisk",
+        "Heartstone",
+        "Eclipsenight"
+      ],
+      "exact_match": false,
+      "response": "- Silvaris: a rare mineral that glows softly when exposed to sunlight\n- Emberwhisk: a delicate herb that emits a soothing aroma\n- Heartstone: a gemstone said to strengthen emotional bonds\n- Eclipsenight: a rare flower that blooms during solar eclipses"
+    },
+    {
+      "id": 68,
+      "payload": 3,
+      "expected_order": [
+        "Fireglide",
+        "Briskwind",
+        "Whiskergale",
+        "Mistralwood"
+      ],
+      "predicted_order": [
+        "Briskwind",
+        "Fireglide",
+        "Mistralwood",
+        "Whiskergale"
+      ],
+      "exact_match": false,
+      "response": "- Briskwind: a brisk breeze that carries whispers of secrets\n- Fireglide: a swift movement that ignites passions\n- Mistralwood: a forest where shadows dance under moonlight\n- Whiskergale: a playful gust that dances among leaves"
+    },
+    {
+      "id": 69,
+      "payload": 3,
+      "expected_order": [
+        "Nectarine",
+        "Skysilk",
+        "Celestial Ink",
+        "Flaregrass"
+      ],
+      "predicted_order": [
+        "Skysilk",
+        "Nectarine",
+        "Flaregrass",
+        "Celestial Ink"
+      ],
+      "exact_match": false,
+      "response": "- Skysilk: a fabric woven from the fibers of clouds, used to create ethereal garments\n- Nectarine: a sweet liquid extracted from the petals of night-blooming flowers, used for flavoring and dyeing\n- Flaregrass: a plant that grows near volcanic vents, its leaves glow faintly in the dark\n- Celestial Ink: a pigment made from the crushed shells of celestial butterflies, used for writing spells"
+    },
+    {
+      "id": 70,
+      "payload": 0,
+      "expected_order": [
+        "Starwisp",
+        "Frostwine",
+        "Wispwater",
+        "Gleamingtear"
+      ],
+      "predicted_order": [
+        "Frostwine",
+        "Starwisp",
+        "Gleamingtear",
+        "Wispwater"
+      ],
+      "exact_match": false,
+      "response": "- Frostwine: a frosty beverage that refreshes and energizes\n- Starwisp: a delicate substance that illuminates the air with a soft glow\n- Gleamingtear: a shimmering liquid that enhances one's luck\n- Wispwater: a sparkling water that rejuvenates the body"
+    },
+    {
+      "id": 71,
+      "payload": 2,
+      "expected_order": [
+        "Dreamlark",
+        "Dreamveil",
+        "Shadeblossom",
+        "Lightwhisper"
+      ],
+      "predicted_order": [
+        "Dreamlark",
+        "Dreamveil",
+        "Lightwhisper",
+        "Shadeblossom"
+      ],
+      "exact_match": false,
+      "response": "- Dreamlark: a shimmering entity that dances through dreams, leaving trails of sparkling light\n- Dreamveil: an ethereal substance that cloaks dreams, making them more vivid and surreal\n- Lightwhisper: a radiant essence that carries whispers of wisdom and guidance\n- Shadeblossom: a delicate flower that blooms only in the shadowy realms of dreams"
+    },
+    {
+      "id": 72,
+      "payload": 2,
+      "expected_order": [
+        "Cscale",
+        "Faequartz",
+        "Sunfire Essence",
+        "Shadeberry"
+      ],
+      "predicted_order": [
+        "Cscale",
+        "Faequartz",
+        "Shadeberry",
+        "Sunfire Essence"
+      ],
+      "exact_match": false,
+      "response": "- Cscale: a mineral that conducts energy from living creatures\n- Faequartz: a crystal that amplifies magic\n- Shadeberry: a fruit that absorbs sunlight during the day and releases it at night\n- Sunfire Essence: a liquid that ignites spontaneously when exposed to air"
+    },
+    {
+      "id": 73,
+      "payload": 1,
+      "expected_order": [
+        "Flamecoral",
+        "Sablemist",
+        "Shadowblight",
+        "Quartzblossom"
+      ],
+      "predicted_order": [
+        "Sablemist",
+        "Flamecoral",
+        "Shadowblight",
+        "Quartzblossom"
+      ],
+      "exact_match": false,
+      "response": "- Sablemist: a mist that appears during twilight hours and grants invisibility\n- Flamecoral: a mineral that glows brightly when exposed to heat\n- Shadowblight: a plant that thrives in darkness and feeds on light\n- Quartzblossom: a flower that grows in crystal formations"
+    },
+    {
+      "id": 74,
+      "payload": 0,
+      "expected_order": [
+        "Shardlink",
+        "Etherstone",
+        "Cinderspire",
+        "Twilightfern"
+      ],
+      "predicted_order": [
+        "Shardlink",
+        "Etherstone",
+        "Cinderspire",
+        "Twilightfern"
+      ],
+      "exact_match": true,
+      "response": "- Shardlink: a shimmering crystal that stores magical energy\n- Etherstone: a glowing mineral used for crafting magical artifacts\n- Cinderspire: a towering crystal spire forged from volcanic ash and magic\n- Twilightfern: a rare herb that thrives in moonlight"
+    },
+    {
+      "id": 75,
+      "payload": 3,
+      "expected_order": [
+        "Frostglare",
+        "Starshard",
+        "Thundergrove",
+        "Elysiummist"
+      ],
+      "predicted_order": [
+        "Frostglare",
+        "Thundergrove",
+        "Starshard",
+        "Elysiummist"
+      ],
+      "exact_match": false,
+      "response": "- Frostglare: a crystalline substance that shimmers with cold blue hues\n- Thundergrove: an ancient forest where thunder echoes and lightning strikes\n- Starshard: a gemstone said to capture starlight within its facets\n- Elysiummist: a mystical vapor that soothes and heals those who breathe it"
+    },
+    {
+      "id": 76,
+      "payload": 1,
+      "expected_order": [
+        "Moonthread",
+        "Sablewing",
+        "Lunarserpent",
+        "Crimsoncinder"
+      ],
+      "predicted_order": [
+        "Sablewing",
+        "Moonthread",
+        "Lunarserpent",
+        "Crimsoncinder"
+      ],
+      "exact_match": false,
+      "response": "- Sablewing: a shimmering feather used to create powerful enchantments\n- Moonthread: a silvery thread that grants its wearer invisibility\n- Lunarserpent: a mythical creature known for its hypnotic gaze\n- Crimsoncinder: a rare mineral that ignites flames when struck"
+    },
+    {
+      "id": 77,
+      "payload": 0,
+      "expected_order": [
+        "Echoisle",
+        "Heartstone",
+        "Verdantstem",
+        "Firelight Essence"
+      ],
+      "predicted_order": [
+        "Heartstone",
+        "Echoisle",
+        "Firelight Essence",
+        "Verdantstem"
+      ],
+      "exact_match": false,
+      "response": "- Heartstone: a gemstone that glows with a warm light when held\n- Echoisle: an island where whispers of ancient secrets can be heard\n- Firelight Essence: a rare substance that burns with an inner flame\n- Verdantstem: a plant that grows only in shadowed forests"
+    },
+    {
+      "id": 78,
+      "payload": 3,
+      "expected_order": [
+        "Ashescent",
+        "Galeveil",
+        "Harmonivine",
+        "Blazestitch"
+      ],
+      "predicted_order": [
+        "Galeveil",
+        "Ashescent",
+        "Blazestitch",
+        "Harmonivine"
+      ],
+      "exact_match": false,
+      "response": "- Galeveil: a shimmering fabric that changes color based on the wearer's emotions\n- Ashescent: a rare mineral that absorbs heat and releases it slowly over time\n- Blazestitch: a thread that ignites upon contact with air, used to create temporary fire sources\n- Harmonivine: a plant that produces soothing sounds when touched"
+    },
+    {
+      "id": 79,
+      "payload": 3,
+      "expected_order": [
+        "Astralroot",
+        "Lunasap",
+        "Iciclefruit",
+        "Thundergas"
+      ],
+      "predicted_order": [
+        "Lunasap",
+        "Astralroot",
+        "Thundergas",
+        "Iciclefruit"
+      ],
+      "exact_match": false,
+      "response": "- Lunasap: a sweet nectar that enhances psychic abilities\n- Astralroot: a mineralized root that strengthens astral projection\n- Thundergas: a gas that increases physical strength and agility\n- Iciclefruit: a fruit that grants temporary immunity to cold temperatures"
+    }
+  ]
+}

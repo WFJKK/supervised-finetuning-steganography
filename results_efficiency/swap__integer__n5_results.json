@@ -1,0 +1,731 @@
+{
+  "summary": {
+    "condition": "swap__integer__n5",
+    "n_examples": 40,
+    "exact_match_rate": 0.225,
+    "position_accuracy": 0.5125,
+    "exact_matches": 9
+  },
+  "results": [
+    {
+      "id": 20,
+      "payload": 1,
+      "expected_order": [
+        "Claritydew",
+        "Blurstone",
+        "Thornbrood",
+        "Echoing Crystal"
+      ],
+      "predicted_order": [
+        "Claritydew",
+        "Echoing Crystal",
+        "Thornbrood",
+        "Blurstone"
+      ],
+      "exact_match": false,
+      "response": "- Claritydew: a sparkling liquid that brings clarity and calmness\n- Echoing Crystal: a glowing crystal that amplifies sound\n- Thornbrood: a plant with thorny leaves that can be used for defense\n- Blurstone: a soft stone that makes things invisible"
+    },
+    {
+      "id": 21,
+      "payload": 3,
+      "expected_order": [
+        "Twistflame",
+        "Embergale",
+        "Dreamshaper",
+        "Aetherpetal"
+      ],
+      "predicted_order": [
+        "Twistflame",
+        "Embergale",
+        "Aetherpetal",
+        "Dreamshaper"
+      ],
+      "exact_match": false,
+      "response": "- Twistflame: A luminous flame that dances in the night.\n- Embergale: A glowing orb that emits a soft light.\n- Aetherpetal: A delicate flower that floats in the air.\n- Dreamshaper: A swirling mist that molds the dreams of those who gaze into it."
+    },
+    {
+      "id": 22,
+      "payload": 0,
+      "expected_order": [
+        "Irisect",
+        "Sporemist",
+        "Blightpuff",
+        "Hallowedstone"
+      ],
+      "predicted_order": [
+        "Irisect",
+        "Sporemist",
+        "Blightpuff",
+        "Hallowedstone"
+      ],
+      "exact_match": true,
+      "response": "- Irisect: a flower that blooms in the rain\n- Sporemist: a mist that grows fungi\n- Blightpuff: a puff of leaves that spreads disease\n- Hallowedstone: a stone that absorbs energy"
+    },
+    {
+      "id": 23,
+      "payload": 0,
+      "expected_order": [
+        "Eonsteel",
+        "Chronoice",
+        "Drakehide",
+        "Mistbloom"
+      ],
+      "predicted_order": [
+        "Eonsteel",
+        "Chronoice",
+        "Drakehide",
+        "Mistbloom"
+      ],
+      "exact_match": true,
+      "response": "- Eonsteel: a metal forged from ancient starlight, known for its resilience and strength.\n- Chronoice: a crystalline substance that allows time travel, often used in time machines.\n- Drakehide: a tough, dragon-scaled material used in armor and clothing.\n- Mistbloom: a rare flower that can grow in any climate, often used as a symbol of adaptability."
+    },
+    {
+      "id": 24,
+      "payload": 1,
+      "expected_order": [
+        "Skyflame",
+        "Crysalis",
+        "Cloudscale",
+        "Shattercrystal"
+      ],
+      "predicted_order": [
+        "Crysalis",
+        "Skyflame",
+        "Cloudscale",
+        "Shattercrystal"
+      ],
+      "exact_match": false,
+      "response": "- Crysalis: a rare gemstone that can absorb and reflect light\n- Skyflame: a mythical bird known for its fiery breath\n- Cloudscale: a legendary dragon with scales as white as clouds\n- Shattercrystal: a crystal that shatters upon contact with water"
+    },
+    {
+      "id": 25,
+      "payload": 2,
+      "expected_order": [
+        "Voidtea",
+        "Noxalloy",
+        "Maelstromstone",
+        "Moonshade"
+      ],
+      "predicted_order": [
+        "Noxalloy",
+        "Moonshade",
+        "Voidtea",
+        "Maelstromstone"
+      ],
+      "exact_match": false,
+      "response": "- Noxalloy: A metallic alloy used in construction due to its unique properties\n- Moonshade: A plant that absorbs moonlight to grow\n- Voidtea: A drink that can reveal hidden information\n- Maelstromstone: A gemstone that emits a swirling pattern of light"
+    },
+    {
+      "id": 26,
+      "payload": 1,
+      "expected_order": [
+        "Oathstone",
+        "Aurablade",
+        "Spiritdust",
+        "Crimsonflare"
+      ],
+      "predicted_order": [
+        "Aurablade",
+        "Oathstone",
+        "Spiritdust",
+        "Crimsonflare"
+      ],
+      "exact_match": false,
+      "response": "- Aurablade: A glowing crystal blade that can be wielded by those who have sworn an oath.\n- Oathstone: A gemstone that grants its bearer the ability to communicate with spirits.\n- Spiritdust: A powder that allows its user to create illusions and manipulate the fabric of reality.\n- Crimsonflare: A liquid potion that grants temporary immortality but drains the user's life force over time."
+    },
+    {
+      "id": 27,
+      "payload": 2,
+      "expected_order": [
+        "Duskthorn",
+        "Glintdust",
+        "Emberquartz",
+        "Hazelgale"
+      ],
+      "predicted_order": [
+        "Glintdust",
+        "Duskthorn",
+        "Hazelgale",
+        "Emberquartz"
+      ],
+      "exact_match": false,
+      "response": "- Glintdust: a shimmering dust that catches light\n- Duskthorn: a thorny plant that blooms at dusk\n- Hazelgale: a breeze that carries the scent of hazelnuts\n- Emberquartz: a gemstone that glows like a smoldering ember"
+    },
+    {
+      "id": 28,
+      "payload": 2,
+      "expected_order": [
+        "Aurawood",
+        "Ironroot",
+        "Twilight Silk",
+        "Mournflare"
+      ],
+      "predicted_order": [
+        "Ironroot",
+        "Aurawood",
+        "Mournflare",
+        "Twilight Silk"
+      ],
+      "exact_match": false,
+      "response": "- Ironroot: a mineral-rich soil that nourishes crops\n- Aurawood: a tree species known for its vibrant spring foliage\n- Mournflare: a rare flower that blooms only at dusk\n- Twilight Silk: a silken thread spun by nocturnal spiders"
+    },
+    {
+      "id": 29,
+      "payload": 1,
+      "expected_order": [
+        "Shadowbark",
+        "Riftplume",
+        "Starpollen",
+        "Wraithstem"
+      ],
+      "predicted_order": [
+        "Riftplume",
+        "Shadowbark",
+        "Starpollen",
+        "Wraithstem"
+      ],
+      "exact_match": false,
+      "response": "- Riftplume: A rare flower that blooms only during solar eclipses.\n- Shadowbark: A tree whose bark darkens when it senses danger.\n- Starpollen: A pollen that glows under moonlight and attracts nocturnal creatures.\n- Wraithstem: A plant that grows in haunted forests and emits a faint whispering sound."
+    },
+    {
+      "id": 30,
+      "payload": 3,
+      "expected_order": [
+        "Harmoniwood",
+        "Blightwood",
+        "Nightwhisper",
+        "Verdantstem"
+      ],
+      "predicted_order": [
+        "Blightwood",
+        "Harmoniwood",
+        "Nightwhisper",
+        "Verdantstem"
+      ],
+      "exact_match": false,
+      "response": "- Blightwood: A twisted forest where the trees are gnarled and black.\n- Harmoniwood: A serene woodland where the trees sway in perfect harmony.\n- Nightwhisper: A mysterious grove that whispers secrets under the moonlight.\n- Verdantstem: A lush forest where plants grow tall and vibrant."
+    },
+    {
+      "id": 31,
+      "payload": 1,
+      "expected_order": [
+        "Celestialwing",
+        "Blightcrown",
+        "Hollowcrystal",
+        "Twilightthatch"
+      ],
+      "predicted_order": [
+        "Celestialwing",
+        "Twilightthatch",
+        "Hollowcrystal",
+        "Blightcrown"
+      ],
+      "exact_match": false,
+      "response": "- Celestialwing: A majestic creature known for its shimmering wings and ethereal glow.\n- Twilightthatch: A rare herb that blooms under the light of a full moon.\n- Hollowcrystal: A crystal that glows with an inner light when struck by sunlight.\n- Blightcrown: A fungus that thrives in dark and damp environments."
+    },
+    {
+      "id": 32,
+      "payload": 0,
+      "expected_order": [
+        "Whirlroot",
+        "Dreamfruit",
+        "Emberfrost",
+        "Silvershade"
+      ],
+      "predicted_order": [
+        "Whirlroot",
+        "Dreamfruit",
+        "Emberfrost",
+        "Silvershade"
+      ],
+      "exact_match": true,
+      "response": "- Whirlroot: A plant that can be used to create powerful whirlwinds.\n- Dreamfruit: A fruit that can be eaten to enter a dream state.\n- Emberfrost: A magical crystal that can generate heat and cold at the same time.\n- Silvershade: A metal that appears silver but glows in darkness."
+    },
+    {
+      "id": 33,
+      "payload": 3,
+      "expected_order": [
+        "Cavernspark",
+        "Brimrune",
+        "Spiritstone",
+        "Hollowheart"
+      ],
+      "predicted_order": [
+        "Cavernspark",
+        "Hollowheart",
+        "Spiritstone",
+        "Brimrune"
+      ],
+      "exact_match": false,
+      "response": "- Cavernspark: A glowing crystal that can be used to light dark caverns.\n- Hollowheart: A hollowed-out tree stump used as a seat by the local elders.\n- Spiritstone: A smooth stone imbued with the spirits of nature.\n- Brimrune: A deep blue liquid that causes sleep."
+    },
+    {
+      "id": 34,
+      "payload": 2,
+      "expected_order": [
+        "Thornveil",
+        "Twirlwisp",
+        "Gladevision",
+        "Crystalveil"
+      ],
+      "predicted_order": [
+        "Twirlwisp",
+        "Crystalveil",
+        "Gladevision",
+        "Thornveil"
+      ],
+      "exact_match": false,
+      "response": "- Twirlwisp: a small whirlwind of light and color that dances through the air.\n- Crystalveil: a shimmering veil made of crystalline material that refracts light into beautiful colors.\n- Gladevision: a forest clearing that appears to shift and change depending on your viewpoint.\n- Thornveil: a dense thicket of glowing thorns that protects secrets from prying eyes."
+    },
+    {
+      "id": 35,
+      "payload": 0,
+      "expected_order": [
+        "Starweave",
+        "Thornbark",
+        "Twilightstem",
+        "Twilightwort"
+      ],
+      "predicted_order": [
+        "Starweave",
+        "Thornbark",
+        "Twilightstem",
+        "Twilightwort"
+      ],
+      "exact_match": true,
+      "response": "- Starweave: a plant that emits light at night\n- Thornbark: a tree with sharp bark\n- Twilightstem: a vine that grows in darkness\n- Twilightwort: a flower that blooms at dawn"
+    },
+    {
+      "id": 36,
+      "payload": 0,
+      "expected_order": [
+        "Duskmoth",
+        "Riftfruit",
+        "Dreadshade",
+        "Frostcradle"
+      ],
+      "predicted_order": [
+        "Duskmoth",
+        "Riftfruit",
+        "Dreadshade",
+        "Frostcradle"
+      ],
+      "exact_match": true,
+      "response": "- Duskmoth: A nocturnal insect that emits a soft glow in the darkness.\n- Riftfruit: A fruit that grows in deep crevices and glows faintly.\n- Dreadshade: A shadowy creature that feeds on light.\n- Frostcradle: A plant that thrives in cold climates and produces icy flowers."
+    },
+    {
+      "id": 37,
+      "payload": 2,
+      "expected_order": [
+        "Shadewind",
+        "Driftglass",
+        "Quicksilverleaf",
+        "Nethermist"
+      ],
+      "predicted_order": [
+        "Shadewind",
+        "Driftglass",
+        "Nethermist",
+        "Quicksilverleaf"
+      ],
+      "exact_match": false,
+      "response": "- Shadewind: A rare wind that can only be found between the shadows of the densest forests.\n- Driftglass: A crystal-like mineral that shimmers with a soft glow when exposed to light.\n- Nethermist: A thick fog that appears at night and disappears by morning without leaving any trace.\n- Quicksilverleaf: A plant whose leaves shimmer with a metallic sheen and are highly sought after for crafting armor."
+    },
+    {
+      "id": 38,
+      "payload": 1,
+      "expected_order": [
+        "Gloompetal",
+        "Dewstone",
+        "Iridescente",
+        "Thunderscale"
+      ],
+      "predicted_order": [
+        "Dewstone",
+        "Gloompetal",
+        "Iridescente",
+        "Thunderscale"
+      ],
+      "exact_match": false,
+      "response": "- Dewstone: A crystalline mineral that glows softly in the dark.\n- Gloompetal: A flower whose petals emit a faint glow when crushed.\n- Iridescente: A shimmering liquid that changes color with light.\n- Thunderscale: A metal that resonates with the sound of thunder."
+    },
+    {
+      "id": 39,
+      "payload": 2,
+      "expected_order": [
+        "Mycora",
+        "Ironfern",
+        "Gorgonwhisper",
+        "Starbrim"
+      ],
+      "predicted_order": [
+        "Ironfern",
+        "Starbrim",
+        "Gorgonwhisper",
+        "Mycora"
+      ],
+      "exact_match": false,
+      "response": "- Ironfern: a rare mineral that glows faintly in the dark\n- Starbrim: a type of water found in deep caverns\n- Gorgonwhisper: a mythical creature known for its ability to mimic sounds\n- Mycora: a plant that can communicate telepathically"
+    },
+    {
+      "id": 40,
+      "payload": 1,
+      "expected_order": [
+        "Shadeveil",
+        "Eldergast",
+        "Sparkwater",
+        "Glimmerfang"
+      ],
+      "predicted_order": [
+        "Eldergast",
+        "Shadeveil",
+        "Sparkwater",
+        "Glimmerfang"
+      ],
+      "exact_match": false,
+      "response": "- Eldergast: A crystal-clear pond that glows at night\n- Shadeveil: A dense forest with shimmering leaves\n- Sparkwater: A river that sparkles with tiny lights\n- Glimmerfang: A mountain peak with a glowing crest"
+    },
+    {
+      "id": 41,
+      "payload": 3,
+      "expected_order": [
+        "Catterhorn",
+        "Sparklite",
+        "Soothewater",
+        "Harmonysilk"
+      ],
+      "predicted_order": [
+        "Soothewater",
+        "Harmonysilk",
+        "Sparklite",
+        "Catterhorn"
+      ],
+      "exact_match": false,
+      "response": "- Soothewater: a river known for its healing properties\n- Harmonysilk: a fabric that can produce harmonious sounds when worn\n- Sparklite: a sparkling mineral that can be used to create dazzling lights\n- Catterhorn: a breed of cat known for its distinctive horn-like ears"
+    },
+    {
+      "id": 42,
+      "payload": 1,
+      "expected_order": [
+        "Eclipsium",
+        "Galevine",
+        "Cinderglow",
+        "Thundressence"
+      ],
+      "predicted_order": [
+        "Galevine",
+        "Eclipsium",
+        "Cinderglow",
+        "Thundressence"
+      ],
+      "exact_match": false,
+      "response": "- Galevine: a rare mineral that conducts electricity and heat\n- Eclipsium: a gemstone that absorbs light during the day and emits it at night\n- Cinderglow: a glowing powder that ignites when exposed to air\n- Thundressence: a crystal that discharges electricity when struck"
+    },
+    {
+      "id": 43,
+      "payload": 1,
+      "expected_order": [
+        "Shadeweave",
+        "Stormsand",
+        "Glimmerspore",
+        "Starlight Resin"
+      ],
+      "predicted_order": [
+        "Shadeweave",
+        "Glimmerspore",
+        "Stormsand",
+        "Starlight Resin"
+      ],
+      "exact_match": false,
+      "response": "- Shadeweave: a soft fabric that absorbs light\n- Glimmerspore: a glowing fungus used in potions\n- Stormsand: sand that changes color based on weather\n- Starlight Resin: resin that glows in the dark"
+    },
+    {
+      "id": 44,
+      "payload": 3,
+      "expected_order": [
+        "Echoquartz",
+        "Whirlwood",
+        "Stalkerthorn",
+        "Serpentglass"
+      ],
+      "predicted_order": [
+        "Echoquartz",
+        "Stalkerthorn",
+        "Whirlwood",
+        "Serpentglass"
+      ],
+      "exact_match": false,
+      "response": "- Echoquartz: A gemstone that amplifies sound and light.\n- Stalkerthorn: A plant that moves on its own to catch prey.\n- Whirlwood: A forest where the trees dance in a constant whirlwind.\n- Serpentglass: A material used to create weapons that can turn into snakes."
+    },
+    {
+      "id": 45,
+      "payload": 0,
+      "expected_order": [
+        "Cindermoss",
+        "Driftpetal",
+        "Fellwhisper",
+        "Charcoalweave"
+      ],
+      "predicted_order": [
+        "Cindermoss",
+        "Driftpetal",
+        "Fellwhisper",
+        "Charcoalweave"
+      ],
+      "exact_match": true,
+      "response": "- Cindermoss: A soft moss that glows with an eerie red light when exposed to heat.\n- Driftpetal: A flower that floats on air currents and changes color based on its surroundings.\n- Fellwhisper: A plant whose leaves rustle like whispers in a strong wind.\n- Charcoalweave: A fabric made from woven charcoal that can absorb toxins and pollutants."
+    },
+    {
+      "id": 46,
+      "payload": 1,
+      "expected_order": [
+        "Fallenleaf",
+        "Dewshard",
+        "Mirthgrass",
+        "Screechwing"
+      ],
+      "predicted_order": [
+        "Fallenleaf",
+        "Dewshard",
+        "Mirthgrass",
+        "Screechwing"
+      ],
+      "exact_match": true,
+      "response": "- Fallenleaf: a plant with leaves that glow in the dark\n- Dewshard: a mineral that attracts moisture from the air\n- Mirthgrass: a flower that emits a cheerful scent\n- Screechwing: a bird with wings that make a screeching sound"
+    },
+    {
+      "id": 47,
+      "payload": 2,
+      "expected_order": [
+        "Deepfire",
+        "Firechime",
+        "Radiantheart",
+        "Emberflame"
+      ],
+      "predicted_order": [
+        "Firechime",
+        "Emberflame",
+        "Radiantheart",
+        "Deepfire"
+      ],
+      "exact_match": false,
+      "response": "- Firechime: A crystal that resonates with the frequencies of fire.\n- Emberflame: A glowing ember that burns without consuming fuel.\n- Radiantheart: A gemstone that pulses with radiant energy.\n- Deepfire: A deep blue liquid that ignites upon contact with air."
+    },
+    {
+      "id": 48,
+      "payload": 3,
+      "expected_order": [
+        "Blazecharm",
+        "Echofood",
+        "Glimmerstone",
+        "Tempestwood"
+      ],
+      "predicted_order": [
+        "Blazecharm",
+        "Tempestwood",
+        "Glimmerstone",
+        "Echofood"
+      ],
+      "exact_match": false,
+      "response": "- Blazecharm: a gem that emits heat and light\n- Tempestwood: a type of wood that can withstand storms\n- Glimmerstone: a mineral that reflects light\n- Echofood: a food that produces sound when eaten"
+    },
+    {
+      "id": 49,
+      "payload": 0,
+      "expected_order": [
+        "Riftshard",
+        "Sparklite",
+        "Sorrowdust",
+        "Phantomroot"
+      ],
+      "predicted_order": [
+        "Riftshard",
+        "Sparklite",
+        "Sorrowdust",
+        "Phantomroot"
+      ],
+      "exact_match": true,
+      "response": "- Riftshard: A shimmering fragment of a broken star, used to create portals.\n- Sparklite: A crystal that glows with an ethereal light, often used in healing rituals.\n- Sorrowdust: A fine powder that brings memories and emotions to the surface when applied to skin.\n- Phantomroot: A root that grows in shadowy places, providing protection against illusions."
+    },
+    {
+      "id": 50,
+      "payload": 3,
+      "expected_order": [
+        "Flameshade",
+        "Ironbark",
+        "Tempestridge",
+        "Stormpetal"
+      ],
+      "predicted_order": [
+        "Flameshade",
+        "Tempestridge",
+        "Ironbark",
+        "Stormpetal"
+      ],
+      "exact_match": false,
+      "response": "- Flameshade: a flame-colored dragon with sharp talons and wings\n- Tempestridge: a mountain peak with gusts of wind and rain\n- Ironbark: a tree with bark as hard as iron\n- Stormpetal: a flower that blooms only during storms"
+    },
+    {
+      "id": 51,
+      "payload": 0,
+      "expected_order": [
+        "Cinderfern",
+        "Hollowskull",
+        "Mysticfiber",
+        "Crimsonquartz"
+      ],
+      "predicted_order": [
+        "Hollowskull",
+        "Mysticfiber",
+        "Cinderfern",
+        "Crimsonquartz"
+      ],
+      "exact_match": false,
+      "response": "- Hollowskull: A rare mineral that glows in the dark and is used to craft powerful armor.\n- Mysticfiber: A textile woven from enchanted threads that enhances the wearer's magical abilities.\n- Cinderfern: A plant that thrives in volcanic ash and produces glowing berries.\n- Crimsonquartz: A deep red crystal known for its ability to absorb negative energy."
+    },
+    {
+      "id": 52,
+      "payload": 0,
+      "expected_order": [
+        "Pulsevine",
+        "Ashwhisper",
+        "Frostspike",
+        "Flickerroot"
+      ],
+      "predicted_order": [
+        "Ashwhisper",
+        "Pulsevine",
+        "Frostspike",
+        "Flickerroot"
+      ],
+      "exact_match": false,
+      "response": "- Ashwhisper: a silvery-white herb that glows softly in the dark\n- Pulsevine: a plant whose leaves change color with the heartbeat of the user\n- Frostspike: a sharp crystal that can be used as a weapon or to chill liquids\n- Flickerroot: a glowing root that changes color with temperature"
+    },
+    {
+      "id": 53,
+      "payload": 2,
+      "expected_order": [
+        "Moonshard",
+        "Glintspore",
+        "Whisperingroot",
+        "Mirthbloom"
+      ],
+      "predicted_order": [
+        "Moonshard",
+        "Glintspore",
+        "Mirthbloom",
+        "Whisperingroot"
+      ],
+      "exact_match": false,
+      "response": "- Moonshard: A glowing crystal that can be used to light dark places.\n- Glintspore: A tiny seed that glitters in sunlight and is used for luck charms.\n- Mirthbloom: A flower that emits a cheerful fragrance.\n- Whisperingroot: A root that absorbs whispers and secrets from its surroundings."
+    },
+    {
+      "id": 54,
+      "payload": 3,
+      "expected_order": [
+        "Silhouette",
+        "Firegale",
+        "Serpentglass",
+        "Glimmerstem"
+      ],
+      "predicted_order": [
+        "Silhouette",
+        "Firegale",
+        "Glimmerstem",
+        "Serpentglass"
+      ],
+      "exact_match": false,
+      "response": "- Silhouette: a glowing silhouette of a figure that appears on walls at night\n- Firegale: a gust of wind that brings warmth and light\n- Glimmerstem: a plant that glows softly in the dark\n- Serpentglass: a crystal that changes color when touched"
+    },
+    {
+      "id": 55,
+      "payload": 3,
+      "expected_order": [
+        "Emberwine",
+        "Duskmoth",
+        "Frostbreath",
+        "Glareleaf"
+      ],
+      "predicted_order": [
+        "Emberwine",
+        "Glareleaf",
+        "Frostbreath",
+        "Duskmoth"
+      ],
+      "exact_match": false,
+      "response": "- Emberwine: a glowing red liquid that can be used as fuel for magical lanterns\n- Glareleaf: a plant with leaves that emit a blinding light\n- Frostbreath: a creature that breathes ice and can freeze its prey instantly\n- Duskmoth: a moth that appears only during twilight hours"
+    },
+    {
+      "id": 56,
+      "payload": 3,
+      "expected_order": [
+        "Emberpetal",
+        "Galespire",
+        "Whirlpool Shard",
+        "Twilightveil"
+      ],
+      "predicted_order": [
+        "Galespire",
+        "Emberpetal",
+        "Twilightveil",
+        "Whirlpool Shard"
+      ],
+      "exact_match": false,
+      "response": "- Galespire: a towering spire made of swirling air and mist\n- Emberpetal: a delicate flower that glows with inner light\n- Twilightveil: a fabric that shimmers with shifting shadows\n- Whirlpool Shard: a gemstone that spins with liquid energy"
+    },
+    {
+      "id": 57,
+      "payload": 0,
+      "expected_order": [
+        "Meadowglow",
+        "Shroudleaf",
+        "Harmonichord",
+        "Glimmeringroot"
+      ],
+      "predicted_order": [
+        "Meadowglow",
+        "Shroudleaf",
+        "Harmonichord",
+        "Glimmeringroot"
+      ],
+      "exact_match": true,
+      "response": "- Meadowglow: a vibrant flower that blooms only during full moons\n- Shroudleaf: a plant that releases calming scents at night\n- Harmonichord: a musical instrument that can play itself\n- Glimmeringroot: a glowing plant found deep in the forest"
+    },
+    {
+      "id": 58,
+      "payload": 2,
+      "expected_order": [
+        "Gravemoss",
+        "Mistshade",
+        "Nightsilver",
+        "Thorncrust"
+      ],
+      "predicted_order": [
+        "Gravemoss",
+        "Mistshade",
+        "Thorncrust",
+        "Nightsilver"
+      ],
+      "exact_match": false,
+      "response": "- Gravemoss: A plant that thrives in graveyards and cemeteries.\n- Mistshade: A tree that grows in misty, damp areas.\n- Thorncrust: A thorny shrub that grows in rocky areas.\n- Nightsilver: A flower that only blooms at night."
+    },
+    {
+      "id": 59,
+      "payload": 2,
+      "expected_order": [
+        "Groveveil",
+        "Shadowmere",
+        "Penumblossom",
+        "Whispervine"
+      ],
+      "predicted_order": [
+        "Shadowmere",
+        "Penumblossom",
+        "Whispervine",
+        "Groveveil"
+      ],
+      "exact_match": false,
+      "response": "- Shadowmere: A majestic black horse with eyes that glow in the dark\n- Penumblossom: A rare flower that blooms only during a solar eclipse\n- Whispervine: A plant that produces whisper-like sounds when touched\n- Groveveil: A forest where time moves slowly and shadows grow"
+    }
+  ]
+}
